@@ -220,3 +220,13 @@ a:link, a:visited {
 	bottom : 0px;
 	background-color : #00a087;
 }
+
+.contact{
+   position				: fixed;
+   background-color		:#e67e22;
+   height				: 15px;
+   width				:600px;
+   right				:0;
+   bottom				:0;
+   z-index				: 9999;
+}
