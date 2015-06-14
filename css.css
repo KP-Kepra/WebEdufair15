@@ -92,6 +92,17 @@ html, body {
 		user-select: none;
 	}
 	
+.nav-bar li ul {
+	opacity : 0;
+	-webkit-transition: all .25s ease;
+    -moz-transition   : all .25s ease;
+    -ms-transition    : all .25s ease;
+    -o-transition     : all .25s ease;
+    transition        : all .25s ease;
+	z-index : 1;
+	left : 0;
+}
+
 .nav-bar ul ul li{
   height: 10px;
   padding: 10 20;
@@ -99,20 +110,22 @@ html, body {
   font-size: 12px;
   line-height : 10px;
   font-type : helvetica;
+  color : white;
+  display : block;
   background: #333333;
-  -webkit-transition: height .2s ease;
-  -moz-transition: height .2s ease;
-  -ms-transition: height .2s ease;
-  -o-transition: height .2s ease;
-  transition: height .2s ease;
+  
 }
 	.nav-bar ul ul{
-	left : -9000px;
+	left : 462px;
+	top : - 300px;
 	position : absolute;
 	}
-	.nav-bar li:hover > ul {
-	left: 462px;
+	.nav-bar li:hover  ul {
+	opacity : 1;
+	left : 462px;
+	top : 50px;
 	}
+	
 a:link, a:visited {
 	display: block;
     font-weight: bold;
