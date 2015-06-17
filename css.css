@@ -61,7 +61,7 @@ html, body {
 		margin-top : 0px;
 		font-size : 16px;
 	}
-	.nav-bar li, .nav-bar ul ul{
+	.nav-bar li{
 		width : 100px;
 		height :50px;
 		display : inline-block;
@@ -113,7 +113,7 @@ html, body {
 .nav-bar .li-child li{ /*Buat anak-anaknya*/
 	height : 30px;
 	padding : 0 0 0 0;
-	display : block;
+	display : inline-block;
 	width : 180px;
 	font-size : 12px;
 	line-height : 30px;
@@ -125,23 +125,25 @@ html, body {
 		background-color : #005f5f;
 	}
 	.li-child li a{
-		margin-left : 30px;
+		margin-left : 0px;
 		text-align : left;
-	}
-a:link, a:visited {
-	display: block;
-    font-weight: bold;
-    color: #ffffff;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-}
 
 @font-face {
 	font-family: 'icomoon';
 	src:url(icomoon.ttf);
 	font-weight: normal;
 	font-style: normal;
+}
+
+a:link, a:visited {
+    display: block;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #98bf21;
+    width: 120px;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
 }
 
 .sb-search {
