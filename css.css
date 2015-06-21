@@ -4,11 +4,10 @@ html, body {
 	height:100%;
 	background-color : #99CCFF;
 }
-
 .template {
 	width : 1100px;
 	height : 100%;
-	margin : 20px 0px 20px 0px;
+	margin : 70px 0px 20px 0px;
 	margin-left	: auto;
 	margin-right : auto;
 	border-style : solid;
@@ -40,21 +39,25 @@ html, body {
 	min-height:100%;
 	position:relative;
 }
-
 .nav-container{
 	top : 0;
 	left : 0;
+	position : fixed;
+	align : center;
+	margin-left : auto;
+	margin-right : auto;
 	width : 100%;
 	height : 50px;
+	background-color : #00a087;
 }
 .nav-bar{
-	position	: fixed;
-	left		: 0;
-	top		: 0;
+	align : center;
 	z-index	: 9999;
-	width		: 100%;
+	left : 10%;
+	margin-left : auto;
+	margin-right : auto;
+	width		: 1350px;
 	height	: 50px;
-	background-color	: #00a087;
 }
 	.nav-bar ul{
 		margin-left : 60px;
@@ -261,6 +264,25 @@ a:link{
 	bottom : 0px;
 	background-color : #00a087;
 }
+	.foot-temp{
+		width : 1200px;
+		align : center;
+		margin-left : auto;
+		margin-right : auto;
+		background : black;
+	}
+	.foot-tab{
+	display : inline-block;
+	position : relative;
+	text-align : center;
+	margin-left : 13.6px;
+	margin-right : 0px;
+	bottom	: 0;
+	z-index	: 9999;
+	width		: 280px;
+	height	: 60px;
+	background : white;
+	}
 
 .contact-bottom{
    position				: fixed;
@@ -272,3 +294,4 @@ a:link{
    bottom				:0px;
    z-index				: 9999;
 }
+
