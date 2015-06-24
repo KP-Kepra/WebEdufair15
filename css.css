@@ -142,7 +142,7 @@ html, body {
 	font-weight: normal;
 	font-style: normal;
 }
-a:link{
+.li-tab a{
 	display : block;
 	font-weight : bold;
 	color : white;
@@ -259,7 +259,7 @@ a:link{
 
 .footer {
 	width:100%;
-	height:80px;
+	height:auto;
 	position : relative;
 	bottom : 0px;
 	background-color : #00a087;
@@ -267,20 +267,20 @@ a:link{
 	.foot-temp{
 		width : 1200px;
 		align : center;
+		top : 0;
 		margin-left : auto;
 		margin-right : auto;
 		background : black;
 	}
 	.foot-tab{
 	display : inline-block;
-	position : relative;
-	text-align : center;
+	vertical-align : top;
 	margin-left : 13.6px;
 	margin-right : 0px;
-	bottom	: 0;
+	margin-top : 0;
 	z-index	: 9999;
 	width		: 280px;
-	height	: 60px;
+	min-height	: 60px;
 	background : white;
 	}
 
