@@ -1,0 +1,42 @@
+a:link, a:visited {
+display				: block;
+font-weight			: bold;
+color				:#ffffff;
+background-color	:pink;
+height				:60px;
+width				:200px;
+text-align			:center;
+padding				:4px;
+text-decoration		:none;
+}
+
+a:hover, a:active {
+background-color	:#FFC7F8;
+}
+
+.logo{
+display			:block;
+margin-top		:80px;
+}
+
+.linkies{
+color			:white;
+font-size		:50px;
+font-family		:Arial;
+}
+
+.container{
+height			:auto; 
+width			:600px;
+margin-left		:auto;
+margin-right	:auto;
+}
+
+.enex{
+float			:left;
+margin-top		:60px;
+margin-left		:60px;
+height			:60px;
+width			:200px;
+border			:0px double #FFC7F8;
+}
