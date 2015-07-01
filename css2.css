@@ -71,13 +71,13 @@ a:hover, a:active {
 		background : black;
 	}
 	.foot-tab{
-	display : inline-block;
-	vertical-align : top;
-	margin-left : 13.6px;
-	margin-right : 0px;
-	margin-top : 0;
-	z-index	: 9999;
-	width		: 280px;
-	min-height	: 60px;
-	background : white;
+		display : inline-block;
+		vertical-align : top;
+		margin-left : 18px;
+		margin-right : 0px;
+		margin-top : 0;
+		z-index	: 9999;
+		width		: 570px;
+		min-height	: 60px;
+		background : white;
 	}
