@@ -1,17 +1,17 @@
 a:link, a:visited {
 display				: block;
 font-weight			: bold;
-color				:#ffffff;
-background-color	:pink;
+color				:black;
+background-color	:white;/*pink*/;
 height				:60px;
-width				:200px;
+width				:400px;
 text-align			:center;
 padding				:4px;
 text-decoration		:none;
 }
 
 a:hover, a:active {
-background-color	:#FFC7F8;
+background-color	:white/*#FFC7F8*/;
 }
 
 .logo{
@@ -40,3 +40,13 @@ height			:60px;
 width			:200px;
 border			:0px double #FFC7F8;
 }
+
+.cs{
+margin-top		:60px;
+margin-left		:auto;
+margin-right	:auto;
+height			:80px;
+width			:400px;
+border			:0px double #FFC7F8;
+}
+
