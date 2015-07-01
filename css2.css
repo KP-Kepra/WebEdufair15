@@ -1,52 +1,83 @@
 a:link, a:visited {
-display				: block;
-font-weight			: bold;
-color				:black;
-background-color	:white;/*pink*/;
-height				:60px;
-width				:400px;
-text-align			:center;
-padding				:4px;
-text-decoration		:none;
+	display				: block;
+	font-weight			: bold;
+	color				:#ffffff;
+	background-color	:pink;
+	height				:60px;
+	width				:200px;
+	text-align			:center;
+	padding				:4px;
+	text-decoration		:none;
 }
 
 a:hover, a:active {
-background-color	:white/*#FFC7F8*/;
+	background-color	:#FFC7F8;
 }
 
 .logo{
-display			:block;
-margin-top		:80px;
+	display : block;
+	width : 700px;
+	height : 300px;
+	background-color : #00B3B3;
+}
+.intro{
+	height : 100px;
+	width : 700px;
+	display : block;
+	background-color : #FF8000;
+	margin-bottom : 400px;
 }
 
 .linkies{
-color			:white;
-font-size		:50px;
-font-family		:Arial;
+	margin-top : 400px;
+	margin-left : auto;
+	margin-right : auto;
+	color	: black;
+	font-size : 50px;
+	font-family : Arial;
+	text-align : center;
+	margin-bottom : 200px;
 }
 
 .container{
-height			:auto; 
-width			:600px;
-margin-left		:auto;
-margin-right	:auto;
+	margin-top : 120px;
+	height : auto; 
+	width	 : 700px;
+	margin-left : auto;
+	margin-right : auto;
+	background : black;
 }
 
 .enex{
-float			:left;
-margin-top		:60px;
-margin-left		:60px;
-height			:60px;
-width			:200px;
-border			:0px double #FFC7F8;
+	display : inline-block;
+	height : 60px;
+	width	 : 200px;
+	border : 0px double #FFC7F8;
 }
 
-.cs{
-margin-top		:60px;
-margin-left		:auto;
-margin-right	:auto;
-height			:80px;
-width			:400px;
-border			:0px double #FFC7F8;
+.footer {
+	width:100%;
+	height:auto;
+	position : relative;
+	bottom : 0px;
+	background-color : #00a087;
 }
-
+	.foot-temp{
+		width : 1200px;
+		align : center;
+		top : 0;
+		margin-left : auto;
+		margin-right : auto;
+		background : black;
+	}
+	.foot-tab{
+	display : inline-block;
+	vertical-align : top;
+	margin-left : 13.6px;
+	margin-right : 0px;
+	margin-top : 0;
+	z-index	: 9999;
+	width		: 280px;
+	min-height	: 60px;
+	background : white;
+	}
