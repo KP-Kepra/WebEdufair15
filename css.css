@@ -4,12 +4,19 @@ html, body {
 	height:100%;
 	background-color : #99CCFF;
 }
+h1{
+	color : white;
+	font-weight : normal;
+	font-size : 12px;
+	margin : 0 auto 0 auto;
+	padding : 10 0 20 0;
+	text-align: center;
+	
+}
 .template {
 	width : 1100px;
 	height : 100%;
-	margin : 70px 0px 20px 0px;
-	margin-left	: auto;
-	margin-right : auto;
+	margin : 70px auto 20px auto;
 	border-style : solid;
 	border-width : 1px;
 }
@@ -56,7 +63,6 @@ html, body {
 .nav-bar{
 	align : center;
 	z-index	: 9999;
-	left : 10%;
 	position : relative;
 	min-width : 1050px;
 	margin-left : auto;
@@ -137,6 +143,7 @@ html, body {
 		margin-left : 30px;
 		text-align : left;
 	}
+	
 .li-tab a{
 	display : block;
 	font-weight : bold;
@@ -144,6 +151,16 @@ html, body {
 	text-decoration : none;
 	font-family : icomoon;
 }
+.li-tab p{
+	color : #000000;
+	font-size : 15px;
+	display : inline;
+	transition : color .2s ease;
+}
+.li-tab:hover p{
+	color : white;
+}
+
 @font-face {
 	font-family: 'icomoon';
 	src:url(icomoon.ttf);
@@ -169,18 +186,21 @@ html, body {
 
 .sb-search-input {
 	position: absolute;
-	border-radius: 25px;
+	border-radius: 20px;
 	right: 100px;
 	border: none;
 	outline: none;
 	background: #fff;
+	border : 2px outset #868686;
+	box-shadow: 2px 2px 8px #BBBBBB inset;
+	border-style : inset;
 	width: 100%;
-	height: 30px;
+	height: 28px;
 	margin: 0;
 	z-index: 10;
-	padding: 15 15 15 15;
+	padding: 13 13 13 13;
 	font-family: inherit;
-	font-size: 13px;
+	font-size: 12px;
 	color: #2c3e50;
 }
 
@@ -278,19 +298,40 @@ html, body {
 		top : 0;
 		margin-left : auto;
 		margin-right : auto;
-		background : black;
 	}
 	.foot-tab{
 		display : inline-block;
 		vertical-align : top;
 		margin-left : 13.6px;
 		margin-right : 0px;
-		margin-top : 0;
+		margin-top : 20px;
+		margin-bottom : 20px;
 		z-index : 9999;
 		width	: 280px;
 		min-height	: 60px;
-		background : white;
+		line-height : 20px;
+		color : white;
 	}
+		.foot-tab p{
+			color : #FFFFFF;
+			font-size : 25px;
+			display : inline;
+			line-height : 15px;
+		}
+		.foot-tab .socmed img{
+			margin-left : 10px;
+			position : absolute;
+			height : 32px;
+			width : 32px;
+			border-radius : 5px;
+			-webkit-transition: opacity .4s ease-in-out;
+			-moz-transition: opacity .4s ease-in-out;
+			-o-transition: opacity .4s ease-in-out;
+			transition: opacity .4s ease-in-out;
+		}
+		.foot-tab .socmed img.top:hover {
+			opacity:0;
+		}	
 
 .contact-bottom{
    position : fixed;
