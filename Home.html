@@ -109,6 +109,11 @@
 <script>
 	new UISearch( document.getElementById( 'sb-search' ) );
 </script>
+<script> /*Nav-Bar Zoom Scroll*/
+    $(window).scroll(function() {
+    $('.nav-bar').css('left', -$(this).scrollLeft() + "px");
+    });
+</script>
 <!--
 <div class="contact-bottom"><hr color="black">Contact us : 14045, Nisiuska College Aceh, Jawa Utara. Jalan mak lo</div>
 -->
