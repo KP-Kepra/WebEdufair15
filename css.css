@@ -13,6 +13,10 @@ html, body {
 	border-style : solid;
 	border-width : 1px;
 }
+
+/* =====================================================
+							COLUMN CONTENT
+======================================================*/
 .coloumn-middle{
 	float : right;
 	width	: 780px;
@@ -34,10 +38,9 @@ html, body {
 	border-width	: 0 0 0 2px;
 	padding-left : 12px;
 }
-.wrap{
-	min-height:100%;
-	position:relative;
-}
+/* =====================================================
+							NAVIGATION BAR
+======================================================*/
 .nav-container{
 	top : 0;
 	left : 0;
@@ -88,29 +91,26 @@ html, body {
 	.nav-bar img {
 		height : 100%;
 		display : inline-block;
-			-webkit-transform: translateY(50%);
-			-ms-transform: translateY(50%);
-			transform: translateY(0%);
 		user-select: none;
 	}
 	
-.nav-bar .li-child { /*Buat Drop-Down*/
-	display : block;
+.li-tab .li-child { /*Buat Drop-Down*/
 	position: absolute;
 	top: 50px;
-	left : 462px;
-	visibility: hidden;	
-	opacity: 0;
+	margin-left : -40px;
+	visibility: hidden;
 	width : 100px;
-	-webkit-transition: opacity .3s ease;
-	-moz-transition: opacity .3s ease;
-	-o-transition: opacity 3s ease;
-	transition: opacity .3s ease;
+	opacity : 0;
+	-webkit-transition: opacity .2s linear;
+	-moz-transition: opacity .2s linear;
+	-o-transition: opacity .2s linear;
+	transition: visibility 0s linear 0.2s, opacity .2s linear;
 }
 	.li-tab:hover ul.li-child{
 		visibility : visible;
 		opacity : 1;
-		left : 462px;
+		margin-left : -40px;
+		transition-delay:0s
 	}
 	
 .nav-bar .li-child li{ /*Buat anak-anaknya*/
@@ -134,13 +134,6 @@ html, body {
 		margin-left : 30px;
 		text-align : left;
 	}
-
-@font-face {
-	font-family: 'icomoon';
-	src:url(icomoon.ttf);
-	font-weight: normal;
-	font-style: normal;
-}
 .li-tab a{
 	display : block;
 	font-weight : bold;
@@ -148,6 +141,16 @@ html, body {
 	text-decoration : none;
 	font-family : icomoon;
 }
+@font-face {
+	font-family: 'icomoon';
+	src:url(icomoon.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* =====================================================
+								SEARCH BAR
+======================================================*/
 .sb-search {
 	position: relative;
 	width: 0%;
@@ -256,9 +259,12 @@ html, body {
 	z-index: 90;
 }
 
+/* =====================================================
+							FOOTER & CONTACT
+======================================================*/
 .footer {
-	width:100%;
-	height:auto;
+	width : 100%;
+	height : auto;
 	position : relative;
 	bottom : 0px;
 	background-color : #00a087;
