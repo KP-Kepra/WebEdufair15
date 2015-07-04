@@ -12,29 +12,37 @@
 <div class="nav-container">
 	<nav class="nav-bar">
 		<ul>
-			<li style="width:250px">
+			<li style="width:250px;">
 				<a href="Home.html"><img src="logo.jpg"></img></a>
 			</li>
-			
+		
+			<li class="li-tab">
+				<a href="Home.html">Home</a>
+			</li>
+
 			<li class="li-tab">
 				<a href="www.google.com">News</a>
 			</li>
 			
 			<li class="li-tab">
-				<a href="History.html">History</a>
+				<a href="History.html">The Fair</a>
 			</li>
 			
 			<li class="li-tab">
-				<a href="aaa">Events <p>&#x25BC;</p></a>
+				<a href="aaa">Events  <p>&#x25BC;</p></a>
 					<ul class="li-child">
-						<li><a href="b">asd</a></li>
-						<li><a href="c">wow</a></li>
+						<li><a href="b"><p>&#8227;</p>  Exhibition</a></li>
+						<li><a href="c"><p>&#8227;</p>  Presentation</a></li>
 					</ul>
 			</li>
 			
 			<li class="li-tab">
 				<a href="aaa">Gallery</a>
 			</li>		
+			
+			<li class="li-tab">
+				<a href="aaa">Contact</a>
+			</li>	
 			
 			<li class="li-search" style="width:18%">
 				<div id="sb-search" class="sb-search">
@@ -50,9 +58,30 @@
 	</nav>
 </div>
 
+<section class="fixed-bg parallax bg-1">
+	<div class="logo">
+		<img src="./img/logo.	png"></img>
+	</div>
+	<a href="https://www.google.com/"><h1>WATCH OUR TRAILER</h1></a>
+</section>	
+
 <div class="template">
-	<div class="coloumn-right">poib</div>
-	<div class="coloumn-middle">poia</div>
+	<div class="col-right">
+		<div class="col-right-child">
+		<h1>Latest News</h1>
+		<hr width = "90%" style="padding-left : 10px; background:#F87431; border : 0; border-radius : 5px; height:4px">	
+			<p>
+			Lorem ipsum dolor sit amet<br>
+			a<br>
+			a<br>
+			</p>
+		</div>
+	</div>
+	
+	<div class="col-middle">
+	</div>
+</div>
+
 </div>
 
 <div class="footer">
@@ -112,17 +141,16 @@
 	</div>
 	<hr color="white" style="border : 0;height:1px">
 	
-	<h1><img src="./img/logo_amdg.png" height="48px" width="48px"></img><br><br>
-		&#169; Made by : Antonio Setya, Henry Kosim, Kevin Pratama</h1>
+	<h2><img src="./img/logo_amdg.png" height="48px" width="48px"></img><br><br>
+		&#169; Made by : Antonio Setya, Henry Kosim, Kevin Pratama</h2>
 		
-</div>
-</div>
-
+	</div>
 </div>
 
 <!--JAVASCRIPT-->
 <script src="js/classie.js"></script>
 <script src="js/uisearch.js"></script>
+<script src="js/offset.js"></script>
 <script>
 	new UISearch( document.getElementById( 'sb-search' ) );
 </script>

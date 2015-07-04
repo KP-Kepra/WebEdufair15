@@ -5,54 +5,95 @@ html, body {
 	background-color : #99CCFF;
 }
 h1{
+	font-size : 40px;
+	padding : 10 0 0 10;
+	margin-bottom : 0px;
+}
+h2{
 	color : white;
 	font-weight : normal;
 	font-size : 12px;
 	margin : 0 auto 0 auto;
 	padding : 10 0 20 0;
 	text-align: center;
-	
 }
-.template {
-	width : 1100px;
-	height : 100%;
-	margin : 70px auto 20px auto;
-	border-style : solid;
-	border-width : 1px;
+
+.wrap {
+	width : 100%px;
+	margin : auto auto auto auto;
 }
 
 /* =====================================================
-							COLUMN CONTENT
+									SECTIONS
 ======================================================*/
-.coloumn-middle{
-	float : right;
-	width	: 780px;
-	height : 97%;
-	margin : 8px;
-	margin-right : 0px;
-	border-style	: solid;
-	border-width : 0 2px 0 0;
+section.fixed-bg{
+	height : 550px;
+	width : 100%;
+	padding-top : 100px;
+	background-size : cover;
+	background-position : 0 0;
+	margin-bottom:0px;
+	margin-top : 50px;
+}
+	.fixed-bg h1{
+		border-radius : 5px;
+		background-opacity : 50%;
+		height : auto;
+		width : 450px;
+		padding : 8px;
+		margin : 10 auto 0 auto;
+		background-color : rgba(0,0,0,0.5);
+		transition : background-color .2s ease;
+		color : white;
+	}
+	.fixed-bg a{
+		text-decoration : none;
+	}
+	.fixed-bg a:hover h1{
+		background-color : rgba(0,0,0,0.7);
+	}
+	.fixed-bg.bg-1{
+		background-image : url("./img/bg.jpg");
+	}
+	.fixed-bg.bg-2{
+		background-image : url("./img/bg2.jpg");
+	}
+	
+.scroll-bg{
+	margin-bottom : 0px;
+	margin-top : 0px;
+	height : auto;
+	padding-top : 0px;
+	padding-bottom : 0px;
+	background-color : rgba(255,255,115,0.5);
 }
 
-.coloumn-right{
-	float : right;
-	align : center;
-	width	: 280px;
-	height : 97%;
-	margin : 8px;
-	margin-left : 0px;
-	border-style	: solid;
-	border-width	: 0 0 0 2px;
-	padding-left : 12px;
-}
 /* =====================================================
-							NAVIGATION BAR
+									CONTENT
+======================================================*/
+.logo img{
+	margin:auto;
+	display : block;
+	width : 600px;
+	height : 350px;
+}
+
+.intro{
+	margin:auto;
+	height : 100px;
+	width : 700px;
+	display : block;
+	background-color : #FF8000;
+	margin-bottom : 120px;
+}
+
+/* =====================================================
+							NAVIGATION BAR									 
 ======================================================*/
 .nav-container{
 	top : 0;
 	left : 0;
 	position : fixed;
-	align : center;
 	margin-left : auto;
 	margin-right : auto;
 	width : 100%;
@@ -64,15 +105,15 @@ h1{
 	align : center;
 	z-index	: 9999;
 	position : relative;
-	min-width : 1050px;
+	min-width : 1200px;
 	margin-left : auto;
 	margin-right : auto;
-	max-width : 1350px;
+	max-width : 1200px;
 	height : 50px;
 }
 	.nav-bar ul{
-		margin-left : 60px;
 		margin-top : 0px;
+		padding-left : 0px;
 		font-size : 16px;
 	}
 	.nav-bar li{
@@ -96,6 +137,7 @@ h1{
 	.li-search{
 		float : right;
 		width : auto;
+		right : 6opx;
 	}
 	.nav-bar img {
 		height : 100%;
@@ -106,7 +148,6 @@ h1{
 .li-tab .li-child { /*Buat Drop-Down*/
 	position: absolute;
 	top: 50px;
-	margin-left : -40px;
 	visibility: hidden;
 	width : 100px;
 	opacity : 0;
@@ -118,13 +159,12 @@ h1{
 	.li-tab:hover ul.li-child{
 		visibility : visible;
 		opacity : 1;
-		margin-left : -40px;
 		transition-delay:0s
 	}
 	
 .nav-bar .li-child li{ /*Buat anak-anaknya*/
 	height : 30px;
-	padding : 0 0 0 0;
+	padding : 0 0 5 0;
 	display : inline-block;
 	width : 180px;
 	font-size : 12px;
@@ -136,6 +176,24 @@ h1{
 }
 	.li-tab ul.li-child li:hover {
 		background-color : #005f5f;
+	}
+	.li-child li p{
+		margin-left : -15px;
+		line-height : 30px;
+		height : 30px;
+		font-size : 20px;
+		visibility : hidden;
+		opacity : 0;
+		-webkit-transition: opacity .2s linear;
+		-moz-transition: opacity .2s linear;
+		-o-transition: opacity .2s linear;
+		transition: margin-left .2s, visibility 0s linear 0.2s, opacity .2s linear;
+	}
+	.li-child li:hover p{
+		visibility : visible;
+		margin-left : -5px;
+		opacity : 1;
+		transition-delay:0s
 	}
 	.li-child li a{
 		display : block;
@@ -169,7 +227,7 @@ h1{
 }
 
 /* =====================================================
-								SEARCH BAR
+								SEARCH BAR										 
 ======================================================*/
 .sb-search {
 	position: relative;
@@ -187,7 +245,7 @@ h1{
 .sb-search-input {
 	position: absolute;
 	border-radius: 20px;
-	right: 100px;
+	right: 10px;
 	border: none;
 	outline: none;
 	background: #fff;
@@ -204,19 +262,8 @@ h1{
 	color: #2c3e50;
 }
 
-.sb-search-input::-webkit-input-placeholder {
-	color: #5C997A;
-}
-
-.sb-search-input:-moz-placeholder {
-	color: #5C997A;
-}
-
-.sb-search-input::-moz-placeholder {
-	color: #5C997A;
-}
-
-.sb-search-input:-ms-input-placeholder {
+.sb-search-input::-webkit-input-placeholder, .sb-search-input:-moz-placeholder,
+.sb-search-input::-moz-placeholder, .sb-search-input:-ms-input-placeholder{
 	color: #5C997A;
 }
 
@@ -227,7 +274,7 @@ h1{
 	display: block;
 	border-radius: 15px;
 	position: absolute;
-	right: 100px;
+	right: 10px;
 	padding: 0;
 	margin: 0;
 	line-height: 30px;
@@ -283,21 +330,71 @@ h1{
 }
 
 /* =====================================================
-							FOOTER & CONTACT
+							COLUMN CONTENT									 
+======================================================*/
+.template {
+	width : 1100px;
+	height : 90%;
+	margin : 50px auto 20px auto;
+	background-color : yellow;
+}
+
+.col-middle{
+	width	: 760px;
+	height : 100%;
+	background : white;
+	margin : 0px;
+	border : 0px;
+	padding : 0px;
+}
+	.col-mid-top{
+		text-align : center;
+		width : 100%;
+		height : 400px;
+		background : red;
+	}
+
+.col-right{
+	float : right;
+	width	: 330px;
+	padding : 0;
+	margin : 0;
+	height : 100%;
+	background : blue;
+	border-left : 1px thick black;
+}
+	.col-right-child{
+		width : 300px;
+		height : auto;
+		background : cyan;
+		margin : auto;
+	}
+	.col-right-child p {
+		padding : 0 10 10 10;
+	}
+
+/* =====================================================
+							FOOTER & CONTACT								 
 ======================================================*/
 .footer {
+	bottom : 0;
+	left : 0;
+	position : relative;
+	margin-left : auto;
+	margin-right : auto;
 	width : 100%;
 	height : auto;
-	position : relative;
-	bottom : 0px;
 	background-color : #00a087;
 }
 	.foot-temp{
-		width : 1200px;
-		align : center;
-		top : 0;
+		z-index	: 9999;
+		position : relative;
+		min-width : 1200px;
 		margin-left : auto;
 		margin-right : auto;
+		width : 1200px;
+		height : auto;
+		background-color : #00a087;
 	}
 	.foot-tab{
 		display : inline-block;
@@ -341,4 +438,5 @@ h1{
    right : 0px;
    bottom : 0px;
    z-index : 9999;
+}
 }
