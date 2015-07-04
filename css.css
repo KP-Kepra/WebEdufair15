@@ -38,15 +38,19 @@ section.fixed-bg{
 	.fixed-bg h1{
 		border-radius : 5px;
 		background-opacity : 50%;
-		height : auto;
-		width : 450px;
-		padding : 8px;
-		margin : 10 auto 0 auto;
+		padding : 8 8 8 8;
+		margin : 10 auto;
+		text-align : center;
 		background-color : rgba(0,0,0,0.5);
 		transition : background-color .2s ease;
 		color : white;
 	}
 	.fixed-bg a{
+		height : auto;
+		width : 480px;
+		padding : 0;
+		display : block;
+		margin : auto;
 		text-decoration : none;
 	}
 	.fixed-bg a:hover h1{
