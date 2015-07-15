@@ -1,6 +1,5 @@
 //Main Page BG Offset
-(function(){
-
+(function (){
   var parallax = document.querySelectorAll(".parallax"),
       speed = 0.5;
 
@@ -11,7 +10,6 @@
           elBackgrounPos = "50%" + (windowYOffset * speed) + "px";
 
       el.style.backgroundPosition = elBackgrounPos;
-
     });
   };
 
