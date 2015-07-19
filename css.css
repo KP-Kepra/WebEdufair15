@@ -520,11 +520,25 @@ section.fixed-bg{
 	background : blue;
 	border-left : 1px thick black;
 }
+	.col-right h1{
+		padding : 0 0 0 20;
+	}
+	.col-right hr {
+		 width : 92%; 
+		 padding-left : 10px; 
+		 background : #F87431; 
+		 border : 0; 
+		 border-radius : 5px; 
+		 height : 4px
+	}
 	.col-right-child{
 		width : 300px;
-		height : auto;
-		background : cyan;
+		height : 209px;
+		background : purple;
 		margin : auto;
+		border-bottom : 3px solid #FAFAD2;
+		border-bottom-left-radius : 5px;
+		border-bottom-right-radius : 5px;
 	}
 	.col-right-child p {
 		padding : 0 10 10 10;
