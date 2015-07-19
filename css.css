@@ -24,8 +24,10 @@ h2{
 }
 
 /* =====================================================
-									SECTIONS
+									PARALLAX
 ======================================================*/
+	/* Sections
+	--------------------------------------------- */
 section.fixed-bg{
 	height : 550px;
 	min-width : 1200px;
@@ -69,7 +71,6 @@ section.fixed-bg{
 	.fixed-bg.bg-4{
 		background-image : url(".img/bg4.jpg");
 	}
-	
 .scroll-bg{
 	margin-bottom : 0px;
 	margin-top : 0px;
@@ -79,125 +80,126 @@ section.fixed-bg{
 	background-color : rgba(255,255,115,0.5);
 }
 
-  .prlx {
-    height: 500px; /* fallback for older browsers */
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-perspective: 300px;
-    perspective: 300px;
-    -webkit-perspective-origin-x: 100%;
-    perspective-origin-x: 100%;
-  }
+	/* Parallax - Classes
+	--------------------------------------------- */
+.prlx {
+	height: 500px; /* fallback for older browsers */
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-perspective: 300px;
+	perspective: 300px;
+	-webkit-perspective-origin-x: 100%;
+	perspective-origin-x: 100%;
+}
 
-  .prlx_group {
-    position: relative;
-    height: 500px; /* fallback for older browsers */
-    height: 100vh;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  }
+.prlx_group {
+	position: relative;
+	height: 500px; /* fallback for older browsers */
+	height: 100vh;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
 .prlx_layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    -webkit-transform-origin-x: 100.6%;
-    transform-origin-x: 120%;
-  }
-
-  .prlx_layer-fore {
-    -webkit-transform: translateZ(90px) scale(.7);
-    transform: translateZ(90px) scale(.7);
-    z-index: 1;
-  }
-
-  .prlx_layer-base {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    z-index: 4;
-  }
-
-  .prlx_layer-back {
-    -webkit-transform: translateZ(-300px) scale(2);
-    transform: translateZ(-300px) scale(2);
-    z-index: 3;
-  }
-	.back-bg1 {
-		height : 100%;
-		background-image : url("./img/bg.jpg");
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	-webkit-transform-origin-x: 100.6%;
+	transform-origin-x: 120%;
+}
+	.prlx_layer-deepfore {
+		-webkit-transform: translateZ(160px) scale(.45);
+		transform: translateZ(160px) scale(.45);
+		z-index: 10;
+		margin-right : 15;
+	}
+	.prlx_layer-fore {
+		-webkit-transform: translateZ(90px) scale(.7);
+		transform: translateZ(90px) scale(.7);
+		z-index: 1;
+		}
+	.prlx_layer-base {
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0);
+		z-index: 4;
+		}
+	.prlx_layer-back {
+		-webkit-transform: translateZ(-300px) scale(2);
+		transform: translateZ(-300px) scale(2);
+		z-index: 3;
+	}
+		.back-bg1 {
+			height : 100%;
+			background-image : url("./img/bg.jpg");
+		}
+	.prlx_layer-deep {
+		-webkit-transform: translateZ(-600px) scale(3);
+		transform: translateZ(-600px) scale(3);
+		z-index: 2;
+	}
+.title {
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+	/* Parallax - ID Groups
+	--------------------------------------------- */
+#group1 {
+	z-index: 5; /* slide over group 2 */
+}
+	#group1 .prlx_layer-base {
 	}
 
-  .prlx_layer-deep {
-    -webkit-transform: translateZ(-600px) scale(3);
-    transform: translateZ(-600px) scale(3);
-    z-index: 2;
-  }
-  .prlx_group {
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
-  }
-  .title {
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
+#group2 {
+	z-index: 3; /* slide under groups 1 and 3 */
+}
+	#group2 .prlx_layer-back {
+		background-image : url("./img/bg.jpg");
+		background-size : cover;
+	}
 
-  /* style the groups
-  --------------------------------------------- */
+#group3 {
+	z-index: 4; /* slide over group 2 and 4 */
+}
+	#group3 .prlx_layer-base {
+		background: rgb(153,216,101);
+	}
 
-  #group1 {
-    z-index: 5; /* slide over group 2 */
-  }
-  #group1 .prlx_layer-base {
-  }
+#group4 {
+	z-index: 1; /* slide under group 3 and 5 */
+	}
+	#group4 .prlx_layer-deep {
+		background: rgb(184,223,101);
+	}
 
-  #group2 {
-    z-index: 3; /* slide under groups 1 and 3 */
-  }
-  #group2 .prlx_layer-back {
-    background-image : url("./img/bg.jpg");
-	background-size : cover;
-  }
+#group5 {
+	z-index: 3; /* slide over group 4 and 6 */
+}
+	#group5 .prlx_layer-base {
+		background: rgb(214,229,100);
+	}
 
-  #group3 {
-    z-index: 4; /* slide over group 2 and 4 */
-  }
-  #group3 .prlx_layer-base {
-    background: rgb(153,216,101);
-  }
+#group6 {
+	z-index: 1; /* slide under group 5 and 7 */
+}
+	#group6 .prlx_layer-back {
+		background: rgb(245,235,100);
+		height : 100vh;
+	}
 
-  #group4 {
-    z-index: 2; /* slide under group 3 and 5 */
-  }
-  #group4 .prlx_layer-deep {
-    background: rgb(184,223,101);
-  }
-
-  #group5 {
-    z-index: 3; /* slide over group 4 and 6 */
-  }
-  #group5 .prlx_layer-base {
-    background: rgb(214,229,100);
-  }
-
-  #group6 {
-    z-index: 2; /* slide under group 5 and 7 */
-  }
-  #group6 .prlx_layer-back {
-    background: rgb(245,235,100);
-  }
-
-  #group7 {
-    z-index: 3; /* slide over group 7 */
-  }
-  #group7 .prlx_layer-base {
-    background: rgb(255,241,100);
-  }
+#group7 {
+	z-index: 3; /* slide over group 7 */
+}
+	#group7 .prlx_layer-base {
+		background: rgb(255,241,100);
+	}
 /* =====================================================
 									CONTENT
 ======================================================*/
@@ -489,10 +491,13 @@ section.fixed-bg{
 	margin-right : auto;
 }
 .col-middle{
+	display : inline-block;
+	vertical-align : middle;
 	width	: 760px;
-	height : 100%;
+	height :500px;
+	left : 0;
 	background : red;
-	margin :0px;
+	margin : 0 6 0 0;
 	border : 0px;
 	padding : 0 0 25 0;
 }
@@ -511,11 +516,12 @@ section.fixed-bg{
 	}
 
 .col-right{
-	float : right;
+	right : 0;
+	vertical-align : top;
+	display : inline-block;
 	width	: 330px;
 	padding : 0;
-	margin : 0;
-	position : static;
+	margin : 0 0 20 0;
 	height : auto;
 	background : blue;
 	border-left : 1px thick black;
@@ -529,13 +535,13 @@ section.fixed-bg{
 		 background : #F87431; 
 		 border : 0; 
 		 border-radius : 5px; 
-		 height : 4px
+		 height : 4px;
 	}
 	.col-right-child{
 		width : 300px;
 		height : 209px;
 		background : purple;
-		margin : auto;
+		margin :auto;
 		border-bottom : 3px solid #FAFAD2;
 		border-bottom-left-radius : 5px;
 		border-bottom-right-radius : 5px;
