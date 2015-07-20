@@ -71,6 +71,9 @@ section.fixed-bg{
 	.fixed-bg.bg-4{
 		background-image : url(".img/bg4.jpg");
 	}
+	.fixed-bg #trailer {
+		visibility : hidden;
+	}
 .scroll-bg{
 	margin-bottom : 0px;
 	margin-top : 0px;
@@ -549,7 +552,7 @@ section.fixed-bg{
 	.col-right-child p {
 		padding : 0 10 10 10;
 	}
-	
+
 /*Gallery*/
 .gal-slides{
 	top : 50px;
