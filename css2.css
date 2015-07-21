@@ -106,33 +106,3 @@ iframe{
 .enex a:hover, a:active {
 	background-color	:#FFC7F8;
 }
-
-/* =====================================================
-									FOOTER
-======================================================*/
-.footer {
-	width:100%;
-	height:auto;
-	position : relative;
-	bottom : 0px;
-	background-color : #00a087;
-}
-	.foot-temp{
-		width : 1200px;
-		align : center;
-		top : 0;
-		margin-left : auto;
-		margin-right : auto;
-		background : black;
-	}
-	.foot-tab{
-		display : inline-block;
-		vertical-align : top;
-		margin-left : 18px;
-		margin-right : 0px;
-		margin-top : 0;
-		z-index	: 9999;
-		width		: 570px;
-		min-height	: 60px;
-		background : white;
-	}

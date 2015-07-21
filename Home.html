@@ -63,9 +63,9 @@
 		<img src="./img/logo.png"></img>
 	</div>
 	<a class="introVid" href="#video"><h1>WATCH OUR TRAILER</h1></a>
-	<div id="trailer">
-	<iframe src="https://www.youtube.com/embed/KP23f9j8qPE?wmode=transparent" frameborder="0" allowfullscreen wmode="Opaque">
-	</iframe>
+	<div id="trailer" style="width : 700px; height : 425px; margin : auto; margin-top : 100px">
+		<iframe src="https://www.youtube.com/watch?v=ckQZx8pjOTk?wmode=transparent" frameborder="0" allowfullscreen wmode="Opaque">
+		</iframe>
 	</div>
 </section>	
 
@@ -167,7 +167,7 @@
 </script>
 <script> /*Embedded Video Trailer */
 	$('.introVid').click(function(){
-  autoPlayVideo('KP23f9j8qPE','700','425');
+  autoPlayVideo('ckQZx8pjOTk','700','425');
 	});
 function autoPlayVideo(vcode, width, height){
 	var p = $(".fixed-bg .logo");
@@ -175,9 +175,8 @@ function autoPlayVideo(vcode, width, height){
 	$(".fixed-bg .introVid").css({"visibility" : "hidden"});
 	$(".fixed-bg .logo").css({"visibility" : "hidden"});
 	$(".fixed-bg #trailer").html('<iframe width="'+width+'" height="'+height+'" src="https://www.youtube.com/embed/'+vcode+'?autoplay=1&loop=1&rel=0&wmode=transparent&controls=0&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen wmode="Opaque"></iframe>');
-	$(".fixed-bg #trailer").offset({top : offset.top, left : offset.left});
-	$(".fixed-bg #trailer").css({"visibility" : "visible"});
-  
+	$(".fixed-bg #trailer").css({"visibility" : "visible"});  
+	$(".fixed-bg #trailer").offset({top : offset.top});
 }
 </script>
 <!--
