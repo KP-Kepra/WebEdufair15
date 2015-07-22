@@ -235,7 +235,8 @@ section.fixed-bg{
 	width : 100%;
 	min-width : 20%;
 	height : 50px;
-	background-color : #00a087;
+	background: linear-gradient(#00a087, #009176);
+	box-shadow : 0px 0px 12px 3px #111111;
 }
 .nav-bar{
 	align : center;
@@ -257,6 +258,7 @@ section.fixed-bg{
 		height :50px;
 		display : inline-block;
 		vertical-align : middle;
+		padding : 0px;
 		line-height : 45px;
 		text-align : center;
 		-webkit-touch-callout: none;
@@ -265,15 +267,19 @@ section.fixed-bg{
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		transition : background-color .2s ease;
+		overflow : hidden;
+		transition : background-color .2s ease, border-left .2s ease, box-sizing .2s ease, border-right .2s ease;
 	}
 	.li-tab:hover{
 		background-color : #005f5f;
+		border-left : 1.7px solid #003737;
+		border-right : 1.7px solid #005f5f;
+		box-sizing : border-box;
 	}
 	.li-search{
 		float : right;
-		width : auto;
-		right : 6opx;
+		width : 60px;
+		right : 30px;
 	}
 	.nav-bar img {
 		height : 100%;
@@ -287,14 +293,16 @@ section.fixed-bg{
 	visibility: hidden;
 	width : 100px;
 	opacity : 0;
+	margin-left : -5px;
 	-webkit-transition: opacity .2s linear;
 	-moz-transition: opacity .2s linear;
 	-o-transition: opacity .2s linear;
-	transition: visibility 0s linear 0.2s, opacity .2s linear;
+	transition: margin-left 0.2s linear, visibility 0s linear 0.2s, opacity .2s linear, margin-left .2s linear;
 }
 	.li-tab:hover ul.li-child{
 		visibility : visible;
 		opacity : 1;
+		margin-left : -1px;
 		transition-delay:0s
 	}
 	
@@ -308,7 +316,7 @@ section.fixed-bg{
 	color : white;
 	font-type : Helvetica;
 	background: #333333;
-	transition : background .2s ease;
+	transition : background .2s ease-in-out;
 }
 	.li-tab ul.li-child li:hover {
 		background-color : #005f5f;
@@ -344,13 +352,14 @@ section.fixed-bg{
 	color : white;
 	text-decoration : none;
 	font-family : icomoon;
+	transition : all .2s ease;
 }
 .li-tab p{
 	color : #000000;
 	font-size : 15px;
 	display : inline;
 	line-height : 15px;
-	transition : color .2s ease;
+	transition : all .2s ease;
 }
 .li-tab:hover p{
 	top : 10px;
@@ -452,7 +461,7 @@ section.fixed-bg{
 /* Open state */
 .sb-search.sb-search-open,
 .no-js .sb-search {
-	width: 100%;
+	width: 90%;
 }
 
 .sb-search.sb-search-open .sb-icon-search,
@@ -486,7 +495,7 @@ section.fixed-bg{
 .col-history {
 	border-radius : 50px;
 	background-color : rgba(255,255,255,0.5);
-	margin-top : 100px;
+	margin-top : 70px;
 	height : 400px;
 	padding : 50px;
 	width : 900px;
@@ -670,7 +679,33 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 		margin : 50px 0px 0px 50px;
 		padding : 0px;
 	}
-	
+.pagination {
+	background-color : white;
+	margin : auto auto 50px auto;
+	padding : 0px;
+	width : 310px;
+	border-radius : 5px;
+	border : 1px solid black;
+}
+	.pagination li {
+		width : 50px;
+		height: 50px;
+		text-align : center;
+		line-height : 50px;
+		border-left : 1px solid green;
+		padding-left : 7px;
+		margin : 0px;
+		display : inline-block;
+		list-style-type : none;
+	}
+	.pagination a {
+		display : block;
+		text-decoration : none;
+		color : rgba(0,70,140,0.5);
+	}
+	.pagination a:hover {
+		color : rgba(0,70,140,1);
+	}
 /* =====================================================
 							FOOTER & CONTACT								 
 ======================================================*/
@@ -682,7 +717,8 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	margin-right : auto;
 	width : 100%;
 	height : auto;
-	background-color : #00a087;
+	background: linear-gradient(#00a087, #009176);
+	box-shadow : 0px 0px 12px 1px #222222;
 }
 	.foot-temp{
 		z-index	: 9999;
@@ -692,7 +728,7 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 		margin-right : auto;
 		width : 1200px;
 		height : auto;
-		background-color : #00a087;
+		background: linear-gradient(#00a087, #009176);
 	}
 	.foot-tab{
 		display : inline-block;
