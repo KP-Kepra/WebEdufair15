@@ -60,94 +60,23 @@
 
 <div class="template" style="margin-top : 100px;">
 <div class="body">	
-	<div class="col-middle" style="width : 100%; height : auto; padding-bottom : 100px">
-	<h1> News</h1>
-	<hr width ="40%" align="left" style="background:#000000; border:0; height : 5px">
-		<ul class="gal-slides">
-		
-		    <input type="radio" name="radio-btn" id="img-1" checked />
-			<li class="gal-cont">
-				<div class="gal-slide">
-					<img src="./img/logo_tw.png">
-				</div>
-			
-				<div class="gal-nav">
-					<label for="img-5" class="prev">&#x2039;</label>
-					<label for="img-2" class="next">&#x203a;</label>
-				</div>
-			</li>
-			
-		    <input type="radio" name="radio-btn" id="img-2"/>
-			<li class="gal-cont">
-				<div class="gal-slide">
-					<img src="./img/bg.jpg">
-				</div>
-			
-				<div class="gal-nav">
-					<label for="img-1" class="prev">&#x2039;</label>
-					<label for="img-3" class="next">&#x203a;</label>
-				</div>
-			</li>
-			
-		    <input type="radio" name="radio-btn" id="img-3"/>
-			<li class="gal-cont">
-				<div class="gal-slide">
-					<img src="./img/bg2.jpg">
-				</div>
-			
-				<div class="gal-nav">
-					<label for="img-2" class="prev">&#x2039;</label>
-					<label for="img-4" class="next">&#x203a;</label>
-				</div>
-			</li>
-			
-			<input type="radio" name="radio-btn" id="img-4"/>
-			<li class="gal-cont">
-				<div class="gal-slide">
-					<img src="./img/logo.png">
-				</div>
-			
-				<div class="gal-nav">
-					<label for="img-3" class="prev">&#x2039;</label>
-					<label for="img-5" class="next">&#x203a;</label>
-				</div>
-			</li>
-			
-			<input type="radio" name="radio-btn" id="img-5"/>
-			<li class="gal-cont">
-				<div class="gal-slide">
-					<img src="./img/logo_cc.png">
-				</div>
-			
-				<div class="gal-nav">
-					<label for="img-4" class="prev">&#x2039;</label>
-					<label for="img-1" class="next">&#x203a;</label>
-				</div>
-			</li>
-			
-			<li class="gal-dots">
-				<label for="img-1" class="gal-dot" id="img-dot-1"></label>
-				<label for="img-2" class="gal-dot" id="img-dot-2"></label>
-				<label for="img-3" class="gal-dot" id="img-dot-3"></label>
-				<label for="img-4" class="gal-dot" id="img-dot-4"></label>
-				<label for="img-5" class="gal-dot" id="img-dot-5"></label>
-			</li>
-		</ul>
+	<div class="col-right" style="left : 0">
+		<h1>Latest News</h1>
+	<hr>
+	<button id="newsbutton1">News 1</button>
+	<button id="newsbutton2">News 2</button>
 	</div>
-	
-	<div class="gal-content">
-		<img src="1.jpg">
-		<img src="2.jpg">
-		<img src="3.jpg">
-		<img src="4.jpg">
 		
-		<img src="5.jpg">
-		<img src="6.jpg">
-		<img src="7.jpg">
-		<img src="8.jpg">
-		
-		<img src="9.jpg">
+	<div class="col-middle" id="content" style="right : 0; margin : 0 0 0 6">
+
 	</div>
+	<div id="news1">
+		News 1
+	</div>
+	<div id="news2">
+		News 2
+	</div>
+
 </div></div>
 
 <div class="footer">
@@ -224,6 +153,15 @@
     $(window).scroll(function() {
     $('.nav-bar').css('left', -$(this).scrollLeft() + "px");
     });
+</script>
+<script>
+	$('#newsbutton1').click(function(){
+		$('#content').load('news.html #news1');
+	});
+
+	$('#newsbutton2').click(function(){
+		$('#content').load('news.html #news2');
+	});
 </script>
 <!--
 <div class="contact-bottom"><hr color="black">Contact us : 14045, Nisiuska College Aceh, Jawa Utara. Jalan mak lo</div>

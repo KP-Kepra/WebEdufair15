@@ -549,6 +549,9 @@ section.fixed-bg{
 		 border-radius : 5px; 
 		 height : 4px;
 	}
+	.col-right a{
+		display : block;
+	}
 	.col-right-child{
 		width : 300px;
 		height : 209px;
