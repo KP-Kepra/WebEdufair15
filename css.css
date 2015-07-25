@@ -212,28 +212,58 @@ section.fixed-bg{
 	height : 350px;
 }
 
-.homebutton{
-	display : block;
+
+.homebutton {
 	height : 120px;
 	width : 120px;
-	border-radius : 64px;
-	background-color : white;
-	position : absolute;
-	transition : all .4s ease;
+	border-radius : 130px;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position: absolute;
 	text-align : center;
+	overflow: hidden;
+	background: #e1e1e1;
+	-webkit-transition-property: color;
+	transition-property: color;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	transition : all .4s ease;
 }
-	.homebutton p{
-		margin-top : 40px;
-		margin-bottom : 0px;
-		transition : all .4s ease;
-	}
-	.homebutton:hover{
-		height : 150px;
-		width : 150px;
-		border-radius : 150px;
-	}
-	.homebutton:hover p{
+.homebutton:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #2098d1;
+	border-radius: 100%;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+.homebutton:hover, .homebutton:focus, .homebutton:active {
+	color: white;
+  	height : 150px;
+	width : 150px;
+}
+.homebutton:hover:before, .homebutton:focus:before, .homebutton:active:before {
+	-webkit-transform: scale(2);
+	transform: scale(2);
+}
+	.homebutton p {
 		margin-top : 20px;
+		transition : margin-top .4s ease;
 	}
 #but1 /*What is Edufair*/ {
 	margin-top : -420px;
@@ -243,6 +273,8 @@ section.fixed-bg{
 		margin-top : -435px;
 		margin-left : 235px;
 	}
+	#but1 p { margin-top : 40px}
+	#but1:hover p { margin-top : 20px}
 #but2{
 	margin-top : -270px;
 	margin-left : 140px;
