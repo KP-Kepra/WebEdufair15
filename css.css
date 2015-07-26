@@ -72,6 +72,10 @@ section.fixed-bg{
 	}
 	.fixed-bg #trailer {
 		visibility : hidden;
+		width : 700px; 
+		height : 425px; 
+		margin : auto; 
+		margin-top : 100px;
 	}
 .scroll-bg{
 	margin-bottom : 0px;
@@ -235,6 +239,17 @@ section.fixed-bg{
 	.homebutton:hover p{
 		margin-top : 20px;
 	}
+	.homebutton a {
+	width : 80%;
+	color : black;
+	}
+	.homebutton hr{
+	width : 80%; 
+	border : 0px; 
+	background : #000000; 
+	height : 1px;
+	}
+
 #but1 /*What is Edufair*/ {
 	margin-top : -420px;
 	margin-left : 250px;
@@ -831,6 +846,14 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 			font-size : 25px;
 			display : inline;
 			line-height : 15px;
+		}
+		.foot-tab hr {
+		 width : 100%;
+		 text-align : left;
+		 background : #F87431; 
+		 border : 0; 
+		 border-radius : 5px; 
+		 height : 2px;
 		}
 		.foot-tab .socmed img{
 			margin-left : 10px;
