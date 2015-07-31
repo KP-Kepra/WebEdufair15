@@ -310,8 +310,10 @@ section.fixed-bg{
 		transition : margin-top .4s ease;
 	}
 	.homebutton a {
-	width : 80%;
-	color : black;
+	width : inherit;
+	height : inherit;
+	color : inherit;
+	font-family : inherit;
 	}
 	.homebutton hr{
 	width : 80%; 
