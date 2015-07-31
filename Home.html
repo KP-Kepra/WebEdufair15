@@ -4,17 +4,19 @@
 	<link href="css.css" rel="stylesheet" type="text/css">
 	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
 	<script src="js.js"></script>
+	<title>Official Website of Canisius Education Fair 2015</title>
 </head>
 
 <body>
 
+<div id="trailerfade"></div>
+<div class="videotrailer"></div>
 <section class="fixed-bg parallax bg-1">
 	<div class="template" style="margin-top : 0">
 		<div class="logo">
 			<img src="./img/logo.png"></img>
 		</div>
 		<div class="homebutton" id="but1">
-
 			<p>What is<br>Edufair?</p>
 			<div id="but1p"><hr style="width : 80%; border : 0px; background : #FFFFFF; height : 2px">Learn more about Canisius Education Fair 2015</div>
 		</div>
@@ -24,15 +26,15 @@
 			<div id="but2p"><hr style="width : 80%; border : 0px; background : #FFFFFF; height : 2px">The early days of Edufair</div>
 		</div>
 		
-		<div class="homebutton" id="but3">
+		<div class="homebutton" id="but3"><a href="gallery.html">
 			<p>Gallery</p>
 			<div id="but3p"><hr style="width : 80%; border : 0px; background : #FFFFFF; height : 2px">Check out the recent activity!</div>
-		</div>
+		</div></a>
 		
-		<div class="homebutton" id="but4">
+		<div class="homebutton" id="but4"><a id="introVid" href="#">
 			<p>Trailer</p>
 			<div id="but4p"><hr style="width : 80%; border : 0px; background : #FFFFFF; height : 2px">Video Trailer<br>Edufair 2015</div>
-		</div>
+		</div></a>
 		
 		<div class="homebutton" id="but5">
 			<p>News</p>
@@ -47,11 +49,6 @@
 			<div id="butchild1">Exhibitions</div>
 			<div id="butchild2">Presentations</div>
 		</div>
-	<!--<a classs="introVid" href="#video"><h1>WATCH OUR TRAILER</h1></a>
-	<div id="trailer">
-		<iframe src="https://www.youtube.com/watch?v=ckQZx8pjOTk?wmode=transparent" frameborder="0" allowfullscreen wmode="Opaque">
-		</iframe>
-	</div>-->
 	</div>
 </section>
 	
@@ -131,18 +128,28 @@
     });
 </script>
 <script> /*Embedded Video Trailer */
-	$('.introVid').click(function(){
+	$('#introVid').click(function(){
   autoPlayVideo('ckQZx8pjOTk','700','425');
 	});
 function autoPlayVideo(vcode, width, height){
 	var p = $(".fixed-bg .logo");
 	var offset = p.offset();
-	$(".fixed-bg .introVid").css({"visibility" : "hidden"});
-	$(".fixed-bg .logo").css({"visibility" : "hidden"});
-	$(".fixed-bg #trailer").html('<iframe width="'+width+'" height="'+height+'" src="https://www.youtube.com/embed/'+vcode+'?autoplay=1&loop=1&rel=0&wmode=transparent&controls=0&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen wmode="Opaque"></iframe>');
-	$(".fixed-bg #trailer").css({"visibility" : "visible"});  
-	$(".fixed-bg #trailer").offset({top : offset.top});
+	$(".videotrailer").html('<iframe width="'+width+'" height="'+height+'" src="https://www.youtube.com/embed/'+vcode+'?autoplay=1&loop=1&rel=0&wmode=transparent&controls=0&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen wmode="Opaque"></iframe><a id="closevideo" href="home.html">Close Video</a>');
+	$("#trailerfade").css({"visibility" : "visible"});
+	$('body').css({"overflow-y" : "auto"});
+	$('body').css({"overflow-x" : "hidden"});
+	$('html').css({"overflow-y" : "auto"});
+	$('html').css({"overflow-x" : "hidden"});
+	$(".videotrailer").css({"visibility" : "visible"});
+	$("#closevideo").css({"visibility" : "visible"});
+	$(".videotrailer").offset({top : offset.top});
 }
+	$('#closevideo').click(function(){
+	$(".videotrailer").html('');
+	$("#closevideo").css({"visibility" : "hidden"});
+	$("#trailerfade").css({"visibility" : "hidden"}); 
+	$(".videotrailer").css({"visibility" : "hidden"});
+});
 </script>
 <!--
 <div class="contact-bottom"><hr color="black">Contact us : 14045, Nisiuska College Aceh, Jawa Utara. Jalan mak lo</div>

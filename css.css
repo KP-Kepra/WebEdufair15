@@ -70,13 +70,7 @@ section.fixed-bg{
 	.fixed-bg.bg-4{
 		background-image : url(".img/bg4.jpg");
 	}
-	.fixed-bg #trailer {
-		visibility : hidden;
-		width : 700px; 
-		height : 425px; 
-		margin : auto; 
-		margin-top : 100px;
-	}
+
 .scroll-bg{
 	margin-bottom : 0px;
 	margin-top : 0px;
@@ -216,6 +210,52 @@ section.fixed-bg{
 	height : 350px;
 }
 
+#trailerfade {
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: rgba(0, 0, 0, 0.8);
+	background-image: none;
+	background-origin: padding-box;
+	background-size: auto;
+	bottom: 0px;
+	color: rgb(0, 0, 0);
+	display: block;
+	height: 100%;
+	left: 0px;
+	line-height: normal;
+	max-height: 999999px;
+	opacity: 1;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	transition-delay: 0s;
+	transition-duration: 0.15s;
+	transition-property: opacity;
+	transition-timing-function: linear;
+	width: 100%;
+	word-wrap: break-word;
+	z-index: 5000;
+	visibility : hidden;
+	body, html {
+		overflow-y : auto;
+	}
+}
+.videotrailer {
+	visibility : hidden;
+	position : fixed;
+	z-index : 5100;
+	left : 300px;
+}
+#closevideo {
+	z-index : 5100;
+	visibility : hidden;
+	position : fixed;
+}
+#closevideo:hover{
+	cursor : pointer;
+}
 
 .homebutton {
 	height : 120px;
@@ -906,7 +946,7 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	box-shadow : 0px 0px 12px 1px #222222;
 }
 	.foot-temp{
-		z-index	: 9999;
+		z-index	: 1000;
 		position : relative;
 		min-width : 1200px;
 		margin-left : auto;
@@ -919,7 +959,7 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 		display : inline-block;
 		vertical-align : top;
 		margin : 20 0 20 30;
-		z-index : 9999;
+		z-index : 1000;
 		width	: 260px;
 		min-height	: 60px;
 		line-height : 20px;
