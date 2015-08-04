@@ -242,15 +242,15 @@ section.fixed-bg{
 	word-wrap: break-word;
 	z-index: 5000;
 	visibility : hidden;
-	body, html {
-		overflow-y : auto;
-	}
 }
 .videotrailer {
 	visibility : hidden;
 	position : fixed;
 	z-index : 5100;
-	left : 300px;
+}
+.videotrailer iframe {
+	margin : auto;
+	display : inline;
 }
 #closevideo {
 	z-index : 5100;
