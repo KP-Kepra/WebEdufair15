@@ -1,10 +1,11 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<link rel="shortcut icon" href="img/bg.jpg">
+	<link rel="icon" href="img/logoheader.png">
 	<link href="css.css" rel="stylesheet" type="text/css">
 	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
 	<script src="js.js"></script>
+	<title>Gallery</title>
+	<meta charset="UTF-8">
 </head>
 <body>
 <div class="wrap">
@@ -143,8 +144,8 @@ $last_page = ceil($total / $per_page);
 if(isset($_GET["page"])  && ($_GET["page"] <=$last_page) && ($_GET["page"] > 0) ){
     $page = $_GET["page"];
     $offset = ($per_page + 1)*($page - 1);      
-}else{
-    echo "Page out of range showing results for page one";
+}
+else{
     $page=1;
     $offset=0;      
 }    
@@ -152,8 +153,7 @@ $max = $offset + $per_page;
 if($max>$total){
     $max = $total;
 }
-
-echo "Processsing page : $page offset: $offset max: $max total: $total last_page: $last_page";        
+  
 	show_pagination($page, $last_page);        
     for($i = $offset; $i< $max; $i++){
         $file = $files[$i];
