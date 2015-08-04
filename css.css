@@ -34,7 +34,6 @@ section.fixed-bg{
 	width : auto;
 	margin : auto;
 	padding-top : 150px;
-	background-repeat : repeat;
 	background-position : left top;
 	margin-left : 0px;
 	margin-bottom:0px;
@@ -62,8 +61,8 @@ section.fixed-bg{
 		background-color : rgba(0,0,0,0.7);
 	}
 	.fixed-bg.bg-1{
-		background-image : url("./img/bg.jpg");
-		background-repeat : repeat-x;
+		background-image : url("./img/bghome.jpg");
+		background-repeat : repeat;
 	}
 	.fixed-bg.bg-2{
 		background-image : url("./img/bg2.jpg");
@@ -465,7 +464,7 @@ section.fixed-bg{
 	opacity : 0;
 	visibility : hidden;
 	transition : visibility .1s ease, opacity .3s ease, margin .8s ease;
-	overflow : hidden;
+	overflow : hidden;f
 }
  #but1:hover #but1p, #but2:hover #but2p, #but3:hover #but3p,
  #but4:hover #but4p, #but5:hover #but5p, #but6:hover #but6p, .butplacehold:hover #but6p {
