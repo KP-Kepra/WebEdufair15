@@ -242,15 +242,15 @@ section.fixed-bg{
 	word-wrap: break-word;
 	z-index: 5000;
 	visibility : hidden;
+	body, html {
+		overflow-y : auto;
+	}
 }
 .videotrailer {
 	visibility : hidden;
 	position : fixed;
 	z-index : 5100;
-}
-.videotrailer iframe {
-	margin : auto;
-	display : inline;
+	left : 300px;
 }
 #closevideo {
 	z-index : 5100;
@@ -299,6 +299,7 @@ section.fixed-bg{
 	left: 0;
 	right: 0;
 	bottom: 0;
+	overflow : hidden;
 	background: #eb7602;
 	border-radius: 100%;
 	-webkit-transform: scale(0);
@@ -324,16 +325,25 @@ section.fixed-bg{
 		transition : margin-top .4s ease;
 	}
 	.homebutton a {
-	width : inherit;
-	height : inherit;
-	color : inherit;
-	font-family : inherit;
+		width : inherit;
+		height : inherit;
+		border-radius : inherit;
+		color : inherit;
+		font-family : inherit;
+		display : block;
 	}
 	.homebutton hr{
-	width : 80%; 
-	border : 0px; 
-	background : #000000; 
-	height : 1px;
+		width : 80%; 
+		border : 0px; 
+		background : #000000; 
+		height : 1px;
+	}
+	.homebutton img {
+		margin-top  : -5px;
+		transition : all .5s ease;
+	}
+	.homebutton:hover img {
+		margin-top : -50px;
 	}
 .butplacehold {
 	height : 120px;
@@ -363,8 +373,8 @@ section.fixed-bg{
 		margin-top : -435px;
 		margin-left : 235px;
 	}
-	#but1 p { margin-top : 40px}
-	#but1:hover p { margin-top : 20px}
+	#but1 p { margin-top : 25px; transition : all .3s ease}
+	#but1:hover p { margin-top : 20px; opacity : 0;}
 #but2{
 	margin-top : -270px;
 	margin-left : 140px;
@@ -373,8 +383,8 @@ section.fixed-bg{
 		margin-top : -285px;
 		margin-left : 125px;
 	}
-	#but2 p { margin-top : 50px}
-	#but2:hover p { margin-top : 40px}
+	#but2 p { margin-top : 30px; transition : all .3s ease}
+	#but2:hover p { margin-top : 40px; opacity : 0;}
 #but3{
 	margin-top : -100px;
 	margin-left : 150px;
@@ -383,8 +393,8 @@ section.fixed-bg{
 		margin-top : -115px;
 		margin-left : 135px;
 	}
-	#but3 p { margin-top : 50px}
-	#but3:hover p { margin-top : 40px}
+	#but3 p { margin-top : 30px; transition : all .3s ease}
+	#but3:hover p { margin-top : 40px; opacity : 0}
 #but4{
 	margin-top : -420px;
 	margin-left : 800px;
@@ -393,11 +403,8 @@ section.fixed-bg{
 		margin-top : -435px;
 		margin-left : 785px;
 	}
-	#but4 a {
-		margin-top : 0px;
-	}
-	#but4 p { margin-top : 50px}
-	#but4:hover p { margin-top : 40px}
+	#but4 p { margin-top : 30px; transition : all .3s ease}
+	#but4:hover p { margin-top : 40px; opacity : 0}
 #but5{
 	margin-top : -270px;
 	margin-left : 910px;
@@ -406,8 +413,8 @@ section.fixed-bg{
 		margin-top : -285px;
 		margin-left : 895px;
 	}
-	#but5 p { margin-top : 50px}
-	#but5:hover p { margin-top : 40px}
+	#but5 p { margin-top : 30px; transition : all .3s ease}
+	#but5:hover p { margin-top : 40px; opacity : 0}
 #but6{
 	z-index : 2;
 	margin-top : -10px;
@@ -416,7 +423,8 @@ section.fixed-bg{
 		margin-top : -25px;
 		margin-left : -15px;
 	}
-	#but6 p { margin-top : 50px}
+	#but6 p { margin-top : 30px; transition : all .3s ease}
+	#but6:hover p { opacity : 0}
 	.butplacehold:hover #but6 p, #but6:hover p { margin-top : 40px}
 	#butchild1, #butchild2{
 		height : 25px;
@@ -433,7 +441,6 @@ section.fixed-bg{
 	#butchild2 { margin-top : 10px}
 	.butplacehold:hover #butchild1, .butplacehold:hover #butchild2{
 		visibility : visible;
-		transition-delay : .1s;
 		margin-left : 20px;
 		width : 100px;
 		margin-top : 10px;
@@ -444,7 +451,6 @@ section.fixed-bg{
 		display : block;
 		visibility : visible;
 		width : 100%;
-		transition-delay : .1s;
 	}
 	.butplacehold #butchild1:hover, .butplacehold #butchild2:hover{
 		padding-left : 180px;
@@ -453,16 +459,21 @@ section.fixed-bg{
 		}
 	#butchild2:hover, #but6:hover ~ #butchild2 { margin-top : 10px;}
  #but1p, #but2p, #but3p, #but4p, #but5p, #but6p {
-	visibility : hidden;
+	transition : margin-top .2s ease-in-out;
+	position : fixed;
+	margin-top : 60px;
 	opacity : 0;
-	transition : visibility .3s ease, opacity .3s ease, margin-top .1s ease;
-	margin-top : 10px;
+	visibility : hidden;
+	transition : visibility .1s ease, opacity .3s ease, margin .8s ease;
+	overflow : hidden;
 }
  #but1:hover #but1p, #but2:hover #but2p, #but3:hover #but3p,
  #but4:hover #but4p, #but5:hover #but5p, #but6:hover #but6p, .butplacehold:hover #but6p {
-	visibility : visible;
+	margin-top : -10px;
+	text-align : center;
 	opacity : 1;
-	margin-top : 0px;
+	visibility : visible;
+	overflow : hidden;
  }
 /* =====================================================
 							NAVIGATION BAR									 
