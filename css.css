@@ -17,7 +17,13 @@ h2{
 	padding : 10 0 20 0;
 	text-align: center;
 }
-
+@font-face {
+	font-family: "Exo";
+	src: url("./fonts/Exo.otf");
+}
+.text{
+	font-family : "Exo";
+}
 .wrap {
 	width : 100%px;
 	margin : auto auto auto auto;
@@ -86,7 +92,7 @@ section.fixed-bg{
 	/* Parallax - Classes
 	--------------------------------------------- */
 .prlx {
-	height: 500px; /* fallback for older browsers */
+	height: 450px; /* fallback for older browsers */
 	height: 100vh;
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -164,8 +170,9 @@ section.fixed-bg{
 	z-index: 3; /* slide under groups 1 and 3 */
 }
 	#group2 .prlx_layer-back {
-		background-image : url("./img/bg.jpg");
-		background-size : cover;
+		background-image : url("./img/bghome.jpg");
+		margin-left : -6px;
+		background-size : repeat-x;
 	}
 
 #group3 {
@@ -177,6 +184,7 @@ section.fixed-bg{
 
 #group4 {
 	z-index: 1; /* slide under group 3 and 5 */
+	margin-left : -6px;
 	}
 	#group4 .prlx_layer-deep {
 		background: rgb(184,223,101);
@@ -191,6 +199,7 @@ section.fixed-bg{
 
 #group6 {
 	z-index: 1; /* slide under group 5 and 7 */
+	margin-left : -6px;
 }
 	#group6 .prlx_layer-back {
 		background: rgb(245,235,100);
@@ -341,7 +350,7 @@ section.fixed-bg{
 		margin-top  : -5px;
 		transition : all .5s ease;
 	}
-	.homebutton:hover img {
+	.homebutton:hover img, .butplacehold:hover img {
 		margin-top : -50px;
 	}
 .butplacehold {
@@ -423,8 +432,7 @@ section.fixed-bg{
 		margin-left : -15px;
 	}
 	#but6 p { margin-top : 30px; transition : all .3s ease}
-	#but6:hover p { opacity : 0}
-	.butplacehold:hover #but6 p, #but6:hover p { margin-top : 40px}
+	.butplacehold:hover #but6 p, #but6:hover p { opacity : 0; margin-top : 40px}
 	#butchild1, #butchild2{
 		height : 25px;
 		width : 25px;
@@ -616,13 +624,6 @@ section.fixed-bg{
 .li-tab:hover p{
 	top : 10px;
 	color : white;
-}
-
-@font-face {
-	font-family: 'icomoon';
-	src:url(icomoon.ttf);
-	font-weight: normal;
-	font-style: normal;
 }
 
 /* =====================================================
