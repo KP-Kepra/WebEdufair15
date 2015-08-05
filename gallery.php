@@ -167,12 +167,9 @@ if($max>$total){
 	
 function show_pagination($current_page, $last_page){
     echo '<div align="center">';
-    if( $current_page > 1 ){
-        echo ' <a href="?page='.($current_page-1).'"> &lt;&lt;Previous</a> &nbsp&nbsp&nbsp&nbsp';
-    }
-    if( $current_page < $last_page ){
-        echo ' <a href="?page='.($current_page+1).'"> Next&gt;&gt; </a> ';  
-    }
+    for($z = 1;$z <= $last_page;$z++){
+        echo ' <a href="?page='.($z).'">'.$z.'</a> &nbsp&nbsp&nbsp&nbsp';
+	}
     echo '</div>';
 }
 ?>
