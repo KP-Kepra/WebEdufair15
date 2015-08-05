@@ -198,6 +198,7 @@ section.fixed-bg{
 	#group5 img{
 		height : 350px;
 		width : 350px;
+		transform : rotate(7deg);
 	}
 
 #group6 {
@@ -216,6 +217,11 @@ section.fixed-bg{
 	#group7 .prlx_layer-base {
 		background-image : url("./img/bghome.jpg");
 	}
+	#group7 img{
+		height : 350px;
+		width : 350px;
+		transform : rotate(-7deg);
+	}
 /* =====================================================
 									CONTENT
 ======================================================*/
@@ -226,7 +232,12 @@ section.fixed-bg{
 	height : auto;
 }
 
-#trailerfade {
+.video {
+	width : 700px;
+	height : 425px;
+	margin : auto;
+	position : absolute;
+}#trailerfade {
 	background-attachment: scroll;
 	background-clip: border-box;
 	background-color: rgba(0, 0, 0, 0.8);
@@ -254,15 +265,15 @@ section.fixed-bg{
 	word-wrap: break-word;
 	z-index: 5000;
 	visibility : hidden;
-	body, html {
-		overflow-y : auto;
-	}
 }
 .videotrailer {
 	visibility : hidden;
-	position : fixed;
+	width : 700px;
+	height : 425px;
+	position : absolute;
+	left: 50%;
+	margin-left : -350px;
 	z-index : 5100;
-	left : 300px;
 }
 #closevideo {
 	z-index : 5100;
@@ -335,6 +346,7 @@ section.fixed-bg{
 	.homebutton p {
 		margin-top : 20px;
 		transition : margin-top .4s ease;
+		font-family : "Exo";
 	}
 	.homebutton a {
 		width : inherit;
@@ -362,7 +374,7 @@ section.fixed-bg{
 	width : 120px;
 	border-radius : 130px;
 	margin-top : -100px;
-	margin-left : 885px;
+	margin-left : 900px;
 }
 	.butplacehold:hover{
 	width : 310px;
@@ -409,31 +421,32 @@ section.fixed-bg{
 	#but3:hover p { margin-top : 40px; opacity : 0}
 #but4{
 	margin-top : -420px;
-	margin-left : 800px;
+	margin-left : 830px;
 }
 	#but4:hover{
 		margin-top : -435px;
-		margin-left : 785px;
+		margin-left : 815px;
 	}
 	#but4 p { margin-top : 30px; transition : all .3s ease}
 	#but4:hover p { margin-top : 40px; opacity : 0}
 #but5{
 	margin-top : -270px;
-	margin-left : 910px;
+	margin-left : 940px;
 }
 	#but5:hover{
 		margin-top : -285px;
-		margin-left : 895px;
+		margin-left : 925px;
 	}
 	#but5 p { margin-top : 30px; transition : all .3s ease}
 	#but5:hover p { margin-top : 40px; opacity : 0}
 #but6{
 	z-index : 2;
 	margin-top : -10px;
+	margin-left : 30px;
 }
 	.butplacehold:hover #but6, #but6:hover{
 		margin-top : -25px;
-		margin-left : -15px;
+		margin-left : 15px;
 	}
 	#but6 p { margin-top : 30px; transition : all .3s ease}
 	.butplacehold:hover #but6 p, #but6:hover p { opacity : 0; margin-top : 40px}
@@ -441,18 +454,19 @@ section.fixed-bg{
 		height : 25px;
 		width : 25px;
 		border-radius : 10px;
-		margin-left : 20px;
+		margin-left : 50px;
 		padding : 10px;
 		text-align : left;
 		margin-top : 10px;
 		transition : all .3s ease-in-out;
 		visibility : hidden;
 		z-index : 3;
+		font-family : "Exo"
 	}
 	#butchild2 { margin-top : 10px}
 	.butplacehold:hover #butchild1, .butplacehold:hover #butchild2{
 		visibility : visible;
-		margin-left : 20px;
+		margin-left : 50px;
 		width : 100px;
 		margin-top : 10px;
 		padding-left : 130px;
@@ -476,7 +490,9 @@ section.fixed-bg{
 	opacity : 0;
 	visibility : hidden;
 	transition : visibility .1s ease, opacity .3s ease, margin .8s ease;
-	overflow : hidden;f
+	overflow : hidden;
+	font-size : 15px;
+	font-family : "Exo"
 }
  #but1:hover #but1p, #but2:hover #but2p, #but3:hover #but3p,
  #but4:hover #but4p, #but5:hover #but5p, #but6:hover #but6p, .butplacehold:hover #but6p {
