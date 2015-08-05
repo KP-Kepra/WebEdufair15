@@ -18,11 +18,12 @@ h2{
 	text-align: center;
 }
 @font-face {
+	font-family: "Montserrat";
+	src: url("./fonts/Montserrat.otf");
+}
+@font-face {
 	font-family: "Exo";
 	src: url("./fonts/Exo.otf");
-}
-.text{
-	font-family : "Exo";
 }
 .wrap {
 	width : 100%px;
@@ -150,36 +151,32 @@ section.fixed-bg{
 		transform: translateZ(-600px) scale(3);
 		z-index: 2;
 	}
-.title {
-	text-align: center;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-}
 	/* Parallax - ID Groups
 	--------------------------------------------- */
 #group1 {
 	z-index: 5; /* slide over group 2 */
 }
 	#group1 .prlx_layer-base {
+		margin-bottom : 50px;
 	}
 
 #group2 {
 	z-index: 3; /* slide under groups 1 and 3 */
 }
 	#group2 .prlx_layer-back {
-		background-image : url("./img/bghome.jpg");
+		background-image : url("./img/2012.jpg");
 		margin-left : -6px;
-		background-size : repeat-x;
+		background-size : cover;
 	}
 
 #group3 {
 	z-index: 4; /* slide over group 2 and 4 */
 }
 	#group3 .prlx_layer-base {
-		background: rgb(153,216,101);
+		background-image : url("./img/bghome.jpg");
+	}
+	#group3 .prlx_layer-fore{
+		background : rgba(0,0,0,0.5):
 	}
 
 #group4 {
@@ -187,14 +184,20 @@ section.fixed-bg{
 	margin-left : -6px;
 	}
 	#group4 .prlx_layer-deep {
-		background: rgb(184,223,101);
+		background-image : url("./img/2013.jpg");
+		background-position : 0 -400px;
+		background-size : cover;
 	}
 
 #group5 {
 	z-index: 3; /* slide over group 4 and 6 */
 }
 	#group5 .prlx_layer-base {
-		background: rgb(214,229,100);
+		background-image : url("./img/bghome.jpg");
+	}
+	#group5 img{
+		height : 350px;
+		width : 350px;
 	}
 
 #group6 {
@@ -202,7 +205,8 @@ section.fixed-bg{
 	margin-left : -6px;
 }
 	#group6 .prlx_layer-back {
-		background: rgb(245,235,100);
+		background-image : url("./img/2014.jpg");
+		background-size : cover;
 		height : 100vh;
 	}
 
@@ -210,7 +214,7 @@ section.fixed-bg{
 	z-index: 3; /* slide over group 7 */
 }
 	#group7 .prlx_layer-base {
-		background: rgb(255,241,100);
+		background-image : url("./img/bghome.jpg");
 	}
 /* =====================================================
 									CONTENT
@@ -747,14 +751,24 @@ section.fixed-bg{
 }
 .col-history {
 	border-radius : 50px;
-	background-color : rgba(255,255,255,0.5);
+	background-color : rgba(0,0,0,0.5);
 	margin-top : 70px;
-	height : 400px;
-	padding : 50px;
-	width : 900px;
-	margin-left : auto;
-	margin-right : auto;
+	height : 320px;
+	padding : 50 50 50 50;
+	width : 850px;
+	line-height : 35px;
+	color : white;
+	text-align : justify
 }
+	.col-history p {
+		font-family : "Montserrat";
+	}
+	.title {
+		font-family : "Exo";
+		font-size : 50px;
+		margin-bottom : 40px;
+		text-decoration : underline;
+	}
 .col-middle{
 	display : inline-block;
 	vertical-align : middle;
