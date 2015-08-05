@@ -38,7 +38,7 @@
 			</li>
 			
 			<li class="li-tab">
-				<a href="gallery.html">Gallery</a>
+				<a href="gallery.php">Gallery</a>
 			</li>			
 			
 			<li class="li-search" style="width:20%">
@@ -136,7 +136,7 @@
 $folder = './img/';
 $filetype = '*.*';    
 $files = glob($folder.$filetype);    
-$total = count($files);    
+$total = count($files);   
 $per_page = 9;   
 $line = 1;
 $last_page = ceil($total / $per_page);  
@@ -145,15 +145,14 @@ if(isset($_GET["page"])  && ($_GET["page"] <=$last_page) && ($_GET["page"] > 0) 
     $page = $_GET["page"];
     $offset = ($per_page + 1)*($page - 1);      
 }
-else{
+else {
     $page=1;
     $offset=0;      
 }    
 $max = $offset + $per_page;    
-if($max>$total){
+if($max>$total) {
     $max = $total;
 }
-  
 	show_pagination($page, $last_page);        
     for($i = $offset; $i< $max; $i++){
         $file = $files[$i];
@@ -168,7 +167,12 @@ if($max>$total){
 function show_pagination($current_page, $last_page){
     echo '<div align="center">';
     for($z = 1;$z <= $last_page;$z++){
-        echo ' <a href="?page='.($z).'">'.$z.'</a> &nbsp&nbsp&nbsp&nbsp';
+		if ($current_page != $z) {
+        echo '<a href="?page='.($z).'">'.$z.'</a> &nbsp&nbsp&nbsp&nbsp';
+		}
+		else {
+			echo ''.$z.'&nbsp&nbsp&nbsp&nbsp';
+		}
 	}
     echo '</div>';
 }
