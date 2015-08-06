@@ -165,16 +165,26 @@ if($max>$total) {
     show_pagination($page, $last_page);
 	
 function show_pagination($current_page, $last_page){
-    echo '<div align="center">';
+    echo '<div align="center">
+	<table>
+	<tr>';
+	if($current_page != 1) {
+		echo '<td><a href="?page='.($current_page-1).'"><< Previous</a> &nbsp&nbsp&nbsp&nbsp</td>';
+	}
     for($z = 1;$z <= $last_page;$z++){
 		if ($current_page != $z) {
-        echo '<a href="?page='.($z).'">'.$z.'</a> &nbsp&nbsp&nbsp&nbsp';
+        echo '<td><a href="?page='.($z).'">'.$z.'</a> &nbsp&nbsp&nbsp&nbsp</td>';
 		}
 		else {
-			echo ''.$z.'&nbsp&nbsp&nbsp&nbsp';
+			echo '<td>'.$z.'&nbsp&nbsp&nbsp&nbsp</td>';
 		}
 	}
-    echo '</div>';
+	if($current_page != $last_page){
+		echo '<td><a href="?page='.($current_page+1).'">Next >></a>&nbsp&nbsp&nbsp&nbsp</td>';
+	}
+    echo '</tr>
+	</table>
+	</div>';
 }
 ?>
 </div>
