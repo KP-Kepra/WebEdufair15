@@ -9,10 +9,10 @@
 </head>
 
 <body>
-<div id="trailerfade"></div>
-<div class="videotrailer"></div>
 
 <section class="fixed-bg parallax bg-1">
+	<div id="trailerfade"></div>
+		<div class="videotrailer"></div>
 	<div class="template" style="margin-top : 0">
 		<div class="logo">
 			<img src="./img/logo.png"></img>
@@ -125,7 +125,6 @@ function autoPlayVideo(vcode, width, height){
 	$('html').css({"overflow-x" : "hidden"});
 	$(".videotrailer").css({"visibility" : "visible"});
 	$("#closevideo").css({"visibility" : "visible"});
-	$(".videotrailer").offset({top : offset.top});
 }
 	$('#closevideo').click(function(){
 	$(".videotrailer").html('');
