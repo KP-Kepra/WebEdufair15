@@ -68,8 +68,8 @@
         </ul>
 	</div>
 		
-	<div class="col-middle" id="content" style="right : 0; margin : 0 0 0 6">
-		<div class="main">
+	<div class="col-middle" id="content" style="right : 0; margin : 0 0 0 6; height : auto">
+	<div class="main">
         <div id="page1" class="content">
         <h1>Page 1</h1>
         <p>First section of content.</p>
@@ -136,6 +136,7 @@
     });
 </script>
 <script>
+hideContentDivs();
 $('#menu a').click(function(e){
      hideContentDivs();
      var tmp_div = $(this).parent().index();
@@ -146,7 +147,7 @@ function hideContentDivs(){
     $('.main div').each(function(){
     $(this).hide();});
 }
-hideContentDivs();
+
 </script>
 <!--
 <div class="contact-bottom"><hr color="black">Contact us : 14045, Nisiuska College Aceh, Jawa Utara. Jalan mak lo</div>
