@@ -61,18 +61,29 @@
 	<div class="col-right" style="left : 0">
 		<h1>Latest News</h1>
 	<hr>
-	<a href="#news1">News 1</a>
-	<button id="newsbutton2" style="background-color : none; border : none; display : block">News 2</button>
+	    <ul id="menu">
+            <li id="link1"><a href="#">Topic One</a></li>
+            <li id="link2"><a href="#">Topic Two</a></li>
+            <li id="link3"><a href="#">Topic Three</a></li>               
+        </ul>
 	</div>
 		
 	<div class="col-middle" id="content" style="right : 0; margin : 0 0 0 6">
-
-	</div>
-	<div id="news1">
-		News 1
-	</div>
-	<div id="news2">
-		News 2
+		<div class="main">
+        <div id="page1" class="content">
+        <h1>Page 1</h1>
+        <p>First section of content.</p>
+        </div>
+        <div id="page2" class="content">
+        <h1>Page 2</h1>        
+        <p>Second section of content</p>
+        </div>
+        <div id="page3" class="content">        
+        <h1>Page 3</h1>
+        <p>Third section of content.</p>
+        </div>                 
+    </div>
+		</iframe>
 	</div>
 
 </div></div>
@@ -125,13 +136,17 @@
     });
 </script>
 <script>
-	$('#newsbutton1').click(function(){
-		$('#content').html('news1.html');
-	});
+$('#menu a').click(function(e){
+     hideContentDivs();
+     var tmp_div = $(this).parent().index();
+     $('.main div').eq(tmp_div).show();
+  });
 
-	$('#newsbutton2').click(function(){
-		$('#content').load('news.html #news2');
-	});
+function hideContentDivs(){
+    $('.main div').each(function(){
+    $(this).hide();});
+}
+hideContentDivs();
 </script>
 <!--
 <div class="contact-bottom"><hr color="black">Contact us : 14045, Nisiuska College Aceh, Jawa Utara. Jalan mak lo</div>
