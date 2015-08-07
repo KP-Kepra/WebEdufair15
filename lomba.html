@@ -7,6 +7,57 @@
 	<title>Gallery</title>
 	<meta charset="UTF-8">
 </head>
+<style>
+	h1, h2 {
+		font-family : Exo;
+	}
+	.body-child {
+		padding : 5px 5px 5px 5px;
+		font-family : Montserrat;	
+		animation-name: fadeIn;
+		-webkit-animation-name: fadeIn;	
+		animation-duration: 2s;	
+		-webkit-animation-duration: 2s;
+		animation-timing-function: ease-in-out;	
+		-webkit-animation-timing-function: ease-in-out;		
+	}
+	.imageholder {
+		animation-name: fadeIn;
+		-webkit-animation-name: fadeIn;	
+		animation-duration: 0.5s;	
+		-webkit-animation-duration: 0.5s;
+		animation-timing-function: ease-in-out;	
+		-webkit-animation-timing-function: ease-in-out;	
+	}
+	@keyframes fadeIn {
+	0% {
+		transform: scale(0);
+		opacity: 0.0;		
+	}
+	50% {
+		transform : scale(0.5);
+		opacity: 0.05;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;	
+	}		
+}
+	@-webkit-keyframes fadeIn {
+	0% {
+		transform: scale(0);
+		opacity: 0.0;		
+	}
+	50% {
+		transform : scale(0.5);
+		opacity: 0.05;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;	
+	}			
+}
+</style>
 <body>
 <div class="wrap">
 <div class="nav-container">
@@ -51,10 +102,12 @@
 </div>
 <div class="template">
 <div class="body">
-	<a href="#" id="drawing"><img src="./img/drawingcomp.jpg" width=5500px height=450px /></a>
-	<a href="##" id="science"><img src="./img/sciencecomp.jpg" width=550px height=450px /></a> 
+	<div class="imageholder">
+	<a href="#cermat" id="cermat" alt="Cerdas Cermat" style="display : inline-block; margin : 20px 0px 10px 25px;"/><img src="./img/cerdascermat.jpg"  /></a>
+	<a href="#science" id="science" alt="Science Competition" style="display : inline-block; float : right; margin : 20px 25px 10px 0px;"/><img src="./img/science.jpg" width=493px height=578px /></a> 
 	</div>
-	<div class="body-child">
+	<div class="body-child"></div>
+</div>
 </div>
 <div class="footer">
 	<div class="foot-temp">
@@ -104,18 +157,32 @@
     });
 </script>
 <script>
-	$('#drawing').click(function(){
-		drawing();
+	$('#cermat').click(function(){
+		cermat();
 	}) 
 	$('#science').click(function(){
 		science();
 	})
-	function drawing() {
-		$(".body-child").html("YEY, UDAH BISA!</div>");
-		
+	$('#closenews').click(function() {
+		imagehold();
+	})
+	function imagehold() {
+		$(".body-child").remove();
+		$(".imageholder").append("<a href='#cermat' id='cermat' alt='Cerdas Cermat' style='display : inline-block; margin : 20px 0px 10px 25px;'/><img src='./img/cermatcomp.jpg' width=500px height=450px /></a> <a href='#science' id='science' alt='Science Competition' style='display : inline-block; float : right; margin : 20px 25px 10px 0px;'/><img src='./img/sciencecomp.jpg' width=500px height=450px /></a>")
+	}
+	function cermat() {
+		$(".imageholder").remove();
+		$(".body-child").html("<h1 align='center'> CANISIUS COLLEGE EDUCATION FAIR 2015<br>CERDAS CERMAT</h1>");
+		$(".body-child").append("<p align='center'><img src='./img/poster-cerdas.jpg'/></p>");
+		$(".body-child").append("<a id='closenews' href=''> &#10006 </a>");
 	}
 	function science() {
-		$(".body-child").html("YEY, UDAH BISA SIENCE!</div>");
+		$(".imageholder").remove();
+		$(".body-child").html("<h1 align='center'> CANISIUS COLLEGE EDUCATION FAIR 2015<br>SCIENCE COMPETITION</h1>");
+		$(".body-child").append("<p>CCSC adalah kompetisi proyek sains yang diselenggarakan oleh SMA Kanisius sebagai wadah para siswa-siswi SMA sederajat untuk mewujudkan kepedulian mereka terhadap kehidupan yang lebih baik dari kini dan untuk nanti.</p>");
+		$(".body-child").append("<p align='center'><img src='./img/poster-science.jpg'/></p>");
+		$(".body-child").append("<p>Untuk ketentuan lebih lanjut, silahkan lihat <a href='./document/Petunjuk Teknis CCSC.pdf'> disini</a></p>");
+		$(".body-child").append("<a id='closenews' href=''> &#10006 </a>");
 	}
 </script>
 </body>
