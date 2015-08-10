@@ -24,22 +24,27 @@
             <li id="link3"><a href="#">Topic Three</a></li>               
         </ul>
 		<div class ="aboutcontent" style="height : 65%; background : white">
-			<div class="main">
-        <div id="page1" class="content">
-        <h1>Page 1</h1>
-        <p>First section of content.</p>
-        </div>
-        <div id="page2" class="content">
-        <h1>Page 2</h1>        
-        <p>Second section of content</p>
-        </div>
-        <div id="page3" class="content">        
-        <h1>Page 3</h1>
-        <p>Third section of content.</p>
-        </div>                 
-    </div>
+		<div class="main">
+			<div id="idone" style="display:none; padding:10px;">
+				asdf
+			</div>
+			<div id="idtwo" style="display:none; padding:10px;">
+				ghij
+			</div>
+			<div id="idthree" style="display:none; padding:10px;">
+				klmn
+			</div>
+			<div id="idfour" style="display:none; padding:10px;">
+				opqr
+			</div>
+			<div id="idfive" style="display:none; padding:10px;">
+				opq
+			</div>            
 		</div>
-		<div style="height : 15%; background : blue"></div>
+		</div>
+		
+		<div style="height : 15%; background : blue">
+		</div>
 	</div>
 </section>
 
@@ -82,6 +87,32 @@ $('#menu a').click(function(e){
 function hideContentDivs(){
     $('.main div').each(function(){
     $(this).hide();});
+}
+
+</script>
+<script type="text/javascript">
+/////////////////////////////////////////////////////
+// Between the quotation marks, list the id values of each div.
+
+var IDvaluesOfEachDiv = "idone idtwo idthree idfour";
+
+/////////////////////////////////////////////////////
+IDvaluesOfEachDiv = IDvaluesOfEachDiv.replace(/[,\s"']/g," ");
+IDvaluesOfEachDiv = IDvaluesOfEachDiv.replace(/^\s*/,"");
+IDvaluesOfEachDiv = IDvaluesOfEachDiv.replace(/\s*$/,"");
+IDvaluesOfEachDiv = IDvaluesOfEachDiv.replace(/  +/g," ");
+var IDlist = IDvaluesOfEachDiv.split(" ");
+
+function ShowAllDivs() {
+for(var i=0; i<IDlist.length; i++) { 
+   document.getElementById(IDlist[i]).style.display = "";
+   }
+}
+
+function HideAllDivs() {
+for(var i=0; i<IDlist.length; i++) { 
+   document.getElementById(IDlist[i]).style.display = "none";
+   }
 }
 </script>
 <!--
