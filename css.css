@@ -523,6 +523,21 @@ section.fixed-bg{
 	width	: 760px;
 	height : 500px;
 }
+.aboutimg {
+	width : 400px;
+	height : 300px;
+	display : inline-block;
+	margin-top : 100px;
+}
+	.aboutimg img{
+		height : 300px;
+		width : 400px;
+		opacity : 0;
+		position : absolute;
+	}
+	.aboutimg img.about-img-visible {
+		opacity : 1;
+	}
 .about-element {
 	display: inline-block;
 	width: 80px;
