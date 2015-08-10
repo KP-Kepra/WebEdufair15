@@ -1136,3 +1136,11 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	transform: scale(1);
 	opacity: 1;
 }
+.socmed a {
+		width : inherit;
+		height : inherit;
+		border-radius : inherit;
+		color : inherit;
+		font-family : inherit;
+		display : block;
+}
