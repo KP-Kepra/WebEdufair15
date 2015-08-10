@@ -359,6 +359,7 @@ section.fixed-bg{
 		font-family : inherit;
 		display : block;
 	}
+	
 	.homebutton hr{
 		width : 80%; 
 		border : 0px; 
@@ -388,6 +389,14 @@ section.fixed-bg{
 	background: #eb7602;
 	color : white;
 }
+	.butplacehold a {
+		width : inherit;
+		height : inherit;
+		border-radius : inherit;
+		color : inherit;
+		font-family : inherit;
+		display : block;
+	}
 	.homebutton p {
 		margin-top : 20px;
 		transition : margin-top .4s ease;
@@ -762,6 +771,7 @@ section.fixed-bg{
 	height : auto;
 	margin : 50px auto 50px auto;
 }
+	
 .body {
 	left : 10px;
 	width : 1100px;
