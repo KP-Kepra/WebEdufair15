@@ -515,6 +515,20 @@ section.fixed-bg{
 	visibility : visible;
 	overflow : hidden;
  }
+ /* =====================================================
+									ABOUT US								 
+======================================================*/
+.aboutcontent {
+	width	: 760px;
+	height :500px;
+}
+.aboutcontent li, a {
+	background : blue;
+	height : 100px;
+	width : 100px;
+	border-radius : 50%;
+	display : inline-block
+}
 /* =====================================================
 							NAVIGATION BAR									 
 ======================================================*/
@@ -661,109 +675,6 @@ section.fixed-bg{
 }
 
 /* =====================================================
-								SEARCH BAR										 
-======================================================*/
-.sb-search {
-	position: relative;
-	width: 0%;
-	min-width: 0px;
-	border-radius: 25px;
-	height: 100%;
-	float: right;
-	-webkit-transition: width 0.3s;
-	-moz-transition: width 0.3s;
-	transition: width 0.3s;
-	-webkit-backface-visibility: hidden;
-}
-
-.sb-search-input {
-	position: absolute;
-	border-radius: 20px;
-	right: 10px;
-	border: none;
-	outline: none;
-	background: #fff;
-	border : 2px outset #868686;
-	box-shadow: 2px 2px 8px #BBBBBB inset;
-	border-style : inset;
-	width: 100%;
-	height: 28px;
-	margin: 0;
-	z-index: 10;
-	padding: 13 13 13 13;
-	font-family: inherit;
-	font-size: 12px;
-	color: #2c3e50;
-}
-
-.sb-search-input::-webkit-input-placeholder, .sb-search-input:-moz-placeholder,
-.sb-search-input::-moz-placeholder, .sb-search-input:-ms-input-placeholder{
-	color: #5C997A;
-}
-
-.sb-icon-search,
-.sb-search-submit  {
-	width: 30px;
-	height: 30px;
-	display: block;
-	border-radius: 15px;
-	position: absolute;
-	right: 10px;
-	padding: 0;
-	margin: 0;
-	line-height: 30px;
-	text-align: center;
-	cursor: pointer;
-}
-
-.sb-search-submit {
-	background: #fff; /* IE needs this */
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
-    filter: alpha(opacity=0); /* IE 5-7 */
-    opacity: 0;
-	color: transparent;
-	border: none;
-	outline: none;
-	z-index: -1;
-}
-
-.sb-icon-search {
-	color: #fff;
-	background: #868686;
-	z-index: 90;
-	font-size: 16px;
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	-webkit-font-smoothing: antialiased;
-}
-
-.sb-icon-search:before {
-	content: "\e000";
-}
-
-/* Open state */
-.sb-search.sb-search-open,
-.no-js .sb-search {
-	width: 90%;
-}
-
-.sb-search.sb-search-open .sb-icon-search,
-.no-js .sb-search .sb-icon-search {
-	background: #868686;
-	color: #fff;
-	z-index: 11;
-}
-
-.sb-search.sb-search-open .sb-search-submit,
-.no-js .sb-search .sb-search-submit {
-	z-index: 90;
-}
-
-/* =====================================================
 							COLUMN CONTENT									 
 ======================================================*/
 .template{
@@ -806,7 +717,6 @@ section.fixed-bg{
 	width	: 760px;
 	height :500px;
 	left : 0;
-	background : red;
 	margin : 0 6 0 0;
 	border : 0px;
 	padding : 0 0 25 0;
