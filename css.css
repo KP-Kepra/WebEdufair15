@@ -240,7 +240,8 @@ section.fixed-bg{
 	height : 425px;
 	margin : auto;
 	position : absolute;
-}#trailerfade {
+}
+#trailerfade {
 	background-attachment: scroll;
 	background-clip: border-box;
 	background-color: rgba(0, 0, 0, 0.8);
@@ -518,18 +519,76 @@ section.fixed-bg{
  /* =====================================================
 									ABOUT US								 
 ======================================================*/
-.aboutcontent {
+.about{
 	width	: 760px;
 	height : 500px;
 }
-.aboutcontent li, .aboutcontent a {
-	height : 100px;
-	width : 100px;
-	display : inline-block;
-	line-height : 100px;
-	background : blue;
-	border-radius : 50%;
-	text-align : center;
+.about-element {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	margin-left : 20px;
+	border-radius: 50%;
+	position: relative;
+	z-index: 1;
+	padding : 0px;
+	color: #fff;
+	background: rgba(255,255,255,0.1);
+	-webkit-transition: background 0.2s, color 0.2s;
+	-moz-transition: background 0.2s, color 0.2s;
+	transition: background 0.2s, color 0.2s;
+}
+	.about-element a {
+		text-align: center;
+		text-decoration : none;
+		display : block;
+		width : 80px;
+		height : 55px;
+		padding-top : 25px;
+	}
+.about-element:before {
+	font-family: 'ecoicon';
+	speak: none;
+	font-size: 48px;
+	line-height: 90px;
+	display: block;
+	-webkit-font-smoothing: antialiased;
+}
+.about-icon .about-element:after {
+	pointer-events: none;
+	position: absolute;
+	width: 90%;
+	height: 90%;
+	border-radius: 50%;
+	content: '';
+	-webkit-box-sizing: content-box; 
+	-moz-box-sizing: content-box; 
+	box-sizing: content-box;
+	top: -4px;
+	left: -4px;
+	padding: 8px;
+	box-shadow: 0 0 0 4px #fff;
+	-webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+	-webkit-transform: scale(1.2);
+	-moz-transition: -moz-transform 0.2s, opacity 0.2s;
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transition: transform 0.2s, opacity 0.2s;
+	transform: scale(1.2);
+	opacity: 0;
+}
+
+.about-icon .about-element:hover {
+	background: rgba(255,255,255,1);
+	color: #41ab6b;
+}
+
+.about-icon .about-element:hover:after {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
 }
 /* =====================================================
 							NAVIGATION BAR									 
@@ -968,7 +1027,7 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 		 border-radius : 5px; 
 		 height : 2px;
 		}
-.social-content {
+.social-content{
 	display: inline-block;
 	width: 32px;
 	height: 32px;
@@ -982,7 +1041,7 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	z-index : 1;
 }
 
-.social-content:after {
+.social-content:after{
 	position: absolute;
 	width: 80%;
 	height: 80%;
@@ -993,7 +1052,7 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	box-sizing: content-box;
 }
 
-.socmed .social-content:after {
+.socmed .social-content:after{
 	top: -4px;
 	left: -4px;
 	padding: 7px;
@@ -1006,12 +1065,23 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	transition: transform 0.2s, opacity 0.2s;
 	transform: scale(.8);
 	opacity: 0;
-}
-
-.socmed .social-content:hover {
 	background: rgba(255,255,255,0);
-	opacity : 1;
 	}
+.socmed .social-content:hover:after{
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+.socmed a{
+		width : inherit;
+		height : inherit;
+		border-radius : inherit;
+		color : inherit;
+		font-family : inherit;
+		display : block;
+}
 #fb {
 	background-image : url('./img/logo_fb.png');
 	background-size : 32px 32px;
@@ -1041,18 +1111,3 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	margin-left : 248px;
 }
 
-.socmed .social-content:hover:after {
-	-webkit-transform: scale(1);
-	-moz-transform: scale(1);
-	-ms-transform: scale(1);
-	transform: scale(1);
-	opacity: 1;
-}
-.socmed a {
-		width : inherit;
-		height : inherit;
-		border-radius : inherit;
-		color : inherit;
-		font-family : inherit;
-		display : block;
-}
