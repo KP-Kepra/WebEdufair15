@@ -520,14 +520,7 @@ section.fixed-bg{
 ======================================================*/
 .aboutcontent {
 	width	: 760px;
-	height :500px;
-}
-.aboutcontent li, a {
-	background : blue;
-	height : 100px;
-	width : 100px;
-	border-radius : 50%;
-	display : inline-block
+	height : 500px;
 }
 /* =====================================================
 							NAVIGATION BAR									 
