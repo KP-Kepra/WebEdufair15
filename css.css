@@ -615,7 +615,7 @@ section.fixed-bg{
 	float : left;
 	display : inline-block;
     width: 200px;
-    background: #222;
+    background: #EB7302;
     position: fixed;
     height: 100%;
 	z-index : 1000;
@@ -638,11 +638,11 @@ section.fixed-bg{
 		text-indent: 20px;
 		font-family : "Montserrat";
 		margin : 0px;
-		color: #999;
+		color: #FFE9DE;
 		text-decoration: none;
-		background: #2F2F2F;
-		border-top: 1px solid #373737;
-		border-bottom: 1px solid #1A1A1A;
+		background: linear-gradient(#FD8D32,#FD8C23);
+		border-top: 1px solid #eb7602;
+		border-bottom: 2px solid #B85702;
 		transition: background .5s;
 	}
 
@@ -669,7 +669,7 @@ section.fixed-bg{
 	overflow : hidden;
 }
 	#sidebar-list-cont:hover {
-		background : #131313;
+		background : #904601;
 		height : 130px;
 	}
 #sidebar-list, #sidebar-child{
@@ -679,14 +679,14 @@ section.fixed-bg{
 	text-decoration : none;
 	padding-left : 15px;
 	font-family : "Montserrat";
-	color : #999;
+	color : #FFE0D3;
 	height : 40px;
 	font-size : 13px;
 	transition : all .4s ease;
 }
 	#sidebar-list-cont:hover #sidebar-list, #sidebar-list:hover{
 		padding-left : 25px;
-		background : #2F2F2F;
+		background : #FC8524;
 	}
 	#sidebar-arrow {
 		opacity : 0;
@@ -726,7 +726,7 @@ section.fixed-bg{
 	}
 	#sidebar-child:hover {
 		padding-left : 15px;
-		background : #2F2F2F;
+		background : #FC8524;
 	}
 	#sidebar-child-arrow {
 		opacity : 0;
@@ -742,7 +742,6 @@ section.fixed-bg{
 		visibility : visible;
 	}
 	#sidebar-child a {
-		color : #999;
 		text-decoration : none;
 		display : inline-block;
 	}
