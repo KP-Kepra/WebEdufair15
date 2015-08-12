@@ -5,6 +5,7 @@
 	<title>Gallery</title>
 	<meta charset="UTF-8">
 </head>
+<<<<<<< HEAD
 
 <body>
 <div id="sidebar-wrapper">
@@ -27,7 +28,7 @@
 		<div id="sidebar-text">History</div>
 		<span id="sidebar-icon"><img src="./img/icon_history.png"></span>
 	</a>
-		
+	
 	<a id="sidebar-list" href="gallery.php">
 		<div id="sidebar-arrow">&#10097; </div>
 		<div id="sidebar-text">Gallery</div>
@@ -225,6 +226,7 @@ function show_pagination($current_page, $last_page){
 <script src="js/classie.js"></script>
 <script src="js/uisearch.js"></script>
 <script src="js/offset.js"></script>
+<script src="js/sidebar.js"></script>
 <script>
 	new UISearch( document.getElementById( 'sb-search' ) );
 </script>
