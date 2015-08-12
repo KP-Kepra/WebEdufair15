@@ -541,13 +541,17 @@ section.fixed-bg{
 	}
 .about-element {
 	display: inline-block;
-	width: 80px;
-	height: 80px;
+	width: 100px;
+	height: 70px;
+	margin-top : 0px;
+	padding-top : 30px;
 	margin-left : 20px;
 	border-radius: 50%;
 	position: relative;
+	font-family : Exo;
+	line-height : 20px;
+	text-align : center;
 	z-index: 1;
-	padding : 0px;
 	color: #fff;
 	background: rgba(255,255,255,0.1);
 	-webkit-transition: background 0.2s, color 0.2s;
@@ -560,7 +564,10 @@ section.fixed-bg{
 		display : block;
 		width : 80px;
 		height : 55px;
-		padding-top : 25px;
+		font-family : Exo;
+		font-size : 13px;
+		margin-top : 22px;
+		line-height : 18px;
 	}
 .about-element:before {
 	font-family: 'ecoicon';
@@ -573,8 +580,8 @@ section.fixed-bg{
 .about-icon .about-element:after {
 	pointer-events: none;
 	position: absolute;
-	width: 90%;
-	height: 90%;
+	width: 92%;
+	height: 92%;
 	border-radius: 50%;
 	content: '';
 	-webkit-box-sizing: content-box; 
@@ -596,7 +603,8 @@ section.fixed-bg{
 
 .about-icon .about-element:hover {
 	background: rgba(255,255,255,1);
-	color: #41ab6b;
+	color: #444444;
+	font-weight : bold;
 }
 
 .about-icon .about-element:hover:after {

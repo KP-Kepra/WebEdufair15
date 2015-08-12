@@ -82,13 +82,12 @@
 		
 		<div class="about" style="float : right">
 			<ul class="about-icon" style="padding : 0px;">
-				<li class="about-element"><a href="#/">Topic<br>One</a></li>
-				<li class="about-element"><a href="#/">Topic<br>Two</a></li>
-				<li class="about-element"><a href="#/">Topic<br>Three</a></li>
-				<li class="about-element"><a href="#/">Topic<br>Four</a></li>
-				<li class="about-element"><a href="#/">Topic<br>Five</a></li>
-				<li class="about-element"><a href="#/">Topic<br>Six</a></li>
-				<li class="about-element"><a href="#/">Topic<br>Seven</a></li>
+				<a href="#/"><li class="about-element">APA ITU EDUFAIR?</li></a>
+				<a href="#/"><li class="about-element">KATA SAMBUTAN</li></a>
+				<a href="#/"><li class="about-element">LATAR BELAKANG</li></a>
+				<a href="#/"><li class="about-element">TUJUAN ACARA</li></a>
+				<a href="#/"><li class="about-element">PAMERAN & PRESENTASI</li></a>
+				<a href="#/"><li class="about-element">KEGIATAN LAIN</li></a>
 			</ul>
 			
 			<div class="about-content" style="color : white; padding : 20px; font-family : Montserrat; text-align : justify; background : rgba(0,0,0,0.4); height : 65%; border-radius : 20px;">
@@ -108,16 +107,7 @@
 				eu fermentum quis, cursus dictum eros. Vivamus imperdiet accumsan mauris ac
 				commodo. Donec nunc est, venenatis id aliquam ac, tempor sed nunc.</div>
 				
-				<div id="idthree" style="display:none; padding:10px;">
-				Integer arcu diam, accumsan ut porttitor at, semper ac tortor. Proin eget odio
-				posuere nulla feugiat aliquam. Donec luctus enim in arcu auctor tempor. 
-				Pellentesque pharetra felis ex, consectetur porta urna fringilla vel. Etiam 
-				libero libero, cursus a nisi nec, pretium condimentum augue. Sed lobortis ac 
-				orci vel ullamcorper. Aliquam ultricies felis leo, ac vestibulum ipsum vehicula 
-				faucibus. Vestibulum eu tempus lacus, et placerat dui. Pellentesque aliquam id 
-				turpis id iaculis. Praesent nec magna nibh.</div>
-				
-				<div id="idfour" style="display:none; padding:10px;">
+				<div id="Tujuan" style="display:none; padding:10px;">
 				Mauris dignissim sed sapien ac semper. Cum sociis natoque penatibus et magnis
 				dis parturient montes, nascetur ridiculus mus. In in nibh fermentum, viverra erat
 				at, volutpat felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
@@ -125,6 +115,13 @@
 				Vivamus dignissim luctus ante, vitae tempus dui. Fusce vel ultrices ligula, sit amet
 				tempus tortor. Pellentesque euismod in augue vel ullamcorper. Phasellus cursus nec
 				justo nec lacinia. Maecenas id dolor tortor. Ut non tellus at risus imperdiet euismod.</div>
+				
+				<div id="idfour" style="display:none; padding:10px;">
+				Edufair adalah salah satu pelayanan kita kepada para anak didik kita guna mempersiapkan
+				mereka mengenal lebih terarah kearah mana setelah lulus SMA baik jurusan yang akan 
+				dipilih maupun perguruan tinggi yang bermutu untuk  dipihnya guna mencapai masa depan 
+				mereka.	Pendampingan yang baik, maksimal dan tertata secara benar akan sangat membantu 
+				anak dalam mencari perguruan tinggi yang baik.</div>
 				
 				<div id="idfive" style="display:none; padding:10px;">
 				Donec facilisis arcu odio, vel egestas sem vulputate ac. Proin auctor risus faucibus
@@ -140,6 +137,7 @@
 				Aenean finibus lacinia lacus non feugiat. Aliquam ultrices aliquam vehicula. Donec
 				dignissim lorem id sapien efficitur gravida. Integer suscipit sodales ornare. Fusce
 				tristique lacus quis nibh semper eleifend. Donec in posuere leo, mattis venenatis velit.</div>
+				
 				<div id="idseven" style="display:none; padding:10px;">
 				Pellentesque scelerisque ultrices nisl, quis consectetur erat venenatis at. Phasellus 
 				sed nunc semper, finibus leo sit amet, feugiat ipsum. Cras eget risus vitae dui interdum 
@@ -178,7 +176,8 @@
 <script src="js/sidebar.js"></script>
 <script>
 hideContentDivs();
-$('.about-icon a').click(function(e){
+$('#idone').show();
+$('.about-icon li').click(function(e){
 	hideContentDivs();
     var tmp_div = $(this).parent().index();
     $('.about-content div').eq(tmp_div).show();
@@ -217,7 +216,7 @@ for(var i=0; i<IDlist.length; i++) {
 </script>
 <script>
 $(document).ready(function() {
-  $(".about-icon").on('click', 'li', function() {
+  $(".about-icon").on('click', 'a', function() {
     $(".aboutimg img").removeClass("about-img-visible");
 
     var newImage = $(this).index();
