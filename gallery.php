@@ -4,6 +4,39 @@
 	<link href="css.css" rel="stylesheet" type="text/css">
 	<title>Gallery</title>
 	<meta charset="UTF-8">
+<style>
+	h1 {
+		font-family : Exo;
+	}
+	td {
+		background-color : blue;
+		color : orange;	
+		border : solid 5px white;
+	}
+	td:hover {
+		box-shadow : 0px 0px 7px 5px red;
+	}
+	td a {
+		color : yellow;
+		font-family : Montserrat;
+	}
+	.image {
+		width : 300px;
+		height : 200px;
+		padding : 5px;
+		border : solid 1px #fff;
+		display : inline-block;
+		margin : 25px;
+	}
+	.image:hover {
+		box-shadow : 0px 0px 7px 5px red;
+	}
+	.image img {
+		margin : 0;
+		height : 100%;
+		width : 100%;
+	}
+</style>
 </head>
 <<<<<<< HEAD
 
@@ -176,7 +209,7 @@ if($max>$total) {
         $path_parts = pathinfo($file);
         $filename = $path_parts['filename']; 
         echo '
-                <a rel="group" href="'.$file.'"><img class="galleryPhoto" src="'.$file.'" alt="'.$filename.'"></a>    
+                <div class="image"><a rel="group" href="'.$file.'"><img src="'.$file.'" alt="'.$filename.'"></a></div>  
         ';
     }        
     show_pagination($page, $last_page);

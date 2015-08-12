@@ -20,12 +20,31 @@
 		-webkit-animation-timing-function: ease-in-out;		
 	}
 	.imageholder {
+		width : auto;
+		height : auto;
+		padding : 10px;
 		animation-name: fadeIn;
 		-webkit-animation-name: fadeIn;	
 		animation-duration: 0.5s;	
 		-webkit-animation-duration: 0.5s;
 		animation-timing-function: ease-in-out;	
 		-webkit-animation-timing-function: ease-in-out;	
+	}
+	.imagelomba {
+		width : 490px;
+		height : 575px;
+		padding : 10px;
+		border : solid 1px #fff;
+		display : inline-block;
+		box-shadow : 0;
+		-webkit-transition-property: all .5s ease-out ;
+      	   -moz-transition-property: all .5s ease-out ;
+         	 -o-transition-property: all .5s ease-out ;
+           	    transition-property: all .5s ease-out ;
+}
+	.imagelomba:hover {
+		border : solid 1px whitesmoke;
+		box-shadow : 0px 0px 10px aqua;
 	}
 	@keyframes fadeIn {
 	0% {
@@ -123,8 +142,8 @@
 <div class="template">
 <div class="body">
 	<div class="imageholder">
-	<a href="#cermat" id="cermat" alt="Cerdas Cermat" style="display : inline-block; margin : 20px 0px 10px 25px;"/><img src="./img/cerdascermat.jpg"  /></a>
-	<a href="#science" id="science" alt="Science Competition" style="display : inline-block; float : right; margin : 20px 25px 10px 0px;"/><img src="./img/science.jpg" width=493px height=578px /></a> 
+	<div class="imagelomba"><a href="#cermat" id="cermat" style="display : inline-block;"/><img src="./img/cerdascermat.png"  alt="Cerdas Cermat" /></a></div>
+	<div class="imagelomba" style="float : right"><a href="#science" id="science" alt="Science Competition" style="display : inline-block;"/><img src="./img/science.png" alt="Science Competition" width=490px height=575px /></a></div> 
 	</div>
 	<div class="body-child"></div>
 </div>
