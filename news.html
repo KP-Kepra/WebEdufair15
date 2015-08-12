@@ -28,7 +28,7 @@
 		<span id="sidebar-icon"><img src="./img/icon_history.png"></span>
 	</a>
 		
-	<a id="sidebar-list" href="gallery.html">
+	<a id="sidebar-list" href="gallery.php">
 		<div id="sidebar-arrow">&#10097; </div>
 		<div id="sidebar-text">Gallery</div>
 		<span id="sidebar-icon"><img src="./img/icon_gallery.png"></span>
@@ -132,14 +132,14 @@
 <script src="js/sidebar.js"></script>
 <script>
 hideContentDivs();
-$('.about-icon a').click(function(e){
+$('#menu a').click(function(e){
 	hideContentDivs();
     var tmp_div = $(this).parent().index();
-    $('.about-content div').eq(tmp_div).show();
+    $('.main div').eq(tmp_div).show();
   });
 
 function hideContentDivs(){
-    $('.about-content div').each(function(){
+    $('.main div').each(function(){
     $(this).hide();});
 }
 
@@ -168,17 +168,6 @@ for(var i=0; i<IDlist.length; i++) {
    document.getElementById(IDlist[i]).style.display = "none";
    }
 }
-</script>
-<script>
-$(document).ready(function() {
-  $(".about-icon").on('click', 'li', function() {
-    $(".aboutimg img").removeClass("about-img-visible");
-
-    var newImage = $(this).index();
-
-    $(".aboutimg img").eq(newImage).addClass("about-img-visible");
-  });
-});
 </script>
 </body>
 </html>

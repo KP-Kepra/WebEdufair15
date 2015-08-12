@@ -1,61 +1,77 @@
 <html>
 <head>
-	<link rel="icon" href="img/logoheader.png">
+	<link rel="icon" href="img/logo.png">
 	<link href="css.css" rel="stylesheet" type="text/css">
-	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
-	<script src="js.js"></script>
 	<title>Gallery</title>
 	<meta charset="UTF-8">
 </head>
+
 <body>
-<div class="wrap">
-
-<div class="nav-container">
-	<nav class="nav-bar">
-		<ul>
-			<li style="width:250px;">
-				<a href="index.html"><img src="logo.jpg"></img></a>
-			</li>
+<div id="sidebar-wrapper">
+	<div id="sidebar-menu"><a id="menu-toggle" href="#">NAVIGATION <span id="sidebar-icon">&#9776;</span></a></div>
 		
-			<li class="li-tab">
-				<a href="index.html">Home</a>
-			</li>
+	<a id="sidebar-list" href="index.html">
+		<div id="sidebar-arrow">&#10097; </div>
+		<div id="sidebar-text">Home</div>
+		<span id="sidebar-icon"><img src="./img/icon_logo.png" style="opacity : 1"></span>
+	</a>
+		
+	<a id="sidebar-list" href="aboutedu.html">
+		<div id="sidebar-arrow">&#10097; </div>
+		<div id="sidebar-text">About Edufair</div>
+		<span id="sidebar-icon"><img src="./img/icon_about.png"></span>
+	</a>
+		
+	<a id="sidebar-list" href="History.html">
+		<div id="sidebar-arrow">&#10097; </div>
+		<div id="sidebar-text">History</div>
+		<span id="sidebar-icon"><img src="./img/icon_history.png"></span>
+	</a>
+		
+	<a id="sidebar-list" href="gallery.php">
+		<div id="sidebar-arrow">&#10097; </div>
+		<div id="sidebar-text">Gallery</div>
+		<span id="sidebar-icon"><img src="./img/icon_gallery.png"></span>
+	</a>
 
-			<li class="li-tab">
-				<a href="news.html">News</a>
-			</li>
+	<a id="sidebar-list" href="http://www.youtube.com">
+		<div id="sidebar-arrow">&#10097; </div>
+		<div id="sidebar-text">Trailer</div>
+		<span id="sidebar-icon"><img src="./img/icon_trailer.png" style="height : 16px"></span>
+	</a>
+
+	<a id="sidebar-list" href="news.html">
+		<div id="sidebar-arrow">&#10097; </div>
+		<div id="sidebar-text">News</div>
+		<span id="sidebar-icon"><img src="./img/icon_news.png"></span>
+	</a>
+		
+	<div id="sidebar-list-cont">
+	<div id="sidebar-list">
+		<div id="sidebar-arrow">&#10097; </div>
+		<div id="sidebar-text">Events</div>
+		<span id="sidebar-icon"><img src="./img/icon_events.png"></span>
+	</div>
+		
+		<div id="sidebar-child"> <!--Events' Childs-->
+			<div id="sidebar-child-arrow">&#10097;  </div>
+			<div style="display : inline-block; height : 30px; line-height : 20px">Exhibitions</div>
+		</div>
 			
-			<li class="li-tab">
-				<a href="History.html">The Fair</a>
-			</li>
+		<div id="sidebar-child">
+			<div id="sidebar-child-arrow">&#10097;  </div>
+			<div style="display : inline-block; height : 30px; line-height : 20px">Presentations</div>
+		</div>
 			
-			<li class="li-tab">
-				<a href="aaa">Events <p> &#x25BC;</p></a>
-					<ul class="li-child">
-						<li><a href="b"><p>&#8227;</p>  Exhibition</a></li>
-						<li><a href="c"><p>&#8227;</p>  Presentation</a></li>
-					</ul>
-			</li>
-			
-			<li class="li-tab">
-				<a href="gallery.php">Gallery</a>
-			</li>			
-			
-			<li class="li-search" style="width:20%">
-				<div id="sb-search" class="sb-search">
-					<form style="margin-top : 10px">
-						<input class="sb-search-input" placeholder="Search..." type="search" value="" name="search" id="search">
-						<input class="sb-search-submit" type="submit" value="">
-						<span class="sb-icon-search"></span>
-					</form>
-				</div>
-			</li>
-			
-		</ul>
-	</nav>
+		<a id="sidebar-child" href="lomba.html">
+			<div id="sidebar-child-arrow">&#10097;  </div>
+			<div style="display : inline-block; height : 30px; line-height : 20px">Competitions</div>
+		</a>
+	</div>
 </div>
 
-<div class="template" style="margin-top : 100px;">
+<div class="wrap">
+<div class="template">
 <div class="body">	
 	<div class="col-middle" style="width : 100%; height : auto; padding-bottom : 100px">
 	<h1> Gallery</h1>
@@ -203,6 +219,7 @@ function show_pagination($current_page, $last_page){
 			<h2>&#169; Made by : Antonio Setya, Henry Kosim, <br>Kevin Pratama</h2>
 		</div>
 	</div>
+</div>
 </div>
 <!--JAVASCRIPT-->
 <script src="js/classie.js"></script>
