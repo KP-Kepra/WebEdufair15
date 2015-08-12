@@ -997,6 +997,38 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	.pagination a:hover {
 		color : rgba(0,70,140,1);
 	}
+
+.boxkotak a:link, a:visited {
+		display: block;
+		font-weight: bold;
+		color: #ffffff;
+
+		width: 240px;
+		text-align: center;
+		padding: 4px;
+		text-decoration: none;
+	}
+.boxkotak a:hover, a:active {
+    background-color: #7A991A;
+	}
+
+.boxnews{
+	display : inline-block;
+	vertical-align : middle;
+	width	: 750px;
+	height : auto;
+	left : 0;
+	border : 0px;
+	padding : 0 0 0 0;
+	background-color	:#516559;
+	}
+.boxnews p{
+	color		:white;
+}
+.boxnews h1{
+	color		:white;
+}
+
 /* =====================================================
 							FOOTER & SOCMED						 
 ======================================================*/

@@ -69,27 +69,38 @@
 		</a>
 	</div>
 </div>
- 
+
  
 <div class="wrap">
 <div class="template">
 <div class="body">	
 	<div class="col-right" style="left : 0">
-		<h1>Latest News</h1>
+		<p><font size="60px" color="white">&nbsp Latest News</font></p>
 	<hr>
-	    <ul id="menu">
-            <li id="link1"><a href="#/">Topic One</a></li>
+	    <ul id="menu" type="none">
+			<div class="boxkotak">
+            <li id="link1"><a href="#/">Fifty Shades of Grey</a></li>
             <li id="link2"><a href="#/">Topic Two</a></li>
             <li id="link3"><a href="#/">Topic Three</a></li>
 			<li id="link4"><a href="#/">Topic Vier</a></li>
 			<li id="link5"><a href="#/">Topic Lima</a></li>
+			</div>
         </ul>
 	</div>
 		
 	<div class="col-middle" id="content" style="right : 0; margin : 0 0 0 6; height : auto">
+	<div class="boxnews">
 	<div class="main">
 		<div id="idone" style="display:none; padding:10px;">
-			asdf
+			<p><font size="100px">Fifty Shades of Grey</font><br><br>
+			Anastasia "Ana" Steele is a 21-year-old college senior attending Washington State University in Vancouver, Washington. Her best friend is Katherine "Kate" Kavanagh, who writes for the college newspaper. Due to an illness, Kate persuades Ana to take her place and interview 27-year-old Christian Grey, a successful and wealthy young entrepreneur in Seattle. Ana is instantly attracted to Christian, but also finds him intimidating. As a result, she stumbles through the interview and leaves Christian's office believing it went badly. Ana consoles herself by thinking they will never meet again. However, Christian appears at the hardware store where she works. While he purchases various items including cable ties, masking tape and rope, Ana informs Christian that Kate would like some photographs to go along with her article about him. Christian gives Ana his phone number. Later, Kate urges Ana to call Christian and arrange a photo shoot with their photographer friend, José Rodriguez.
+
+The next day José, Kate, and Ana arrive for the photo shoot at the Heathman Hotel where Christian is staying. Christian asks Ana out for coffee. He asks if she's dating anyone, specifically José. Ana replies that she is not dating anyone. During the conversation, Ana learns that Christian is also single, but he says he is no romantic. Ana is intrigued but believes she is not attractive enough for Christian. Later, Ana receives a package from Christian containing first edition copies of Tess of the d'Urbervilles, which stuns her. Later that night, Ana goes out drinking with her friends and ends up drunk dialling Christian, who informs her that he will be coming to pick her up because of her inebriated state. Ana goes outside to get some fresh air, and José attempts to kiss her, but he is stopped by Christian's arrival. Ana leaves with Christian, but not before she discovers that Kate has been flirting with Christian's brother, Elliot. Later, Ana wakes to find herself in Christian's hotel room, where he scolds her for not taking proper care of herself. Christian then reveals that he would like to have sex with her. He initially says that Ana will first have to fill out paperwork, but later goes back on this statement after making out with her in the elevator.
+
+Ana goes on a date with Christian where he takes her in his helicopter, Charlie Tango, to his apartment. Once there, Christian insists that she sign a non-disclosure agreement forbidding her to discuss anything that they do together, which Ana agrees to sign. He also mentions other paperwork, but first takes her to his playroom full of BDSM toys and gear. There Christian informs her that the second contract will be one of dominance and submission and that there will be no romantic relationship, only a sexual one. The contract even forbids Ana from touching Christian or making eye contact with him. At this point, Christian realizes that Ana is a virgin and agrees to take her virginity without making her sign the contract. The two then have sex. The following morning, Ana and Christian once again have sex. His mother then arrives moments after their sexual encounter, and is surprised by the meeting, having previously thought Christian was homosexual because he was never seen with a woman. Christian later takes Ana out to eat, and he reveals to her that he lost his virginity at fifteen to one of his mother's friends, Elena Lincoln, and that his previous dominant/submissive relationships (Christian reveals that in his first dominant/submissive relationship he was the submissive) failed due to incompatibility. They plan to meet up again and Christian takes Ana home, where she discovers several job offers and admits to Kate that she and Christian had sex.
+
+Over the next few days, Ana receives several packages from Christian. These include a laptop to enable her to perform research on the BDSM lifestyle in consideration of the contract, as well as for the two of them to communicate, since she has never previously owned a computer, and a more detailed version of the dominant/submissive contract. She and Christian email each other, with Ana teasing him and refusing to honour parts of the contract, such as only eating foods from a specific list. Ana later meets up with Christian to discuss the contract, only to grow overwhelmed by the potential BDSM arrangement and the potential of having a sexual relationship with Christian that is not romantic in nature. Because of these feelings, Ana runs away from Christian and does not see him again until her college graduation, where he is a guest speaker. During this time, Ana agrees to sign the dominant/submissive contract. Ana and Christian once again meet up to further discuss the contract, and they go over Ana's hard and soft limits. Ana is spanked for the first time by Christian; the experience leaves her both enticed and slightly confused. This confusion is exacerbated by Christian's lavish gifts, and the fact that he brings her to meet his family. The two continue with the arrangement without Ana having yet signed the contract. After successfully landing a job with Seattle Independent Publishing (SIP), Ana further bristles under the restrictions of the non-disclosure agreement and her complex relationship with Christian. The tension between Ana and Christian eventually comes to a head after Ana asks Christian to punish her in order to show her how extreme a BDSM relationship with him could be. Christian fulfils Ana's request, beating her with a belt, only for Ana to realize that the two of them are incompatible. Devastated, Ana leaves Christian and returns to the apartment she shares with Kate.
+			</p>
 		</div>
 		<div id="idtwo" style="display:none; padding:10px;">
 			ghij
@@ -103,6 +114,7 @@
 		<div id="idfive" style="display:none; padding:10px;">
 			opq
 		</div>
+	</div>
     </div>
 	</div>
 </div>
@@ -132,6 +144,8 @@
 <script src="js/sidebar.js"></script>
 <script>
 hideContentDivs();
+$('#idone').show();
+$('html, body').scrollTop(0);
 $('#menu a').click(function(e){
 	hideContentDivs();
     var tmp_div = $(this).parent().index();
