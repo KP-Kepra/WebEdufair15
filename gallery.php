@@ -9,16 +9,16 @@
 		font-family : Exo;
 	}
 	td {
-		background-color : blue;
-		color : orange;	
-		border : solid 5px white;
-	}
-	td:hover {
-		box-shadow : 0px 0px 7px 5px red;
+		height : auto;
+		width : 120px;
 	}
 	td a {
 		color : yellow;
 		font-family : Montserrat;
+		display : inline-block;
+		height : auto;
+		background : white;
+		width : 120px;
 	}
 	.image {
 		width : 300px;
@@ -107,8 +107,8 @@
 <div class="wrap">
 <div class="template">
 <div class="body">	
+	<h1>Gallery</h1>
 	<div class="col-middle" style="width : 100%; height : auto; padding-bottom : 100px">
-	<h1> Gallery</h1>
 	<hr width ="40%" align="left" style="background:#000000; border:0; height : 5px">
 		<ul class="gal-slides">
 		
@@ -219,18 +219,18 @@ function show_pagination($current_page, $last_page){
 	<table>
 	<tr>';
 	if($current_page != 1) {
-		echo '<td><a href="?page='.($current_page-1).'"><< Previous</a> &nbsp&nbsp&nbsp&nbsp</td>';
+		echo '<td><a href="?page='.($current_page-1).'"><< Previous &nbsp&nbsp&nbsp&nbsp</a></td>';
 	}
     for($z = 1;$z <= $last_page;$z++){
 		if ($current_page != $z) {
-        echo '<td><a href="?page='.($z).'">'.$z.'</a> &nbsp&nbsp&nbsp&nbsp</td>';
+        echo '<td><a href="?page='.($z).'">'.$z.' &nbsp&nbsp&nbsp&nbsp</a></td>';
 		}
 		else {
 			echo '<td>'.$z.'&nbsp&nbsp&nbsp&nbsp</td>';
 		}
 	}
 	if($current_page != $last_page){
-		echo '<td><a href="?page='.($current_page+1).'">Next >></a>&nbsp&nbsp&nbsp&nbsp</td>';
+		echo '<td><a href="?page='.($current_page+1).'">Next >>&nbsp&nbsp&nbsp&nbsp</a></td>';
 	}
     echo '</tr>
 	</table>
