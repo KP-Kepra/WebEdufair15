@@ -270,12 +270,8 @@ function show_pagination($current_page, $last_page){
 </div>
 <!--JAVASCRIPT-->
 <script src="js/classie.js"></script>
-<script src="js/uisearch.js"></script>
 <script src="js/offset.js"></script>
 <script src="js/sidebar.js"></script>
-<script>
-	new UISearch( document.getElementById( 'sb-search' ) );
-</script>
 <script> /*Nav-Bar Zoom Scroll*/
     $(window).scroll(function() {
     $('.nav-bar').css('left', -$(this).scrollLeft() + "px");
