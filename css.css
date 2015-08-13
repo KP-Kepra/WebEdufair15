@@ -2,12 +2,14 @@ html, body {
 	margin:0;
 	padding:0;
 	height: 100%;
-	background : #225e08;
+	background : url("./img/bghome.jpg");
 }
 h1{
-	font-size : 40px;
-	padding : 30 0 0 30;
+	font-size : 85px;
+	padding : 0 0 0 30;
 	margin-bottom : 0px;
+	font-family : Exo;
+	color : #eb7602
 }
 h2{
 	color : white;
@@ -71,7 +73,7 @@ section.fixed-bg{
 	.fixed-bg a:hover h1{
 		background-color : rgba(0,0,0,0.7);
 	}
-	.fixed-bg.bg-1{
+	.fixed-bg.bg-1, .bg-1{
 		background-image : url("./img/bghome.jpg");
 		background-repeat : repeat;
 	}
@@ -621,12 +623,14 @@ section.fixed-bg{
 #sidebar-wrapper {
     margin-left: -150px;
     left: 0px;
+	top : 0px;
 	float : left;
 	display : inline-block;
     width: 200px;
     background: #EB7302;
     position: fixed;
     height: 100%;
+	margin-top : 0px;
 	z-index : 1000;
     transition: all .4s ease;
 }
@@ -769,8 +773,8 @@ section.fixed-bg{
 	width : 1100px;
 	height : auto;
 	min-width : 1100px;
-	margin : 0px 50px 20px 50px;
-	background-color : yellow;
+	margin : 50px 50px 20px 50px;
+	background : rgba(0,0,0,0.5);
 }
 .col-history {
 	border-radius : 50px;
@@ -795,8 +799,8 @@ section.fixed-bg{
 .col-middle{
 	display : inline-block;
 	vertical-align : middle;
-	width	: 760px;
-	height :500px;
+	width	: 60%;
+	height : 500px;
 	left : 0;
 	margin : 0 6 0 0;
 	border : 0px;
@@ -820,23 +824,27 @@ section.fixed-bg{
 	right : 0;
 	vertical-align : top;
 	display : inline-block;
-	width	: 330px;
-	padding : 0;
-	margin : 0 0 20 0;
+	width	: 300px;
+	padding : 10;
+	margin : 0 0 20 10;
 	height : auto;
-	background : blue;
+	background : rgba(102,102,102,0.3);
+	font-family : Montserrat;
 	border-left : 1px thick black;
 }
-	.col-right h1{
-		padding : 0 0 0 20;
+	.col-right p {
+		text-align : center;
+		font-size : 40px;
+		margin : auto;
+		color : white;
 	}
 	.col-right hr {
-		 width : 92%; 
+		 width : 95%; 
 		 padding-left : 10px; 
-		 background : #F87431; 
+		 background : #FFFFFF; 
 		 border : 0; 
 		 border-radius : 5px; 
-		 height : 4px;
+		 height : 3px;
 	}
 	.col-right a{
 		display : block;
@@ -903,7 +911,7 @@ section.fixed-bg{
 	z-index : 3;
 	cursor : pointer;
 	opacity : 0;
-	transition : all .3s ease;
+	transition : opacity .3s ease;
 	font-size : 100px;
 	text-align : center;
 	color : #fff;
@@ -944,7 +952,7 @@ input:checked + .gal-cont .gal-nav label { display : block; }
 	transition : all .2s ease;
 }
 	.gal-dot:hover{
-		background-color : rgba(0,0,0,0.8);
+		background-color : rgba(255,255,255,0.6);
 		cursor : pointer;
 	}
 
@@ -954,13 +962,13 @@ input#img-3:checked ~ .gal-dots label#img-dot-3,
 input#img-4:checked ~ .gal-dots label#img-dot-4,
 input#img-5:checked ~ .gal-dots label#img-dot-5,
 input#img-6:checked ~ .gal-dots label#img-dot-6 {
-	background: rgba(0, 0, 0, 0.8);
+	background: rgba(255,255,255,0.8);
 	cursor : default;
 }
 
 .gal-content{
 	width : 100%;
-	background : cyan;
+	background : none;
 	margin-bottom : 50px;
 	padding-bottom : 25px;
 	height : auto;
@@ -1003,28 +1011,42 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 		display: block;
 		font-weight: bold;
 		color: #ffffff;
-
-		width: 240px;
-		text-align: center;
-		padding: 4px;
+		width : 300px;
+		text-align: left;
+		padding : 4 4 4 12;
+		font-size : 14px;
 		text-decoration: none;
 	}
 .boxkotak a:hover, a:active {
-    background-color: #7A991A;
+    background : rgba(204,204,204,0.5);
+	width : auto;
 	}
 
 .boxnews{
 	display : inline-block;
 	vertical-align : middle;
+	text-align : justify;
 	width	: 750px;
 	height : auto;
 	left : 0;
+	color : white;
+	font-family : Montserrat;
 	border : 0px;
 	padding : 0 0 0 0;
-	background-color	:#516559;
+	background : rgba(102,102,102,0.4);
 	}
 .boxnews p{
 	color		:white;
+	font-size : 60px;
+	margin : auto;
+}
+.boxnews hr {
+	width : 95%; 
+	left : 0px;
+	background : #FFFFFF; 
+	border : 0; 
+	border-radius : 5px; 
+	height : 3px;
 }
 .boxnews h1{
 	color		:white;

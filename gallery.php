@@ -8,17 +8,31 @@
 	h1 {
 		font-family : Exo;
 	}
+	td, td a {
+		text-align : center;
+		font-family : Montserrat;
+	}
 	td {
-		background-color : blue;
-		color : orange;	
-		border : solid 5px white;
+		width : auto;
+		color : black;
+		font-weight : bold;
+		border-radius : 5px;
+		background : rgba(235,115,2,0.5);
+	}
+	td a, td a:link {
+		display : inline-block;
+		height : 100%;
+		padding : 5 21 5 20;
+		width :auto;
+		line-height : 20px;
+		border-radius : 5px;
+		text-decoration : none;
 	}
 	td:hover {
-		box-shadow : 0px 0px 7px 5px red;
+		background : rgba(253,150,60,0.8);
 	}
-	td a {
-		color : yellow;
-		font-family : Montserrat;
+	td a:active {
+		background : none;
 	}
 	.image {
 		width : 300px;
@@ -27,9 +41,11 @@
 		border : solid 1px #fff;
 		display : inline-block;
 		margin : 25px;
+		transition : all .15s ease;
 	}
 	.image:hover {
-		box-shadow : 0px 0px 7px 5px red;
+		box-shadow : 0px 0px 5px 5px orange;
+		border : solid 1px #FEC497;	
 	}
 	.image img {
 		margin : 0;
@@ -38,7 +54,6 @@
 	}
 </style>
 </head>
-<<<<<<< HEAD
 
 <body>
 <div id="sidebar-wrapper">
@@ -104,12 +119,11 @@
 	</div>
 </div>
 
-<div class="wrap">
 <div class="template">
 <div class="body">	
+	<h1>Gallery</h1>
 	<div class="col-middle" style="width : 100%; height : auto; padding-bottom : 100px">
-	<h1> Gallery</h1>
-	<hr width ="40%" align="left" style="background:#000000; border:0; height : 5px">
+	<hr width ="40%" align="left" style="background : orange; border:0; height : 5px">
 		<ul class="gal-slides">
 		
 		    <input type="radio" name="radio-btn" id="img-1" checked />
@@ -219,18 +233,18 @@ function show_pagination($current_page, $last_page){
 	<table>
 	<tr>';
 	if($current_page != 1) {
-		echo '<td><a href="?page='.($current_page-1).'"><< Previous</a> &nbsp&nbsp&nbsp&nbsp</td>';
+		echo '<td><a href="?page='.($current_page-1).'">&#x2190; Prev</a></td>';
 	}
     for($z = 1;$z <= $last_page;$z++){
 		if ($current_page != $z) {
-        echo '<td><a href="?page='.($z).'">'.$z.'</a> &nbsp&nbsp&nbsp&nbsp</td>';
+        echo '<td><a href="?page='.($z).'">'.$z.'</a></td>';
 		}
 		else {
-			echo '<td>'.$z.'&nbsp&nbsp&nbsp&nbsp</td>';
+			echo '<td style="padding : 5 21 5 20; line-height : 25px;">'.$z.'</td>';
 		}
 	}
 	if($current_page != $last_page){
-		echo '<td><a href="?page='.($current_page+1).'">Next >></a>&nbsp&nbsp&nbsp&nbsp</td>';
+		echo '<td><a href="?page='.($current_page+1).'">Next &#x2192;</a></td>';
 	}
     echo '</tr>
 	</table>
