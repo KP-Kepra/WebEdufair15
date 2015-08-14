@@ -10,7 +10,7 @@
 		font-family : Exo;
 	}
 	.body-child {
-		padding : 5px 5px 5px 5px;
+		padding : 40px;
 		font-family : Montserrat;	
 		color : white;
 		animation-name: fadeIn;
@@ -143,15 +143,20 @@
 	</div>
 </div>
 <div class="wrap">
-<div class="template">
+<section class="fixed-bg parallax bg-1" style="padding :  0 0 200 50; margin : 80 0 0 0; height : auto">
+<h1 align="center">PERLOMBAAN</h1>
+
+<div class="template"style="height : auto">
 <div class="body">
-	<div class="imageholder">
+	<div class="imageholder" >
 	<div class="imagelomba" style="padding-left : 25px"><a href="#cermat" id="cermat" style="display : inline-block;"/><img src="./img/cerdascermat.png"  alt="Cerdas Cermat" /></a></div>
 	<div class="imagelomba" style="float : right; padding-right : 25px"><a href="#science" id="science" alt="Science Competition" style="display : inline-block;"/><img src="./img/CCSC.png" alt="Science Competition" width=490px height=575px /></a></div> 
 	</div>
 	<div class="body-child"></div>
 </div>
 </div>
+</section>
+
 <div class="footer" style="margin-top : -8px; opacity : 1">
 	<div class="foot-temp" style="padding-top : 20px">
 		<div class="foot-tab">
@@ -161,7 +166,7 @@
 		<img src="./img/logo_amdg.png" height="64px" width="64px"/>
 		</div>
 		<div class="foot-tab" style="right : 0;">
-			<h2>&#169; Made by : Antonio Setya, Henry Kosim, <br>Kevin Pratama</h2>
+			<h3>&#169; Made by : Antonio Setya, Henry Kosim, <br>Kevin Pratama</h3>
 		</div>
 	</div>
 </div>
@@ -194,20 +199,20 @@
 	}
 	function cermat() {
 		$(".imageholder").remove();
-		$(".body-child").html("<h1 align='center'> CANISIUS COLLEGE EDUCATION FAIR 2015<br>CERDAS CERMAT</h1>");
+		$(".body-child").html("<h2 align='center'> CANISIUS COLLEGE EDUCATION FAIR 2015<br>CERDAS CERMAT</h2>");
 		$(".body-child").append("<p align='center'><img src='./img/poster-cerdas.jpg'/></p>");
 		$(".body-child").append("<p>Untuk ketentuan lebih lanjut, silahkan lihat <a href='./document/Petunjuk Cerdas Cermat.pdf'> disini</a></p>");
 		$(".body-child").append("<p>Formulir pendaftaran bisa diunduh <a href='./document/Formulir Pendaftaran Cerdas Cermat.doc'> disini</a></p>");
-		$(".body-child").append("<p align='center'><a id='closenews' href=''> << Back </a></p>");
+		$(".body-child").append("<p align='center' style='font-size : 30px;'><a id='closenews' href='' style=' text-decoration : none;'> &#10096; BACK</a></p>");
 	}
 	function science() {
 		$(".imageholder").remove();
-		$(".body-child").html("<h1 align='center'> CANISIUS COLLEGE EDUCATION FAIR 2015<br>SCIENCE COMPETITION</h1>");
+		$(".body-child").html("<h2 align='center'> CANISIUS COLLEGE EDUCATION FAIR 2015<br>SCIENCE COMPETITION</h2>");
 		$(".body-child").append("<p>CCSC adalah kompetisi proyek sains yang diselenggarakan oleh SMA Kanisius sebagai wadah para siswa-siswi SMA sederajat untuk mewujudkan kepedulian mereka terhadap kehidupan yang lebih baik dari kini dan untuk nanti.</p>");
 		$(".body-child").append("<p align='center'><img src='./img/poster-science.jpg'/></p>");
 		$(".body-child").append("<p>Untuk ketentuan lebih lanjut, silahkan lihat <a href='./document/Petunjuk Teknis CCSC.pdf'> disini</a></p>");
 		$(".body-child").append("<p>Formulir pendaftaran bisa diunduh <a href='./document/Formulir Pendaftaran CCSC.doc'> disini</a></p>");
-		$(".body-child").append("<p align='center'><a id='closenews' href=''> << Back </a></p>");
+		$(".body-child").append("<p align='center' style='font-size : 30px;'><a id='closenews' href='' style=' text-decoration : none;'> &#10096; BACK </a></p>");
 	}
 </script>
 </body>

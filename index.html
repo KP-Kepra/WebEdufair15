@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<section class="fixed-bg parallax bg-1">
+<section class="fixed-bg parallax bg-1" style="padding : 150 0 150 0">
 	<div id="trailerfade"></div>
 		<div class="videotrailer"></div>
 	<div class="template" style="margin-top : 0">
@@ -112,7 +112,7 @@
 		<img src="./img/logo_amdg.png" height="64px" width="64px"/>
 		</div>
 		<div class="foot-tab" style="right : 0;">
-			<h2>&#169; Made by : Antonio Setya, Henry Kosim, <br>Kevin Pratama</h2>
+			<h3>&#169; Made by : Antonio Setya, Henry Kosim, <br>Kevin Pratama</h3>
 		</div>
 	</div>
 </div>
@@ -140,22 +140,15 @@ function autoPlayVideo(vcode, width, height){
 	var offset = p.offset();
 	$(".videotrailer").html('<iframe width="'+width+'" height="'+height+'" src="https://www.youtube.com/embed/'+vcode+'?autoplay=1&loop=1&rel=0&wmode=transparent&controls=0&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen wmode="Opaque"></iframe><a id="closevideo" href="index.html">&#10006</a>');
 	$("#trailerfade").css({"visibility" : "visible"});
-	$('body').css({"overflow-y" : "auto"});
-	$('body').css({"overflow-x" : "hidden"});
-	$('html').css({"overflow-y" : "auto"});
-	$('html').css({"overflow-x" : "hidden"});
 	$(".videotrailer").css({"visibility" : "visible"});
 	$("#closevideo").css({"visibility" : "visible"});
 }
-	$('#closevideo').click(function(){
+	$('#closevideo, #trailerfade').click(function(){
 	$(".videotrailer").html('');
 	$("#closevideo").css({"visibility" : "hidden"});
 	$("#trailerfade").css({"visibility" : "hidden"}); 
 	$(".videotrailer").css({"visibility" : "hidden"});
-});
+	});
 </script>
-<!--
-<div class="contact-bottom"><hr color="black">Contact us : 14045, Nisiuska College Aceh, Jawa Utara. Jalan mak lo</div>
--->
 </body>
 </html>

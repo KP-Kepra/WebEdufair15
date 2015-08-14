@@ -119,11 +119,11 @@
 	</div>
 </div>
 
-<div class="template">
-<div class="body">	
+<section class="fixed-bg parallax bg-1" style="padding :  0 0 80 50; margin : 80 0 0 0; height : auto">
 	<h1>Gallery</h1>
+<div class="template"  style="background : rgba(0,0,0,0.5);">
 	<div class="col-middle" style="width : 100%; height : auto; padding-bottom : 100px">
-	<hr width ="40%" align="left" style="background : orange; border:0; height : 5px">
+	
 		<ul class="gal-slides">
 		
 		    <input type="radio" name="radio-btn" id="img-1" checked />
@@ -195,7 +195,7 @@
 			</li>
 		</ul>
 </div>
-<div class="gal-content">
+<div class="gal-content" style="margin : auto; width : 1100px">
 <?php 
 $folder = './img/';
 $filetype = '*.*';    
@@ -254,6 +254,8 @@ function show_pagination($current_page, $last_page){
 </div>
 </div>
 </div>
+</section>
+
 <div class="footer" style="margin-top : -8px; opacity : 1">
 	<div class="foot-temp" style="padding-top : 20px">
 		<div class="foot-tab">
@@ -263,7 +265,7 @@ function show_pagination($current_page, $last_page){
 		<img src="./img/logo_amdg.png" height="64px" width="64px"/>
 		</div>
 		<div class="foot-tab" style="right : 0;">
-			<h2>&#169; Made by : Antonio Setya, Henry Kosim, <br>Kevin Pratama</h2>
+			<h3>&#169; Made by : Antonio Setya, Henry Kosim, <br>Kevin Pratama</h3>
 		</div>
 	</div>
 </div>

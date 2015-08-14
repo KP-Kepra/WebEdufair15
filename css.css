@@ -9,15 +9,21 @@ h1{
 	padding : 0 0 0 30;
 	margin-bottom : 0px;
 	font-family : Exo;
-	color : #eb7602
+	color : #eb7602;
 }
 h2{
 	color : white;
 	font-weight : normal;
-	font-size : 12px;
+	font-size : 36px;
 	margin : 0 auto 0 auto;
 	padding : 10 0 20 0;
 	text-align: center;
+}
+h3 {
+	color : white;
+	font-size : 12px;
+	font-family : Montserrat;
+	margin : 0;
 }
 p {
 	font-family : "Montserrat";
@@ -34,19 +40,159 @@ p {
 	width : 100%px;
 	margin : 0px auto auto auto;
 }
+/* =====================================================
+							NAVIGATION BAR									 
+======================================================*/
+#sidebar-wrapper {
+    margin-left: -150px;
+    left: 0px;
+	top : 0px;
+	float : left;
+	display : inline-block;
+    width: 200px;
+    background: #EB7302;
+    position: fixed;
+    height: 100%;
+	margin-top : 0px;
+	z-index : 1000;
+    transition: all .4s ease;
+}
+	#sidebar-wrapper.active{
+		left: 150px;
+	}
 
+#sidebar-menu {
+	margin : 0;
+	padding : 0px;
+}
+	#sidebar-menu a{
+		position : relative;
+		display : block;
+		line-height: 40px;
+		height : 40px;
+		width : 100%;
+		text-indent: 20px;
+		font-family : "Montserrat";
+		margin : 0px;
+		color: #FFE9DE;
+		text-decoration: none;
+		background: linear-gradient(#FD8D32,#FD8C23);
+		border-top: 1px solid #eb7602;
+		border-bottom: 2px solid #B85702;
+		transition: background .5s;
+	}
+
+#sidebar-icon{
+	float : right;
+	font-size : 20px;
+	margin-right : 16px;
+	transition : all .4s ease;
+}
+	#sidebar-wrapper.active #sidebar-icon {
+		color : white;
+	}
+	#sidebar-icon img {
+		height : 20px;
+		width : 20px;
+		margin-top : 10px;
+		opacity : 0.7;
+		transition : all .3s ease;
+	}
+#sidebar-list-cont {
+	height : 40px;
+	width : auto;
+	transition : all .4s ease;
+	overflow : hidden;
+}
+	#sidebar-list-cont:hover {
+		background : #904601;
+		height : 130px;
+	}
+#sidebar-list, #sidebar-child{
+	background-color : none;
+	border : none;
+	display : block;
+	text-decoration : none;
+	padding-left : 15px;
+	font-family : "Montserrat";
+	color : #FFE0D3;
+	height : 40px;
+	font-size : 13px;
+	transition : all .4s ease;
+}
+	#sidebar-list-cont:hover #sidebar-list, #sidebar-list:hover{
+		padding-left : 25px;
+		background : #FC8524;
+	}
+	#sidebar-arrow {
+		opacity : 0;
+		height : 40px;
+		width : auto;
+		color : white;
+		transition : all .3s ease;
+		font-size : 25px;
+		display : inline-block;
+		padding-top : 0px;
+		margin-top : 0px;
+		vertical-align : middle;
+	}
+	#sidebar-list-cont:hover #sidebar-arrow, #sidebar-list-cont:hover #sidebar-icon img, #sidebar-list:hover #sidebar-arrow, #sidebar-list:hover #sidebar-icon img {
+		opacity : 1;
+		color : white;
+		margin-left : 10px;
+	}
+	#sidebar-text, #sidebar-child {
+		display : inline-block;
+		line-height : 30px;
+		height : 40px;
+	}
+	#sidebar-child {
+		opacity : 0;
+		display : block;
+		padding-left : 0px;
+		visibility : hidden;
+		transition : all .4s ease;
+		height : 30px;
+		line-height : 30px;
+	}
+	#sidebar-list-cont:hover #sidebar-child, #sidebar-list:hover ~ #sidebar-child, #sidebar-child:hover {
+		opacity : 1;
+		visibility : visible;
+		margin-left : 40px;
+	}
+	#sidebar-child:hover {
+		padding-left : 15px;
+		background : #FC8524;
+	}
+	#sidebar-child-arrow {
+		opacity : 0;
+		visibility : hidden;
+		transition : all .4s ease;
+		display : inline-block;
+		color : white;
+		font-size : 14px;
+		line-height : 30px;
+	}
+	#sidebar-child:hover #sidebar-child-arrow {
+		opacity : 1;
+		visibility : visible;
+	}
+	#sidebar-child a {
+		text-decoration : none;
+		display : inline-block;
+	}
+	
 /* =====================================================
 									PARALLAX
 ======================================================*/
 	/* Sections
 	--------------------------------------------- */
 section.fixed-bg{
-	height : 700px;
+	height : auto;
 	min-width : auto;
 	width : auto;
 	margin : auto;
 	padding-top : 150px;
-	padding-left : 50px;
 	background-position : left top;
 	margin-left : 0px;
 	margin-bottom:0px;
@@ -60,15 +206,6 @@ section.fixed-bg{
 		background-color : rgba(0,0,0,0.5);
 		transition : background-color .2s ease;
 		color : white;
-	}
-	.fixed-bg a{
-		height : 120px;
-		width : 120px;
-		padding : 0;
-		border-radius : 50%;
-		display : block-inline;
-		color : black;
-		text-decoration : none;
 	}
 	.fixed-bg a:hover h1{
 		background-color : rgba(0,0,0,0.7);
@@ -229,7 +366,7 @@ section.fixed-bg{
 		transform : rotate(-7deg);
 	}
 /* =====================================================
-									CONTENT
+									HOME PAGE
 ======================================================*/
 .logo img, .logo{
 	margin:auto;
@@ -245,22 +382,17 @@ section.fixed-bg{
 	position : absolute;
 }
 #trailerfade {
-	background-attachment: scroll;
 	background-clip: border-box;
 	background-color: rgba(0, 0, 0, 0.8);
-	background-image: none;
-	background-origin: padding-box;
-	background-size: auto;
 	bottom: 0px;
-	color: rgb(0, 0, 0);
 	display: block;
 	height: 100%;
 	left: 0px;
 	line-height: normal;
-	max-height: 999999px;
+	height : 100%;
 	opacity: 1;
 	overflow-x: hidden;
-	overflow-y: auto;
+	overflow-y: hidden;
 	position: fixed;
 	right: 0px;
 	top: 0px;
@@ -285,7 +417,7 @@ section.fixed-bg{
 #closevideo {
 	z-index : 5100;
 	visibility : hidden;
-	position : fixed;
+	position : absolute;
 	height : 32px;
 	width : 32px;
 	display : inline;
@@ -356,12 +488,17 @@ section.fixed-bg{
 		font-family : "Exo";
 	}
 	.homebutton a {
-		width : inherit;
-		height : inherit;
+		height : 120px;
+		width : 120px;
 		border-radius : inherit;
 		color : inherit;
 		font-family : inherit;
 		display : block;
+		padding : 0;
+		border-radius : 50%;
+		display : block-inline;
+		color : black;
+		text-decoration : none;
 	}
 	
 	.homebutton hr{
@@ -399,6 +536,7 @@ section.fixed-bg{
 		border-radius : inherit;
 		color : inherit;
 		font-family : inherit;
+		text-decoration : none;
 		display : block;
 	}
 	.homebutton p {
@@ -479,7 +617,8 @@ section.fixed-bg{
 		visibility : hidden;
 		z-index : 3;
 		line-height : 12px;
-		font-family : "Exo"
+		font-family : "Exo";
+		color : black;
 	}
 	#butchild2 { margin-top : 5px}
 	.butplacehold:hover #butchild1, .butplacehold:hover #butchild2{
@@ -521,7 +660,7 @@ section.fixed-bg{
 	overflow : hidden;
  }
  /* =====================================================
-									ABOUT US								 
+								ABOUT EDUFAIR						 
 ======================================================*/
 .about{
 	width	: 760px;
@@ -605,11 +744,13 @@ section.fixed-bg{
 }
 
 .about-icon .about-element:hover {
-	background: rgba(255,255,255,1);
 	color: #444444;
+	background : rgba(255,255,255,1);
 	font-weight : bold;
 }
-
+.about-icon a:active {
+	background : none;
+}
 .about-icon .about-element:hover:after {
 	-webkit-transform: scale(1);
 	-moz-transform: scale(1);
@@ -617,155 +758,14 @@ section.fixed-bg{
 	transform: scale(1);
 	opacity: 1;
 }
-/* =====================================================
-							NAVIGATION BAR									 
-======================================================*/
-#sidebar-wrapper {
-    margin-left: -150px;
-    left: 0px;
-	top : 0px;
-	float : left;
-	display : inline-block;
-    width: 200px;
-    background: #EB7302;
-    position: fixed;
-    height: 100%;
-	margin-top : 0px;
-	z-index : 1000;
-    transition: all .4s ease;
-}
-	#sidebar-wrapper.active{
-		left: 150px;
-	}
 
-#sidebar-menu {
-	margin : 0;
-	padding : 0px;
-}
-	#sidebar-menu a{
-		position : relative;
-		display : block;
-		line-height: 40px;
-		height : 40px;
-		width : 100%;
-		text-indent: 20px;
-		font-family : "Montserrat";
-		margin : 0px;
-		color: #FFE9DE;
-		text-decoration: none;
-		background: linear-gradient(#FD8D32,#FD8C23);
-		border-top: 1px solid #eb7602;
-		border-bottom: 2px solid #B85702;
-		transition: background .5s;
-	}
-
-#sidebar-icon{
-	float : right;
-	font-size : 20px;
-	margin-right : 16px;
-	transition : all .4s ease;
-}
-	#sidebar-wrapper.active #sidebar-icon {
-		color : white;
-	}
-	#sidebar-icon img {
-		height : 20px;
-		width : 20px;
-		margin-top : 10px;
-		opacity : 0.7;
-		transition : all .3s ease;
-	}
-#sidebar-list-cont {
-	height : 40px;
-	width : auto;
-	transition : all .4s ease;
-	overflow : hidden;
-}
-	#sidebar-list-cont:hover {
-		background : #904601;
-		height : 130px;
-	}
-#sidebar-list, #sidebar-child{
-	background-color : none;
-	border : none;
-	display : block;
-	text-decoration : none;
-	padding-left : 15px;
-	font-family : "Montserrat";
-	color : #FFE0D3;
-	height : 40px;
-	font-size : 13px;
-	transition : all .4s ease;
-}
-	#sidebar-list-cont:hover #sidebar-list, #sidebar-list:hover{
-		padding-left : 25px;
-		background : #FC8524;
-	}
-	#sidebar-arrow {
-		opacity : 0;
-		height : 40px;
-		width : auto;
-		color : white;
-		transition : all .3s ease;
-		font-size : 25px;
-		display : inline-block;
-		padding-top : 0px;
-		margin-top : 0px;
-		vertical-align : middle;
-	}
-	#sidebar-list-cont:hover #sidebar-arrow, #sidebar-list-cont:hover #sidebar-icon img, #sidebar-list:hover #sidebar-arrow, #sidebar-list:hover #sidebar-icon img {
-		opacity : 1;
-		color : white;
-		margin-left : 10px;
-	}
-	#sidebar-text, #sidebar-child {
-		display : inline-block;
-		line-height : 30px;
-		height : 40px;
-	}
-	#sidebar-child {
-		opacity : 0;
-		display : block;
-		padding-left : 0px;
-		visibility : hidden;
-		transition : all .4s ease;
-		height : 30px;
-		line-height : 30px;
-	}
-	#sidebar-list-cont:hover #sidebar-child, #sidebar-list:hover ~ #sidebar-child, #sidebar-child:hover {
-		opacity : 1;
-		visibility : visible;
-		margin-left : 40px;
-	}
-	#sidebar-child:hover {
-		padding-left : 15px;
-		background : #FC8524;
-	}
-	#sidebar-child-arrow {
-		opacity : 0;
-		visibility : hidden;
-		transition : all .4s ease;
-		display : inline-block;
-		color : white;
-		font-size : 14px;
-		line-height : 30px;
-	}
-	#sidebar-child:hover #sidebar-child-arrow {
-		opacity : 1;
-		visibility : visible;
-	}
-	#sidebar-child a {
-		text-decoration : none;
-		display : inline-block;
-	}
-	
 /* =====================================================
-							COLUMN CONTENT									 
+								BASIC CONTENT									 
 ======================================================*/
 .template{
 	width : 1200px;
 	height : auto;
-	margin : 0px auto 50px auto;
+	margin : 0px auto 0px auto;
 }
 	
 .body {
@@ -773,6 +773,7 @@ section.fixed-bg{
 	width : 1100px;
 	height : auto;
 	min-width : 1100px;
+	padding-top : 10px;
 	margin : 50px 50px 20px 50px;
 	background : rgba(0,0,0,0.5);
 }
@@ -862,7 +863,9 @@ section.fixed-bg{
 		padding : 0 10 10 10;
 	}
 
-/*Gallery*/
+/* =====================================================
+									GALLERY								 
+======================================================*/
 .gal-slides{
 	top : 50px;
 	margin-bottom : 50px;
@@ -1006,8 +1009,10 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	.pagination a:hover {
 		color : rgba(0,70,140,1);
 	}
-
-.boxkotak a:link, a:visited {
+/* =====================================================
+										NEWS						 
+======================================================*/
+.boxkotak li a:link, a:visited {
 		display: block;
 		font-weight: bold;
 		color: #ffffff;
@@ -1017,7 +1022,7 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 		font-size : 14px;
 		text-decoration: none;
 	}
-.boxkotak a:hover, a:active {
+.boxkotak li a:hover, a:active {
     background : rgba(204,204,204,0.5);
 	width : auto;
 	}
@@ -1052,6 +1057,43 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	color		:white;
 }
 
+/* =====================================================
+					PRESENTATIONS & EXHIBITIONS							 
+======================================================*/
+.pres-exh-icon {
+	background : rgba(253,147,61,0.5);
+	height : 50px;
+}
+.pres-exh-icon a {
+	width : 357px;
+	height : 40px;
+	margin-top : 5px;
+	margin-left : 5px;
+	margin-right : 0px;
+	display : inline-block;
+	list-style-type : none;
+	text-decoration : none;
+	color : white;
+	font-weight : bold;
+	background : rgba(235,115,2,1);
+	font-family : Montserrat;
+	border-radius : 8px;
+	text-align : center;
+}
+	.pres-exh-icon a li {
+		padding : 10px;
+	}
+	.pres-exh-icon a:hover {
+		background : rgba(253,150,60,0.8);
+	}
+.pres-exh-content table {
+	margin-left : auto;
+	margin-right : auto;
+	margin-bottom : 70px;
+}
+.pres-exh-content div p {
+	text-align : center;
+}
 /* =====================================================
 							FOOTER & SOCMED						 
 ======================================================*/
@@ -1187,8 +1229,9 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	background-size : 32px 32px;
 	margin-left : 248px;
 }
+
 .countdown {
-	margin : -50 auto 15 auto;
+	margin : 0 auto 15 auto;
 	width : 310px;
 	height : 60px;
 }
