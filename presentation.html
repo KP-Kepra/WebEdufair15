@@ -9,46 +9,23 @@
 	h1, h2 {
 		font-family : Exo;
 	}
-	.body-child {
-		padding : 5px 5px 5px 5px;
-		font-family : Montserrat;	
-		color : white;
+	p, h1, table, h2 {
 		animation-name: fadeIn;
 		-webkit-animation-name: fadeIn;	
-		animation-duration: 2s;	
-		-webkit-animation-duration: 2s;
+		animation-duration: .4s;	
+		-webkit-animation-duration: .4s;
 		animation-timing-function: ease-in-out;	
 		-webkit-animation-timing-function: ease-in-out;		
 	}
-	.body-child a {
-		color : darkorange;
+	p, table {
+		font-family : Montserrat;
+		font-size : 18px;
+		padding : 5px; 
+		color : white; 
 	}
-	.imageholder {
-		width : auto;
-		height : auto;
-		padding : 10px;
-		animation-name: fadeIn;
-		-webkit-animation-name: fadeIn;	
-		animation-duration: 0.5s;	
-		-webkit-animation-duration: 0.5s;
-		animation-timing-function: ease-in-out;	
-		-webkit-animation-timing-function: ease-in-out;	
-	}
-	.imagelomba {
-		width : 490px;
-		height : 575px;
-		padding : 10px;
-		border : solid 1px #fff;
-		display : inline-block;
-		box-shadow : 0;
-		-webkit-transition-property: all .5s ease-out ;
-      	   -moz-transition-property: all .5s ease-out ;
-         	 -o-transition-property: all .5s ease-out ;
-           	    transition-property: all .5s ease-out ;
-}
-	.imagelomba:hover {
-		border : solid 1px whitesmoke;
-		box-shadow : 0px 0px 10px aqua;
+	table, th, td {
+		border : 2px solid orangered; 
+		padding : 5px;
 	}
 	@keyframes fadeIn {
 	0% {
@@ -145,11 +122,26 @@
 <div class="wrap">
 <div class="template">
 <div class="body">
-	<div class="imageholder">
-	<div class="imagelomba" style="padding-left : 25px"><a href="#cermat" id="cermat" style="display : inline-block;"/><img src="./img/cerdascermat.png"  alt="Cerdas Cermat" /></a></div>
-	<div class="imagelomba" style="float : right; padding-right : 25px"><a href="#science" id="science" alt="Science Competition" style="display : inline-block;"/><img src="./img/CCSC.png" alt="Science Competition" width=490px height=575px /></a></div> 
-	</div>
-	<div class="body-child"></div>
+<h1 align="center">JADWAL PRESENTASI</h1>
+<p align="center" font-size="40px">JADWAL PRESENTASI JURUSAN</p>
+<p> Sabtu, 19 September 2015 </p>
+<table>
+<tr>
+	<th>Sesi</th>
+	<th>Waktu</th>
+	<th>Ruang C<br>(Lantai 2B - Ruang Sosiologi)</th>
+	<th>Ruang E<br>(Lantai 2A - Ruang Biologi 2)</th>
+</tr>
+<tr>
+	<td><p align="center">1</p></td>
+	<td>11.30 - 12.30</td>
+	<td>Bioteknologi<br>Pembicara : </td>
+	<td>Perbankan<br>Pembicara : </td>
+</tr>
+<tr>
+	<td><p align="center">2</p></td>
+	<td>	
+</table>
 </div>
 </div>
 <div class="footer" style="margin-top : -8px; opacity : 1">
@@ -172,44 +164,6 @@
 <script src="js/sidebar.js"></script>
 <script>
 	new UISearch( document.getElementById( 'sb-search' ) );
-</script>
-<script> /*Nav-Bar Zoom Scroll*/
-    $(window).scroll(function() {
-    $('.nav-bar').css('left', -$(this).scrollLeft() + "px");
-    });
-</script>
-<script>
-	$('#cermat').click(function(){
-		cermat();
-	}) 
-	$('#science').click(function(){
-		science();
-	})
-	$('#closenews').click(function() {
-		imagehold();
-	})
-	function imagehold() {
-		$(".body-child").remove();
-		$(".imageholder").append("<a href='#cermat' id='cermat' alt='Cerdas Cermat' style='display : inline-block; margin : 20px 0px 10px 25px;'/><img src='./img/cermatcomp.jpg' width=500px height=450px /></a> <a href='#science' id='science' alt='Science Competition' style='display : inline-block; float : right; margin : 20px 25px 10px 0px;'/><img src='./img/sciencecomp.jpg' width=500px height=450px /></a>")
-	}
-	function cermat() {
-		$(".imageholder").remove();
-		$(".body-child").html("<h1 align='center'> CANISIUS COLLEGE EDUCATION FAIR 2015<br>CERDAS CERMAT</h1>");
-		$(".body-child").append("<p align='center'><img src='./img/poster-cerdas.jpg'/></p>");
-		$(".body-child").append("<p>Untuk ketentuan lebih lanjut, silahkan lihat <a href='./document/Petunjuk Cerdas Cermat.pdf'> disini</a></p>")
-		$(".body-child").append("<p align='center'><a id='closenews' href=''> << Back </a></p>");
-	}
-	function science() {
-		$(".imageholder").remove();
-		$(".body-child").html("<h1 align='center'> CANISIUS COLLEGE EDUCATION FAIR 2015<br>SCIENCE COMPETITION</h1>");
-		$(".body-child").append("<p>CCSC adalah kompetisi proyek sains yang diselenggarakan oleh SMA Kanisius sebagai wadah para siswa-siswi SMA sederajat untuk mewujudkan kepedulian mereka terhadap kehidupan yang lebih baik dari kini dan untuk nanti.</p>");
-		$(".body-child").append("<p align='center'><img src='./img/poster-science.jpg'/></p>");
-		$(".body-child").append("<p>Untuk ketentuan lebih lanjut, silahkan lihat <a href='./document/Petunjuk Teknis CCSC.pdf'> disini</a></p>");
-		$(".body-child").append("<p align='center'><a id='closenews' href=''> << Back </a></p>");
-	}
-	function exit() {
-			
-	}
 </script>
 </body>
 </html>

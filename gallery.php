@@ -102,15 +102,15 @@
 		<span id="sidebar-icon"><img src="./img/icon_events.png"></span>
 	</div>
 		
-		<div id="sidebar-child"> <!--Events' Childs-->
+		<a id="sidebar-child"> <!--Events' Childs-->
 			<div id="sidebar-child-arrow">&#10097;  </div>
 			<div style="display : inline-block; height : 30px; line-height : 20px">Exhibitions</div>
-		</div>
+		</a>
 			
-		<div id="sidebar-child">
+		<a id="sidebar-child" href="presentation.html">
 			<div id="sidebar-child-arrow">&#10097;  </div>
 			<div style="display : inline-block; height : 30px; line-height : 20px">Presentations</div>
-		</div>
+		</a>
 			
 		<a id="sidebar-child" href="lomba.html">
 			<div id="sidebar-child-arrow">&#10097;  </div>
@@ -271,7 +271,8 @@ function show_pagination($current_page, $last_page){
 <!--JAVASCRIPT-->
 <script src="js/classie.js"></script>
 <script src="js/offset.js"></script>
-<script src="js/sidebar.js"></script>
+<script src="js/jquery-1-7.js"></script>
+<script src="./js/sidebar.js"></script>
 <script> /*Nav-Bar Zoom Scroll*/
     $(window).scroll(function() {
     $('.nav-bar').css('left', -$(this).scrollLeft() + "px");
