@@ -8,13 +8,15 @@
 
 <body>
 <section class="fixed-bg parallax bg-1" style="padding : 150 0 150 0; background : radial-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));">
-
 	<div id="trailerfade"></div>
 		<div class="videotrailer"></div>
-	<div class="template" style="margin-top : 0;">
+	
+	<div class="template" style="margin-top : 0;flex: 0 1 100%; width : auto">
+		<div class="homebutton-cont">
 		<div class="logo">
 			<img src="./img/logo.png"></img>
 		</div>
+		
 		<a href="aboutedu.html"><div class="homebutton" id="but1">
 			<p>What is<br>Edufair?</p>
 			<img src="./img/icon_about.png" style="height : 40px; width : 40px">
@@ -33,12 +35,13 @@
 			<div id="but3p"><hr style="width : 80%; border : 0px; background : #FFFFFF; height : 2px">Check out the recent activity!</div>
 		</div></a>
 		
+		<div class="homebutton-right">
 		<a id="introVid" href="#"><div class="homebutton" id="but4">
 			<p>Trailer</p>
 			<img src="./img/icon_trailer.png" style="height : 32px; width :48px">
 			<div id="but4p"><hr style="width : 80%; border : 0px; background : #FFFFFF; height : 2px">Video Trailer Edufair 2015</div>
 		</div></a>
-		
+
 		<a href="news.html"><div class="homebutton" id="but5">
 			<p>News</p>
 			<img src="./img/icon_news.png" style="height : 48px; width :48px">
@@ -51,10 +54,12 @@
 				<img src="./img/icon_events.png" style="height : 40px; width :40px">
 				<div id="but6p"><hr style="width : 80%; border : 0px; background : #FFFFFF; height : 2px">Activities in Edufair 2015</div>
 			</div>
-			<a id="butchild1" href="exhibitions.html">Exhibitions</a>
-			<a id="butchild1" href="presentation.html">Presentations</a>
-			<a id="butchild1" href="lomba.html">Competitions</div></a>
-	
+			<a href="exhibitions.html"><div id="butchild1">Exhibitions</div></a>
+			<a href="presentation.html"><div id="butchild1">Presentations</div></a>
+			<a href="lomba.html"><div id="butchild1">Competitions</div></a>
+		</div>
+		</div>
+		</div>
 		
 		<div class="countdown">
 			<div class="timeRefDays">
@@ -104,14 +109,13 @@
 </section>
 
 <div class="footer" style="margin-top : -8px; opacity : 1">
-	<div class="foot-temp" style="padding-top : 20px">
-		<div class="foot-tab">
+	<div class="foot-temp" style="padding-top : 20px;">
+		<img src="./img/logo_amdg.png" height="64px" width="64px" style="position : absolute; margin-left : 47.8%"/>
+		<div class="foot-tab" style="order: 1; flex: 0 1 200px;">
 			<a href="http://kanisius.edu/index.php/en/"><img src="./img/contact_cc.png"></img></a>
 		</div>
-		<div class="foot-tab" style="width :550px; text-align : center">
-		<img src="./img/logo_amdg.png" height="64px" width="64px"/>
-		</div>
-		<div class="foot-tab" style="right : 0;">
+		
+		<div class="foot-tab" style="order: 3; float : right; flex: 0 1 200px;">
 			<h3>&#169; Made by : Antonio Setya, Henry Kosim, <br>Kevin Pratama</h3>
 		</div>
 	</div>

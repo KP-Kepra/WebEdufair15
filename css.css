@@ -387,6 +387,7 @@ section.fixed-bg{
 	bottom: 0px;
 	display: block;
 	height: 100%;
+	flex: 0 1 100%;
 	left: 0px;
 	line-height: normal;
 	height : 100%;
@@ -407,7 +408,9 @@ section.fixed-bg{
 }
 .videotrailer {
 	visibility : hidden;
+	max-width : 700px;
 	width : 700px;
+	flex: 0 1 100%;
 	height : 425px;
 	position : absolute;
 	left: 50%;
@@ -431,19 +434,27 @@ section.fixed-bg{
 #closevideo:hover{
 	cursor : pointer;
 }
+.homebutton-cont {
+	height : 440;
+	flex: 0 1 100%;
+	max-width : 920px;
+	position : relative;
+	margin : auto;
+}
 .homebutton {
 	height : 120px;
 	width : 120px;
-	border-radius : 130px;
+	border-radius : 50%;
 	-webkit-transform: translateZ(0);
 	transform: translateZ(0);
 	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	-moz-osx-font-smoothing: grayscale;
-	position: absolute;
+	position : absolute;
 	text-align : center;
 	overflow: hidden;
+	display :inline-block;
 	background: #fbb056;
 	-webkit-transition-property: color;
 	transition-property: color;
@@ -463,7 +474,7 @@ section.fixed-bg{
 	bottom: 0;
 	overflow : hidden;
 	background: #eb7602;
-	border-radius: 100%;
+	border-radius: 50%;
 	-webkit-transform: scale(0);
 	transform: scale(0);
 	-webkit-transition-property: transform;
@@ -477,10 +488,12 @@ section.fixed-bg{
 	color: white;
   	height : 150px;
 	width : 150px;
+	border-radius : 50%;
 }
 .homebutton:hover:before, .homebutton:focus:before, .homebutton:active:before {
 	-webkit-transform: scale(2);
 	transform: scale(2);
+	border-radius : 50%;
 }
 	.homebutton p {
 		margin-top : 20px;
@@ -519,127 +532,113 @@ section.fixed-bg{
 	width : 120px;
 	border-radius : 130px;
 	margin-top : -100px;
-	margin-left : 900px;
+	float : right;
 }
-	.butplacehold:hover{
-	width : 310px;
-	}
 .butplacehold:hover .homebutton, .homebutton:hover{
   	height : 150px;
 	width : 150px;
 	background: #eb7602;
 	color : white;
 }
-	.butplacehold a {
-		width : inherit;
-		height : inherit;
-		border-radius : inherit;
-		color : inherit;
-		font-family : inherit;
-		text-decoration : none;
-		display : block;
-	}
 	.homebutton p {
 		margin-top : 20px;
 		color: white;
 		transition : margin-top .4s ease;
 	}
 #but1 /*What is Edufair*/ {
-	margin-top : -420px;
-	margin-left : 250px;
+	top : 0px;
+	margin-left : 130px;
 }
 	#but1:hover{
-		margin-top : -435px;
-		margin-left : 235px;
+		margin-top : -15px;
+		margin-left : 115px;
 	}
 	#but1 p { margin-top : 25px; transition : all .3s ease}
 	#but1:hover p { margin-top : 20px; opacity : 0;}
 #but2{
-	margin-top : -270px;
-	margin-left : 140px;
+	top : 150px;
+	margin-left : 0px;
 }
 	#but2:hover{
-		margin-top : -285px;
-		margin-left : 125px;
+		margin-top : -15px;
+		margin-left : -15px;
 	}
 	#but2 p { margin-top : 30px; transition : all .3s ease}
 	#but2:hover p { margin-top : 40px; opacity : 0;}
 #but3{
-	margin-top : -100px;
-	margin-left : 150px;
+	top : 300px;
+	margin-left : 60px;
 }
 	#but3:hover{
-		margin-top : -115px;
-		margin-left : 135px;
+		margin-top : -15px;
+		margin-left : 45px;
 	}
 	#but3 p { margin-top : 30px; transition : all .3s ease}
 	#but3:hover p { margin-top : 40px; opacity : 0}
 #but4{
-	margin-top : -420px;
-	margin-left : 830px;
+	top : 0px;
+	float : right;
+	right : 130px;
 }
 	#but4:hover{
-		margin-top : -435px;
-		margin-left : 815px;
+		margin-top : -15px;
+		margin-right : -15px;
 	}
 	#but4 p { margin-top : 30px; transition : all .3s ease}
 	#but4:hover p { margin-top : 40px; opacity : 0}
 #but5{
-	margin-top : -270px;
-	margin-left : 940px;
+	top : 150px;
+	float : right;
+	right : 0px;
 }
 	#but5:hover{
-		margin-top : -285px;
-		margin-left : 925px;
+		margin-top : -15px;
+		margin-right : -15px;
 	}
 	#but5 p { margin-top : 30px; transition : all .3s ease}
 	#but5:hover p { margin-top : 40px; opacity : 0}
 #but6{
 	z-index : 2;
-	margin-top : -10px;
-	margin-left : 30px;
+	top : 300px;
+	right : 60px;
 }
 	.butplacehold:hover #but6, #but6:hover{
-		margin-top : -25px;
-		margin-left : 15px;
+		margin-top : -15px;
+		margin-right : -15px;
 	}
 	#but6 p { margin-top : 30px; transition : all .3s ease}
 	.butplacehold:hover #but6 p, #but6:hover p { opacity : 0; margin-top : 40px}
-	#butchild1, #butchild2{
+	#butchild1{
 		height : 12px;
 		width : 25px;
 		border-radius : 10px;
-		margin-left : 50px;
+		margin-left : 10px;
 		padding : 10px;
 		text-align : left;
+		transition : all .3s ease;
 		margin-top : 5px;
-		transition : all .3s ease-in-out;
-		visibility : hidden;
-		z-index : 3;
 		line-height : 12px;
 		font-family : "Exo";
 		color : black;
+		visibility : hidden;
+		text-decoration : none;
 	}
-	#butchild2 { margin-top : 5px}
-	.butplacehold:hover #butchild1, .butplacehold:hover #butchild2{
+	.butplacehold:hover #butchild1{
 		visibility : visible;
-		margin-left : 50px;
+		margin-left : 10px;
 		width : 100px;
 		margin-top : 5px;
-		padding-left : 130px;
+		padding-left : 90px;
 		background: #fbb056;
 	}
-	.butplacehold:hover a {
-		display : block;
-		visibility : visible;
-		width : 100%;
+	.butplacehold a {
+		text-decoration : none;
 	}
-	.butplacehold #butchild1:hover, .butplacehold #butchild2:hover{
-		padding-left : 180px;
+	.butplacehold #butchild1:hover{
+		padding-left : 130px;
 		background: #eb7602;
 		color : white;
 		}
-	#butchild2:hover, #but6:hover ~ #butchild2 { margin-top : 10px;}
  #but1p, #but2p, #but3p, #but4p, #but5p, #but6p {
 	transition : margin-top .2s ease-in-out;
 	position : fixed;
@@ -1124,7 +1123,7 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	position : relative;
 	margin-left : auto;
 	margin-right : auto;
-	width : 100%;
+	min-width : auto;
 	height : auto;
 	background: linear-gradient(#eb7602, #d07114);
 	box-shadow : 0px 0px 12px 1px #222222;
@@ -1134,38 +1133,32 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	.foot-temp{
 		z-index	: 9990;
 		position : relative;
-		min-width : 1200px;
 		margin-left : auto;
 		margin-right : auto;
-		width : 1200px;
 		height : auto;
 		background: linear-gradient(#eb7602, #d07114);
 	}
 	.foot-tab{
 		display : inline-block;
+		text-align : center;
 		vertical-align : top;
 		margin : 20 0 20 30;
 		z-index : 9990;
-		width	: 260px;
 		min-height	: 60px;
 		line-height : 20px;
 		color : white;
+		flex-flow: row wrap;
 		font-family : Montserrat;
 	}
+		.foot-tab img{
+			margin-left : auto;
+			margin-right : auto;
+		}
 		.foot-tab p{
 			color : #FFFFFF;
 			font-size : 25px;
 			display : inline;
 			line-height : 15px;
-		}
-		.foot-tab hr {
-		 width : 100%;
-		 text-align : left;
-		 background : #F87431; 
-		 border : 0; 
-		 border-radius : 5px; 
-		 height : 2px;
-		 opacity : 0.5;
 		}
 .social-content{
 	display: inline-block;
