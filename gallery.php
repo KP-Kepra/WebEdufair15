@@ -59,17 +59,17 @@
 <div id="sidebar-wrapper">
 	<div id="sidebar-menu"><a id="menu-toggle" href="#">NAVIGATION <span id="sidebar-icon">&#9776;</span></a></div>
 		
-	<a id="sidebar-list" href="index.html">
-		<div id="sidebar-arrow">&#10097; </div>
-		<div id="sidebar-text">Home</div>
+	<a href="index.html" id="sidebar-list">
+		<div id="sidebar-arrow">&#10097;</div>
+		<div id="sidebar-text"> Home</div>
 		<span id="sidebar-icon"><img src="./img/icon_home.png" ></span>
 	</a>
 		
-	<a id="sidebar-list" href="aboutedu.html">
+	<a href="aboutedu.html"><div id="sidebar-list">
 		<div id="sidebar-arrow">&#10097; </div>
 		<div id="sidebar-text">About Edufair</div>
 		<span id="sidebar-icon"><img src="./img/icon_about.png"></span>
-	</a>
+	</div></a>
 		
 	<a id="sidebar-list" href="History.html">
 		<div id="sidebar-arrow">&#10097; </div>
@@ -119,9 +119,10 @@
 	</div>
 </div>
 
-<section class="fixed-bg parallax bg-1" style="padding :  0 0 80 50; margin : 80 0 0 0; height : auto">
+<section class="fixed-bg parallax bg-1" style="padding :  0 0 80 30; margin : 80 0 0 0; height : auto">
 	<h1>Gallery</h1>
-<div class="template"  style="background : rgba(0,0,0,0.5);">
+<div class="template">
+<div class="body">
 	<div class="col-middle" style="width : 100%; height : auto; padding-bottom : 100px">
 	
 		<ul class="gal-slides">
@@ -195,6 +196,7 @@
 			</li>
 		</ul>
 </div>
+
 <div class="gal-content" style="margin : auto; width : 1100px">
 <?php 
 $folder = './img/';
@@ -254,17 +256,17 @@ function show_pagination($current_page, $last_page){
 </div>
 </div>
 </div>
+</div>
 </section>
 
 <div class="footer" style="margin-top : -8px; opacity : 1">
-	<div class="foot-temp" style="padding-top : 20px">
-		<div class="foot-tab">
+	<div class="foot-temp" style="padding-top : 20px;">
+		<img src="./img/logo_amdg.png" height="64px" width="64px" style="position : absolute; margin-left : 47.8%"/>
+		<div class="foot-tab" style="order: 1; flex: 0 1 200px;">
 			<a href="http://kanisius.edu/index.php/en/"><img src="./img/contact_cc.png"></img></a>
 		</div>
-		<div class="foot-tab" style="width :550px; text-align : center">
-		<img src="./img/logo_amdg.png" height="64px" width="64px"/>
-		</div>
-		<div class="foot-tab" style="right : 0;">
+		
+		<div class="foot-tab" style="order: 3; float : right; flex: 0 1 200px; margin-right : 30px">
 			<h3>&#169; Made by : Antonio Setya, Henry Kosim, <br>Kevin Pratama</h3>
 		</div>
 	</div>
