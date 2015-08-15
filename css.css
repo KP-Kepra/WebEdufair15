@@ -809,8 +809,8 @@ section.fixed-bg{
 }
 	.col-middle img{
 		display : default;
-		height : 160px;
-		width : 240px;
+		height : auto;
+		width : 650px;
 		margin : 25px 0px 0px 25px;
 		padding : 0px;
 	}
@@ -1025,7 +1025,24 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 .boxkotak li a:hover, a:active {
     background : rgba(204,204,204,0.5);
 	width : auto;
+}
+
+.boxkotak a:link, a:visited {
+		display: block;
+		font-weight: bold;
+		color: #ffffff;
+		width : 300px;
+		text-align: center;
+		padding : 4 4 4 12;
+		font-size : 14px;
+		text-decoration: none;
 	}
+.boxkotak a:hover, a:active {
+    background : rgba(204,204,204,0.5);
+	width : 300px;
+	}
+
+
 
 .boxnews{
 	display : inline-block;
@@ -1042,7 +1059,7 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	}
 .boxnews p{
 	color		:white;
-	font-size : 60px;
+	font-size : 15px;
 	margin : auto;
 }
 .boxnews hr {
@@ -1055,6 +1072,10 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 }
 .boxnews h1{
 	color		:white;
+}
+
+.boxnews table{
+	border	: 1px solid;
 }
 
 /* =====================================================
