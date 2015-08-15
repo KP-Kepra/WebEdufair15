@@ -1232,7 +1232,7 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 
 .countdown {
 	margin : 0 auto 15 auto;
-	width : 310px;
+	width : 300px;
 	height : 60px;
 }
 	.countdown p{	text-align : center;}
@@ -1241,10 +1241,11 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	background : rgba(0,0,0,0.5);
 	border-radius : 10px;
 	padding : 7px;
+	margin-left : 1px;
+	text-align : center;
 	display: inline-block;
-	width : auto;
+	width : 19%;
 	height : 55px;
 	color : white;
-	margin: 0 auto 20px auto;
 	font-family : "Exo";
 }
