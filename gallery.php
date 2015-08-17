@@ -8,6 +8,9 @@
 	h1 {
 		font-family : Exo;
 	}
+	.body {
+		width : 100%;
+	}
 	td, td a {
 		text-align : center;
 		font-family : Montserrat;
@@ -102,7 +105,7 @@
 		<span id="sidebar-icon"><img src="./img/icon_events.png"></span>
 	</div>
 		
-		<a id="sidebar-child"> <!--Events' Childs-->
+		<a id="sidebar-child" href="exhibitions.html"> <!--Events' Childs-->
 			<div id="sidebar-child-arrow">&#10097;  </div>
 			<div style="display : inline-block; height : 30px; line-height : 20px">Exhibitions</div>
 		</a>
