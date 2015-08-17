@@ -121,11 +121,11 @@
 		</a>
 	</div>
 </div>
-
-<section class="fixed-bg parallax bg-1" style="padding :  0 0 80 30; margin : 80 0 0 0; height : auto">
+<div class="wrap">
+<section class="fixed-bg parallax bg-1" style="padding : 0 0 250 0; margin : 80 0 0 0; height : auto; flex : 0 1 100%">
 	<h1>Gallery</h1>
 <div class="template">
-<div class="body">
+<div class="body" style="width : auto; margin-right : 0px">
 	<div class="col-middle" style="width : 100%; height : auto; padding-bottom : 100px">
 	
 		<ul class="gal-slides">
@@ -200,7 +200,7 @@
 		</ul>
 </div>
 
-<div class="gal-content" style="margin : auto; width : 1100px">
+<div class="gal-content" style="margin : auto">
 <?php 
 $folder = './img/';
 $filetype = '*.*';    
@@ -261,16 +261,16 @@ function show_pagination($current_page, $last_page){
 </div>
 </div>
 </section>
-
+</div>
 <div class="footer" style="margin-top : -8px; opacity : 1">
 	<div class="foot-temp" style="padding-top : 20px;">
 		<img src="./img/logo_amdg.png" height="64px" width="64px" style="position : absolute; margin-left : 47.8%"/>
-		<div class="foot-tab" style="order: 1; flex: 0 1 200px;">
+		<div class="foot-tab" style="order: 1; flex: 0 1 200px; padding-left : 50px">
 			<a href="http://kanisius.edu/index.php/en/"><img src="./img/contact_cc.png"></img></a>
 		</div>
 		
-		<div class="foot-tab" style="order: 3; float : right; flex: 0 1 200px; margin-right : 30px">
-			<h3>&#169; Made by : Antonio Setya, Henry Kosim, <br>Kevin Pratama</h3>
+		<div class="foot-tab" style="order: 3; width : 220px; position : absolute; right : 0; flex: 0 1 200px; margin-right : 30px">
+			<h3>&#169; Made by : Antonio Setya, Henry Kosim, Kevin Pratama</h3>
 		</div>
 	</div>
 </div>
