@@ -233,7 +233,6 @@ section.fixed-bg{
 
 .prlx_group {
 	position: relative;
-	height: 500px; /* fallback for older browsers */
 	height: 100vh;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -1109,7 +1108,7 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 .footer {
 	bottom : 0;
 	left : 0;
-	position : fixed;
+	position : relative;
 	margin-left : 0px;
 	margin-right : 0px;
 	margin-top : 50px;
@@ -1240,7 +1239,7 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	width : 300px;
 	height : 60px;
 }
-	.countdown p{	text-align : center;}
+	.countdown p{	font-size : 30px; text-align : center; margin : 0px;line-height : 32px}
 	
 .timeRefDays, .timeRefHours, .timeRefMinutes, .timeRefSeconds {
 	background : rgba(0,0,0,0.5);
