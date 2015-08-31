@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<link rel="icon" href="img/logo.png">
@@ -122,8 +123,8 @@
 	</div>
 </div>
 <div class="wrap">
-<section class="fixed-bg parallax bg-1" style="padding : 0 0 250 0; margin : 80 0 0 0; height : auto; flex : 0 1 100%">
-	<h1>Gallery</h1>
+<section class="fixed-bg parallax bg-1" style="padding : 0px 0px 250px 0px; margin : 80px 0px 0px 0px; height : auto; flex : 0 1 100%">
+	<h1>Gallery</h1><br>
 <div class="template">
 <div class="body" style="width : auto; margin-right : 0px">
 	<div class="col-middle" style="width : 100%; height : auto; padding-bottom : 100px">
@@ -238,18 +239,18 @@ function show_pagination($current_page, $last_page){
 	<table>
 	<tr>';
 	if($current_page != 1) {
-		echo '<td><a href="?page='.($current_page-1).'">&#x2190; Prev</a></td>';
+		echo '<td><a href="?page='.($current_page-1).'" style="padding : 5px 21px 5px 20px; line-height : 25px;">&#x2190; Prev</td></a>';
 	}
     for($z = 1;$z <= $last_page;$z++){
 		if ($current_page != $z) {
-        echo '<td><a href="?page='.($z).'">'.$z.'</a></td>';
+        echo '<td><a href="?page='.($z).'" style="padding : 5px 21px 5px 20px; line-height : 25px;">'.$z.'</a></td>';
 		}
 		else {
-			echo '<td style="padding : 5 21 5 20; line-height : 25px;">'.$z.'</td>';
+			echo '<td style="padding : 5px 21px 5px 20px; line-height : 25px;">'.$z.'</td>';
 		}
 	}
 	if($current_page != $last_page){
-		echo '<td><a href="?page='.($current_page+1).'">Next &#x2192;</a></td>';
+		echo '<td><a href="?page='.($current_page+1).'" style="padding : 5px 21px 5px 20px; line-height : 25px;">Next &#x2192;</td></a>';
 	}
     echo '</tr>
 	</table>

@@ -1,3 +1,6 @@
+header, section, footer, aside, nav, main, article, figure {
+    display: block; 
+}
 html, body {
 	margin:0;
 	padding:0;
@@ -353,7 +356,7 @@ section.fixed-bg{
 									HOME PAGE
 ======================================================*/
 .logo img, .logo{
-	margin:auto;
+	margin : auto;
 	display : block;
 	width : 500px;
 	height : auto;
@@ -419,11 +422,11 @@ section.fixed-bg{
 	cursor : pointer;
 }
 .homebutton-cont {
-	height : 440;
+	height : 440px;
 	flex: 0 1 100%;
 	max-width : 920px;
 	position : relative;
-	margin : auto;
+	margin : auto auto 10px auto;
 }
 .homebutton {
 	height : 120px;
@@ -534,53 +537,53 @@ section.fixed-bg{
 	margin-left : 130px;
 }
 	#but1:hover{
-		margin-top : -15px;
+		margin-top : -25px;
 		margin-left : 115px;
 	}
 	#but1 p { margin-top : 25px; transition : all .3s ease}
-	#but1:hover p { margin-top : 20px; opacity : 0;}
+	#but1:hover p { margin-top : 10px; opacity : 0;}
 #but2{
 	top : 150px;
 	margin-left : 0px;
 }
 	#but2:hover{
-		margin-top : -15px;
+		margin-top : -25px;
 		margin-left : -15px;
 	}
 	#but2 p { margin-top : 30px; transition : all .3s ease}
-	#but2:hover p { margin-top : 40px; opacity : 0;}
+	#but2:hover p { margin-top : 30px; opacity : 0;}
 #but3{
 	top : 300px;
 	margin-left : 60px;
 }
 	#but3:hover{
-		margin-top : -15px;
+		margin-top : -25px;
 		margin-left : 45px;
 	}
 	#but3 p { margin-top : 30px; transition : all .3s ease}
-	#but3:hover p { margin-top : 40px; opacity : 0}
+	#but3:hover p { margin-top : 25px; opacity : 0}
 #but4{
 	top : 0px;
 	float : right;
 	right : 130px;
 }
 	#but4:hover{
-		margin-top : -15px;
+		margin-top : -25px;
 		margin-right : -15px;
 	}
 	#but4 p { margin-top : 30px; transition : all .3s ease}
-	#but4:hover p { margin-top : 40px; opacity : 0}
+	#but4:hover p { margin-top : 28px; opacity : 0}
 #but5{
 	top : 150px;
 	float : right;
 	right : 0px;
 }
 	#but5:hover{
-		margin-top : -15px;
+		margin-top : -25px;
 		margin-right : -15px;
 	}
-	#but5 p { margin-top : 30px; transition : all .3s ease}
-	#but5:hover p { margin-top : 40px; opacity : 0}
+	#but5 p { margin-top : 25px; transition : all .3s ease}
+	#but5:hover p { margin-top : 25px; opacity : 0}
 #but6{
 	z-index : 2;
 	top : 300px;
@@ -590,8 +593,8 @@ section.fixed-bg{
 		margin-top : -15px;
 		margin-right : -15px;
 	}
-	#but6 p { margin-top : 30px; transition : all .3s ease}
-	.butplacehold:hover #but6 p, #but6:hover p { opacity : 0; margin-top : 40px}
+	#but6 p { margin-top : 25px; transition : all .3s ease}
+	.butplacehold:hover #but6 p, #but6:hover p { opacity : 0; margin-top : 30px}
 	#butchild1{
 		height : 12px;
 		width : 25px;
@@ -755,7 +758,7 @@ section.fixed-bg{
 	height : auto;
 	flex : 0 1 100%;
 	padding-top : 10px;
-	margin : 50 auto 20 auto;
+	margin : 50px auto 20px auto;
 	background : rgba(0,0,0,0.5);
 }
 .col-history {
@@ -763,7 +766,7 @@ section.fixed-bg{
 	background-color : rgba(0,0,0,0.5);
 	margin-top : 70px;
 	height : 320px;
-	padding : 50 50 50 50;
+	padding : 50px 50px 50px 50px;
 	width : 850px;
 	line-height : 35px;
 	color : white;
@@ -785,9 +788,9 @@ section.fixed-bg{
 	flex : 0 1 100%;
 	height : 500px;
 	left : 0;
-	margin : 0 6 0 0;
+	margin : 0px 6px 0px 0px;
 	border : 0px;
-	padding : 0 0 25 0;
+	padding : 0px 0px 25px 0px;
 }
 	.col-middle img{
 		display : default;
@@ -806,8 +809,8 @@ section.fixed-bg{
 	vertical-align : top;
 	display : inline-block;
 	width	: 280px;
-	padding : 10;
-	margin : 0 0 20 10;
+	padding : 10px;
+	margin : 0px 0px 20px 10px;
 	height : auto;
 	background : rgba(102,102,102,0.3);
 	font-family : Montserrat;
@@ -1013,7 +1016,7 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 		color: #ffffff;
 		width : 300px;
 		text-align: center;
-		padding : 4 4 4 12;
+		padding : 4px 4px 4px 12px;
 		font-size : 14px;
 		text-decoration: none;
 	}
@@ -1021,8 +1024,6 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
     background : rgba(204,204,204,0.5);
 	width : 300px;
 	}
-
-
 
 .boxnews{
 	display : inline-block;
@@ -1034,16 +1035,16 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	color : white;
 	font-family : Montserrat;
 	border : 0px;
-	padding : 0 0 0 0;
+	padding : 0px 0px 0px 0px;
 	background : rgba(102,102,102,0.4);
 	}
 .boxnews img {
 	width : 80%;
 	height : auto;
 }
-}
+
 .boxnews p{
-	color		:white;
+	color	:white;
 	font-size : 15px;
 	margin : auto;
 }
@@ -1051,7 +1052,7 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	width : 95%; 
 	left : 0px;
 	background : #FFFFFF; 
-	border : 0; 
+	border : 0px; 
 	border-radius : 5px; 
 	height : 3px;
 }
@@ -1105,20 +1106,18 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 /* =====================================================
 							FOOTER & SOCMED						 
 ======================================================*/
-.footer {
+footer {
 	bottom : 0;
 	left : 0;
 	position : relative;
 	margin-left : 0px;
 	margin-right : 0px;
-	margin-top : 50px;
 	min-width : auto;
 	width : 100%;
 	height : auto;
 	background: linear-gradient(#eb7602, #d07114);
 	box-shadow : 0px 0px 12px 1px #222222;
 	z-index : 10;
-	opacity : 0.5;
 }
 	.foot-temp{
 		z-index	: 9990;
@@ -1127,7 +1126,12 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 		margin-right : auto;
 		height : auto;
 		background: linear-gradient(#eb7602, #d07114);
+		padding : 20px;
 	}
+		.foot-temp img {
+			float : left;
+			margin : auto auto auto 27%;
+		}
 	.foot-tab{
 		display : inline-block;
 		text-align : center;
@@ -1235,7 +1239,7 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 }
 
 .countdown {
-	margin : 0 auto 15 auto;
+	margin : 0px auto 15px auto;
 	width : 300px;
 	height : 60px;
 }

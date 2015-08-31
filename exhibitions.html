@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<link rel="icon" href="img/logo.png">
@@ -17,10 +18,15 @@
 		font-size : 18px;
 		color : white; 
 	}
-	table, th, td {
-		border : 2px solid orangered; 
-		border-collapse : collapse;
+	table {
+		display : inline-block;
+		margin-top : 10px;
+		width : 49%;"
+	}
+	td, th {
+		border : 2px solid transparent;
 		padding : 5px;
+		background : rgba(0,0,0,0.3);
 	}
 </style>
 <body>
@@ -88,12 +94,12 @@
 </div>
 
 <div class="wrap">
-<section class="fixed-bg parallax bg-1" style="padding :  0 0 80 30; margin : 80 0 0 0; height : auto">
+<section class="fixed-bg parallax bg-1" style="padding : 0px 0px 80px 30px; margin : 80px 0px 0px 0px; height : auto">
 	<h1 align="center">PAMERAN UNIVERSITAS</h1>
 	<div class="template">
 		<div class="body">
-			<img src="./img/denah[resjur.jpg" />
-			<table align="center" style="margin-top : 10px;">
+			<img src="./img/denah[resjur.jpg" style="margin : 0px 50px 0px 50px;" />
+			<table cellspacing="4" align="center">
 				<tr>
 					<th>Ruang</th>
 					<th>Stan</th>
@@ -237,6 +243,14 @@
 					<td align="center">4</td>
 					<td>Australian Trade Commission</td>
 				</tr>
+			</table>
+			
+			<table cellspacing="4" style="float : right">
+				<tr>
+					<th>Ruang</th>
+					<th>Stan</th>
+					<th>Nama Peserta</th>
+				</tr>
 				<tr>
 					<td align="center" rowspan="3">206</td>
 					<td align="center">1</td>
@@ -367,7 +381,7 @@
 					<td align="center">4</td>
 					<td>National University of Singapore (NUS)</td>
 				</tr>
-			</table>
+			</table> 	
 		</div>
 	</div>
 </section>
