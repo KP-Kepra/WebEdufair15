@@ -17,10 +17,15 @@
 		font-size : 18px;
 		color : white; 
 	}
-	table, th, td {
-		border : 2px solid orangered; 
-		border-collapse : collapse;
+	table {
+		display : inline-block;
+		margin-top : 10px;
+		width : 49%;"
+	}
+	td, th {
+		border : 2px solid transparent;
 		padding : 5px;
+		background : rgba(0,0,0,0.3);
 	}
 </style>
 <body>
@@ -32,7 +37,7 @@
 		<div id="sidebar-text">Home</div>
 		<span id="sidebar-icon"><img src="./img/icon_home.png" ></span>
 	</a>
-		
+	<!--
 	<a id="sidebar-list" href="aboutedu.html">
 		<div id="sidebar-arrow">&#10097; </div>
 		<div id="sidebar-text">About Edufair</div>
@@ -62,7 +67,7 @@
 		<div id="sidebar-text">News</div>
 		<span id="sidebar-icon"><img src="./img/icon_news.png"></span>
 	</a>
-		
+	-->
 	<div id="sidebar-list-cont">
 	<div id="sidebar-list">
 		<div id="sidebar-arrow">&#10097; </div>
@@ -70,7 +75,7 @@
 		<span id="sidebar-icon"><img src="./img/icon_events.png"></span>
 	</div>
 		
-		<a id="sidebar-child" href="exhibitions.html"> <!--Events' Childs-->
+		<a id="sidebar-child" href="exhibitions.html">
 			<div id="sidebar-child-arrow">&#10097;  </div>
 			<div style="display : inline-block; height : 30px; line-height : 20px">Exhibitions</div>
 		</a>
@@ -88,12 +93,12 @@
 </div>
 
 <div class="wrap">
-<section class="fixed-bg parallax bg-1" style="padding :  0 0 80 30; margin : 80 0 0 0; height : auto">
+<section class="fixed-bg parallax bg-1" style="padding :  0 0 80 0; margin : 80 0 0 0; height : auto">
 	<h1 align="center">PAMERAN UNIVERSITAS</h1>
 	<div class="template">
 		<div class="body">
-			<img src="./img/denah[resjur.jpg" />
-			<table align="center" style="margin-top : 10px;">
+			<img src="./img/denahpresjur.jpg" style="display : block;margin : 70 auto auto auto"/>
+			<table cellspacing="4" align="center">
 				<tr>
 					<th>Ruang</th>
 					<th>Stan</th>
@@ -237,6 +242,14 @@
 					<td align="center">4</td>
 					<td>Australian Trade Commission</td>
 				</tr>
+			</table>
+			
+			<table cellspacing="4" style="float : right">
+				<tr>
+					<th>Ruang</th>
+					<th>Stan</th>
+					<th>Nama Peserta</th>
+				</tr>
 				<tr>
 					<td align="center" rowspan="3">206</td>
 					<td align="center">1</td>
@@ -372,16 +385,18 @@
 	</div>
 </section>
 </div>
-<div class="footer" style="margin-top : -8px; opacity : 1">
+<div class="footer" style="position : initial; margin-top : -8px; opacity : 1">
 	<div class="foot-temp" style="padding-top : 20px;">
 		<img src="./img/logo_amdg.png" height="64px" width="64px" style="position : absolute; margin-left : 47.8%"/>
-		<div class="foot-tab" style="order: 1; flex: 0 1 200px;">
+		<div class="foot-tab" style="order: 1; flex: 0 1 200px">
 			<a href="http://kanisius.edu/index.php/en/"><img src="./img/contact_cc.png"></img></a>
 		</div>
 		
-		<div class="foot-tab" style="order: 3; float : right; flex: 0 1 200px; margin-right : 30px">
-			<h3>&#169; Made by : Antonio Setya, Henry Kosim, <br>Kevin Pratama</h3>
+		<div class="foot-tab" style="order: 3; width : 220px; position : absolute; right : 0; flex: 0 1 200px; margin-right : 30px">
+			<h3>&#169; Made by<br>Edufair Design Team 2015</h3>
 		</div>
+	</div>
+</div>
 <!--JAVASCRIPT-->
 <script src="js/classie.js"></script>
 <script src="js/offset.js"></script>
