@@ -41,6 +41,7 @@ p {
 }
 .wrap {
 	width : auto;
+	min-height : 100%;
 	margin : 0px auto auto 50px;
 }
 /* =====================================================
@@ -348,8 +349,8 @@ section.fixed-bg{
 		background-image : url("./img/bghome.jpg");
 	}
 	#group7 img{
-		height : 350px;
-		width : 350px;
+		height : auto;
+		width : 430px;
 		transform : rotate(-7deg);
 	}
 /* =====================================================
@@ -508,18 +509,19 @@ section.fixed-bg{
 		height : 1px;
 	}
 	.homebutton img {
-		margin-top  : -5px;
+		margin-top  : -10px;
 		transition : all .5s ease;
 	}
 	.homebutton:hover img, .butplacehold:hover img {
-		margin-top : -50px;
+		margin-top : -20px;
 	}
 .butplacehold {
 	height : 120px;
 	width : 120px;
 	border-radius : 130px;
-	margin-top : -100px;
+	margin-top : -200px;
 	float : right;
+	padding-left : 90px;
 }
 .butplacehold:hover .homebutton, .homebutton:hover{
   	height : 150px;
@@ -541,7 +543,7 @@ section.fixed-bg{
 		margin-left : 115px;
 	}
 	#but1 p { margin-top : 25px; transition : all .3s ease}
-	#but1:hover p { margin-top : 10px; opacity : 0;}
+	#but1:hover p { margin-top : -10px; opacity : 0;}
 #but2{
 	top : 150px;
 	margin-left : 0px;
@@ -551,7 +553,7 @@ section.fixed-bg{
 		margin-left : -15px;
 	}
 	#but2 p { margin-top : 30px; transition : all .3s ease}
-	#but2:hover p { margin-top : 30px; opacity : 0;}
+	#but2:hover p { margin-top : 14px; opacity : 0;}
 #but3{
 	top : 300px;
 	margin-left : 60px;
@@ -561,7 +563,7 @@ section.fixed-bg{
 		margin-left : 45px;
 	}
 	#but3 p { margin-top : 30px; transition : all .3s ease}
-	#but3:hover p { margin-top : 25px; opacity : 0}
+	#but3:hover p { margin-top : 5px; opacity : 0}
 #but4{
 	top : 0px;
 	float : right;
@@ -572,7 +574,7 @@ section.fixed-bg{
 		margin-right : -15px;
 	}
 	#but4 p { margin-top : 30px; transition : all .3s ease}
-	#but4:hover p { margin-top : 28px; opacity : 0}
+	#but4:hover p { margin-top : 14px; opacity : 0}
 #but5{
 	top : 150px;
 	float : right;
@@ -583,7 +585,7 @@ section.fixed-bg{
 		margin-right : -15px;
 	}
 	#but5 p { margin-top : 25px; transition : all .3s ease}
-	#but5:hover p { margin-top : 25px; opacity : 0}
+	#but5:hover p { margin-top : 8px; opacity : 0}
 #but6{
 	z-index : 2;
 	top : 300px;
@@ -594,7 +596,7 @@ section.fixed-bg{
 		margin-right : -15px;
 	}
 	#but6 p { margin-top : 25px; transition : all .3s ease}
-	.butplacehold:hover #but6 p, #but6:hover p { opacity : 0; margin-top : 30px}
+	.butplacehold:hover #but6 p, #but6:hover p { opacity : 0; margin-top : 10px}
 	#butchild1{
 		height : 12px;
 		width : 25px;
@@ -607,11 +609,13 @@ section.fixed-bg{
 		line-height : 12px;
 		font-family : "Exo";
 		color : black;
+		opacity : 0;
 		visibility : hidden;
 		text-decoration : none;
 	}
 	.butplacehold:hover #butchild1{
 		visibility : visible;
+		opacity : 1;
 		margin-left : 10px;
 		width : 100px;
 		margin-top : 5px;
@@ -628,8 +632,7 @@ section.fixed-bg{
 		}
  #but1p, #but2p, #but3p, #but4p, #but5p, #but6p {
 	transition : margin-top .2s ease-in-out;
-	position : fixed;
-	margin-top : 60px;
+	text-align : center;
 	opacity : 0;
 	visibility : hidden;
 	transition : visibility .1s ease, opacity .3s ease, margin .8s ease;
@@ -639,7 +642,6 @@ section.fixed-bg{
 }
  #but1:hover #but1p, #but2:hover #but2p, #but3:hover #but3p,
  #but4:hover #but4p, #but5:hover #but5p, #but6:hover #but6p, .butplacehold:hover #but6p {
-	margin-top : -10px;
 	text-align : center;
 	opacity : 1;
 	visibility : visible;
@@ -650,22 +652,26 @@ section.fixed-bg{
 ======================================================*/
 .about{
 	height : 500px;
+	max-width : 760px;
+	vertical-align : 180px;
 	flex : 0 1 100%;
+	display : inline-block;
 }
 .aboutimg {
 	width : 400px;
-	height : 300px;
+	height : 400px;
 	display : inline-block;
-	margin-top : 100px;
 }
 	.aboutimg img{
-		height : 300px;
-		width : 400px;
 		opacity : 0;
+		margin : auto;
+		display : inline-block;
 		position : absolute;
 	}
 	.aboutimg img.about-img-visible {
 		opacity : 1;
+		text-align : center;
+		margin : auto;
 	}
 .about-element {
 	display: inline-block;
@@ -785,9 +791,9 @@ section.fixed-bg{
 	display : inline-block;
 	vertical-align : middle;
 	width : 68%;
+	right : 0;
 	flex : 0 1 100%;
 	height : 500px;
-	left : 0;
 	margin : 0px 6px 0px 0px;
 	border : 0px;
 	padding : 0px 0px 25px 0px;
@@ -805,12 +811,11 @@ section.fixed-bg{
 	}
 
 .col-right{
-	right : 0;
-	vertical-align : top;
+	top : 0;
 	display : inline-block;
-	width	: 280px;
+	min-width : 20%;
 	padding : 10px;
-	margin : 0px 0px 20px 10px;
+	margin : 0px 10px 20px 10px;
 	height : auto;
 	background : rgba(102,102,102,0.3);
 	font-family : Montserrat;
@@ -999,7 +1004,7 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 		display: block;
 		font-weight: bold;
 		color: #ffffff;
-		width : 300px;
+		max-width : 300px;
 		text-align: left;
 		padding : 4 4 4 12;
 		font-size : 14px;
@@ -1014,7 +1019,7 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 		display: block;
 		font-weight: bold;
 		color: #ffffff;
-		width : 300px;
+		max-width : 300px;
 		text-align: center;
 		padding : 4px 4px 4px 12px;
 		font-size : 35px;
@@ -1022,17 +1027,24 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	}
 .boxkotak a:hover, .boxkotak a:active {
     background : rgba(204,204,204,0.5);
-	width : 300px;
+	max-width : 300px;
 	}
+.boxkotak hr{
+	width : 95%;
+	margin : 1px 0 1px 10px;
+	height : 0.5px;
+	padding : 0px;
+	background : rgba(255,255,255,0.4)
+}
 
 .boxnews{
-	display : inline-block;
 	vertical-align : middle;
-	text-align : justify;
-	width : 100%;
+	display : inline-block;
 	height : auto;
-	left : 0;
+	width : 98.5%;
 	color : white;
+	right : 0;
+	margin : 0 0px 10px 0px;
 	font-family : Montserrat;
 	border : 0px;
 	padding : 0px 0px 0px 0px;
@@ -1043,8 +1055,24 @@ input#img-6:checked ~ .gal-dots label#img-dot-6 {
 	height : auto;
 }
 
+.boxnews a:link, .boxnews a:visited {
+		display: block;
+		font-weight: bold;
+		color: #ffffff;
+		max-width : 300px;
+		text-align: center;
+		padding : 4px 4px 4px 12px;
+		font-size : 20px;
+		margin : auto;
+		text-decoration : underline;
+		border-color : rgba(204,204,204,0.5);
+	}
+.boxnews a:hover, .boxkotak a:active {
+    background : rgba(204,204,204,0.5);
+	max-width : 300px;
+	}
 .boxnews p{
-	color	:white;
+	color : white;
 	font-size : 15px;
 	margin : auto;
 }
