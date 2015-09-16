@@ -15,6 +15,12 @@
 		margin-top : 50px;
 		margin-bottom : 50px;
 	}
+	.homebutton a {
+		text-decoration : inherit;
+        border-radius : inherit;
+		color : inherit;
+		font-family : inherit;
+	}
 	.hometemp {
 		width : 200px;
 		margin : 20px 0px 20px 20px;
@@ -82,11 +88,11 @@
 		</div>
 		
 		<div class="homebutton-right">
-		<div class="homebutton" id="but4">
+		<div class="homebutton" id="but4"><a href="https://www.youtube.com/watch?v=KrwsqtRAUhA">
 			<p>Trailer</p>
 			<img src="./img/icon_trailer.png" style="height : 32px; width :48px">
 			<div id="but4p"><hr style="width : 80%; border : 0px; background : #FFFFFF; height : 2px">Coming Soon</div>
-		</div>
+		</a></div>
 
 		<a href="news.html"><div class="homebutton" id="but5">
 			<p>News</p>
@@ -237,7 +243,6 @@ Edufair Design Team 2015</h3>
 	});
 function autoPlayVideo(vcode, width, height){
 	var p = $(".fixed-bg .logo");
-	var offset = p.offset();
 	$(".videotrailer").html('<iframe width="'+width+'" height="'+height+'" src="https://www.youtube.com/embed/'+vcode+'?autoplay=1&loop=1&rel=0&wmode=transparent&controls=0&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen wmode="Opaque"></iframe><a id="closevideo" href="index.html">&#10006</a>');
 	$("#trailerfade").css({"visibility" : "visible"});
 	$(".videotrailer").css({"visibility" : "visible"});
