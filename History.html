@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<div id="sidebar-wrapper">
+<div id="sidebar-wrapper" style="position :relative">
 	<div id="sidebar-menu"><a id="menu-toggle" href="#">NAVIGATION <span id="sidebar-icon">&#9776;</span></a></div>
 		
 	<a id="sidebar-list" href="index.html">
@@ -22,25 +22,26 @@
 		<div id="sidebar-text">About Edufair</div>
 		<span id="sidebar-icon"><img src="./img/icon_about.png"></span>
 	</a>
-		
+	
 	<a id="sidebar-list" href="History.html">
 		<div id="sidebar-arrow">&#10097; </div>
 		<div id="sidebar-text">History</div>
 		<span id="sidebar-icon"><img src="./img/icon_history.png"></span>
 	</a>
 		
-	<a id="sidebar-list" href="gallery.php">
+	<li id="sidebar-list" class="notactive">
 		<div id="sidebar-arrow">&#10097; </div>
 		<div id="sidebar-text">Gallery</div>
-		<span id="sidebar-icon"><img src="./img/icon_gallery.png"></span>
-	</a>
-
-	<a id="sidebar-list" href="http://www.youtube.com">
+		<span id="sidebar-icon"><p style="position : absolute; margin-left : -60px; font-size:10px; display : inline-block;line-height : 10px">COMING<br>SOON!</p>
+									<img src="./img/icon_gallery.png"></span>
+	</li>
+	
+	<a id="sidebar-list" href="https://www.youtube.com/watch?v=KrwsqtRAUhA" target="_blank">
 		<div id="sidebar-arrow">&#10097; </div>
 		<div id="sidebar-text">Trailer</div>
 		<span id="sidebar-icon"><img src="./img/icon_trailer.png" style="height : 16px"></span>
 	</a>
-
+	
 	<a id="sidebar-list" href="news.html">
 		<div id="sidebar-arrow">&#10097; </div>
 		<div id="sidebar-text">News</div>
@@ -86,11 +87,20 @@
 	</div>
 	
     <div id="group3" class="prlx_group">
-		<div class="prlx_layer prlx_layer-deepfore">
+		<div class="prlx_layer prlx_layer-deepfore" style="margin-top : 100px;"> <!--Image-->
+			<img src="./img/history-12.jpg" style="width : 400px; height : auto; margin-left : 4%; margin-top : 0%"/>
 		</div>
+		
 		<div class="prlx_layer prlx_layer-fore">
-			
-		</div>
+		<div class="col-history" style="width : 600px; height : 360px; margin-left : 40%">
+		<div class="title">EDUFAIR 2012</div>
+		<p>Canisius Edufair yang ke-12 ini dilaksanakan pada tahun 2012 dengan tema "Leadership in Me". 
+		Dalam Edufair tahun ini, ditampilkan Tarian Kolosal yaitu bertemakan Papua. Tarian ini merupakan tarian kolosal
+		yang sangat besar, dimana melibatkan hampir seluruh komunitas Kolese Kanisius, yaitu siswa-siswa kelas X, XI, dan XII, 
+		beserta para guru dan pimpinan sekolah SMA Kanisius. Seperti biasanya, Edufair ini mengundang kedutaan dari Amerika, 
+		Jerman, Canada, Belanda, Jepang, Australia, Korea, China dan Inggris, dan berbagai perguruan tinggi baik dari dalam 
+		negeri maupun luar negeri.
+		</div></div>
 		<div class="prlx_layer prlx_layer-base"> <!--Background-->
 		</div>
     </div>
@@ -107,7 +117,7 @@
 	
 	<div id="group5" class="prlx_group">
 		<div class="prlx_layer prlx_layer-deepfore"> <!--Image-->
-			<img src="./img/dummy.jpg" style="margin : 68%; margin-top : 0%"/>
+			<img src="./img/history-13.jpg" style="margin : 68%; margin-top : 0%"/>
 		</div>	
 		<div class="prlx_layer prlx_layer-fore" style="margin-left : 10%">
 			<div class="col-history" style="width : 600px">
@@ -152,18 +162,32 @@
 	
     <div id="group8" class="prlx_group" style="height : 27px">
 		<div class="prlx_layer prlx_layer-base">
-<div class="footer" style="margin-top : -8px; opacity : 1; position : relative">
-	<div class="foot-temp" style="padding-top : 20px;">
-		<img src="./img/logo_amdg.png" height="64px" width="64px" style="position : fixed; margin-left : 47.8%"/>
-		<div class="foot-tab" style="order: 1; flex: 0 1 200px; padding-left : 50px">
-			<a href="http://kanisius.edu/index.php/en/"><img src="./img/contact_cc.png"></img></a>
-		</div>
 		
-		<div class="foot-tab" style="order: 3; width : 220px; position : absolute; right : 0; flex: 0 1 200px; margin-right : 30px">
-			<h3>&#169; Made by <br> Edufair Design Team</h3>
-		</div>
+<div class="footer" style=" margin-top : -8px; opacity : 1">
+<div class="foot-temp" style="padding-top : 20px; height : 150px"><img height="64px" src="./img/logo_amdg.png" style="position : absolute; left : 50%; margin-left : -30px" width="64px" />
+<div class="foot-tab" style="order: 1; flex: 0 1 200px"><a href="http://kanisius.edu/index.php/en/"><img src="./img/contact_cc.png" /></a></div>
+
+<div class="foot-tab" style="order: 3; width : 220px; position : absolute; right : 0px; flex: 0 1 200px; margin-right : 30px">
+<h3>&copy; Made by<br>
+Edufair Design Team 2015</h3>
+</div>
+<hr style="margin-top : 20px; background : white; height : 1px; border : none">
+	<div style="left:50%; margin-left:-450px; flex: 0 1 100%; width : auto; position : absolute; height : 25px;">
+	<h2 style="font-size : 14px; font-family : Montserrat">Sponsored by :</h2><br>
+	<img src="./img/sponsor-bni.png" style="margin-left : 0px; display : inline-block; height : 30px; width : auto"/>
+	<img src="./img/sponsor-shapes.png" style="margin-left : 25px; display : inline-block; height : 30px; width : auto"/>
+	<img src="./img/sponsor-mandiri.png" style="margin-left : 25px; display : inline-block; height : 30px; width : auto"/>
+	<img src="./img/sponsor-yuasa.png" style="margin-left : 25px; display : inline-block; height : 30px; width : auto"/>
+	<img src="./img/sponsor-suzuki.png" style="margin-left : 25px; display : inline-block; height : 30px; width : auto"/>
+	<img src="./img/sponsor-jaya.png" style="margin-left : 25px; display : inline-block; height : 30px; width : auto"/>
+	<img src="./img/sponsor-bca.png" style="margin-left : 25px; display : inline-block; height : 30px; width : auto"/>
+	<img src="./img/sponsor-gforce.png" style="margin-left : 25px; display : inline-block; height : 30px; width : auto"/>
+	<img src="./img/sponsor-chris.png" style="margin-left : 25px; display : inline-block; height : 30px; width : auto"/>
+	<img src="./img/sponsor-calculus.png" style="margin-left : 25px; display : inline-block; height : 30px; width : auto"/>
 	</div>
 </div>
+</div>
+
 		</div>
 	</div>
 </div>
